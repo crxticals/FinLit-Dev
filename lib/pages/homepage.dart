@@ -1,8 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:project_name/pages/class_stuff1.dart';
+// ignore: unused_import
+import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
-final List imgAssets =[
+final List imgAssets = [
   'assets/Unit1.png',
   'assets/Unit2.png',
   'assets/Unit3.png',
@@ -21,6 +24,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    // Set height as 70% of screen height
+    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.7;
+    
+    // Determine width multiplier based on platform
+    const double widthMultiplier = kIsWeb ? 0.21 : 0.8;
+    final double adaptiveWidth = MediaQuery.of(context).size.width * widthMultiplier;
+
     final List<Widget> imageSliders = imgAssets
         .asMap()
         .entries
@@ -38,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Container(
                 margin: const EdgeInsets.all(5.0),
+                width: adaptiveWidth, // Use adaptive width
                 child: ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                   child: Stack(
@@ -50,8 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bottom: 0.0,
                         left: 0.0,
                         right: 0.0,
-                        child: Container(
-                        ),
+                        child: Container(),
                       ),
                     ],
                   ),
@@ -69,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Center(
         child: CarouselSlider(
           options: CarouselOptions(
-            height: 650.0,
+            height: adaptiveHeight,
             enlargeCenterPage: true,
             enableInfiniteScroll: true,
             autoPlay: false,
@@ -80,4 +90,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
