@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:project_name_v2/pages/class_stuff1.dart';
+import 'package:project_name/pages/class_stuff1.dart';
 
 final List imgAssets =[
   'assets/Unit1.png',

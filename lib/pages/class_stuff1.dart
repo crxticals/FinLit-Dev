@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lesson View - Unit $index'),
+        title: Text('Lesson View - Unit ($index+1)'),
       ),
       backgroundColor: const Color.fromRGBO(69, 80, 80, 1),
     );
