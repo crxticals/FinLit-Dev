@@ -3,6 +3,15 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Budgeting",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Budgeting involves the process of creating a plan to allocate your income towards various expenses, savings, and investments. By tracking your spending and setting financial goals, you can ensure that your resources are distributed wisely and effectively. A well-structured budget helps in managing debts, preparing for emergencies, and achieving long-term financial stability. Regularly reviewing and adjusting your budget can lead to better financial decision-making and increased awareness of your financial health."
+          ]
+        }
+
+      ],
+      
       "questions": [
         {
           "question": "What is a budget?",
