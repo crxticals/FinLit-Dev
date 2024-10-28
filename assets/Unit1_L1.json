@@ -1,0 +1,105 @@
+{
+  "unit": "Budgeting",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to Budgeting",
+      "questions": [
+        {
+          "question": "What is a budget?",
+          "options": [
+            "A plan for spending and saving",
+            "A list of expenses",
+            "A form of investment",
+            "A financial statement"
+          ],
+          "correctAnswer": "A plan for spending and saving"
+        },
+        {
+          "question": "Why is budgeting important?",
+          "options": [
+            "It helps track expenses",
+            "It prevents overspending",
+            "It aids in saving for goals",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Creating a Budget",
+      "questions": [
+        {
+          "question": "What are the primary components of a budget?",
+          "options": [
+            "Income and expenditure",
+            "Assets and liabilities",
+            "Income and assets",
+            "Expenses and investments"
+          ],
+          "correctAnswer": "Income and expenditure"
+        },
+        {
+          "question": "Which method can be used to create a budget?",
+          "options": [
+            "Zero-based budgeting",
+            "Cash flow forecasting",
+            "Both A and B",
+            "Retrospective analysis"
+          ],
+          "correctAnswer": "Both A and B"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Tracking Your Budget",
+      "questions": [
+        {
+          "question": "What is the purpose of tracking your budget?",
+          "options": [
+            "To ensure you stick to your budget",
+            "To analyze spending patterns",
+            "To adjust for unexpected expenses",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What tools can be used for tracking a budget?",
+          "options": [
+            "Spreadsheets",
+            "Mobile apps",
+            "Pen and paper",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Common Budgeting Mistakes",
+      "questions": [
+        {
+          "question": "What is a common mistake when budgeting?",
+          "options": [
+            "Not including all expenses",
+            "Underestimating income",
+            "Setting unrealistic goals",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "How can you avoid budgeting mistakes?",
+          "options": [
+            "Regularly review and adjust your budget",
+            "Set reminders for bills",
+            "Both A and B",
+            "Ignore past mistakes"
+          ],
+          "correctAnswer": "Both A and B"
+        }
+      ]
+    }
+  ]
+}
