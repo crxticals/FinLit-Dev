@@ -1,0 +1,230 @@
+
+{
+  "unit": "Debt",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to Debt",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Debt refers to the amount of money borrowed by one party from another, typically for the purpose of making an investment or purchasing goods and services. Understanding debt is crucial as it can significantly impact your financial health. Proper management of debt enables individuals to leverage credit for growth while avoiding excessive financial burden."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is debt?",
+          "options": [
+            "Money borrowed from another party",
+            "Money saved for future use",
+            "Income generated from investments",
+            "A type of insurance"
+          ],
+          "correctAnswer": "Money borrowed from another party"
+        },
+        {
+          "question": "Why is managing debt important?",
+          "options": [
+            "To avoid bankruptcy",
+            "To maintain a good credit score",
+            "To ensure financial stability",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Types of Debt",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "There are various types of debt, including secured and unsecured debt, revolving credit, and installment loans. Each type has its own terms, interest rates, and consequences for non-repayment. Understanding the differences can help in making informed financial decisions."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is secured debt?",
+          "options": [
+            "Debt backed by collateral",
+            "Debt without collateral",
+            "Debt for purchasing assets",
+            "Debt used for personal expenses"
+          ],
+          "correctAnswer": "Debt backed by collateral"
+        },
+        {
+          "question": "Which is a common type of debt?",
+          "options": [
+            "Credit card debt",
+            "Mortgage",
+            "Student loans",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Understanding Interest Rates",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Interest rates are the costs associated with borrowing money, typically expressed as an annual percentage of the borrowed amount. Understanding how interest works, including fixed versus variable rates, is crucial in evaluating the long-term costs and impacts of debt."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a fixed interest rate?",
+          "options": [
+            "An interest rate that changes periodically",
+            "An interest rate that remains the same throughout the loan term",
+            "An interest rate that varies by the lender's decision",
+            "An interest rate with no charges"
+          ],
+          "correctAnswer": "An interest rate that remains the same throughout the loan term"
+        },
+        {
+          "question": "What can high-interest rates lead to?",
+          "options": [
+            "Lower overall debt",
+            "Increased repayment costs",
+            "Better credit score",
+            "None of the above"
+          ],
+          "correctAnswer": "Increased repayment costs"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Managing Debt Effectively",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Effective debt management involves creating a budget, making timely payments, and prioritizing debts to minimize interest costs. Utilizing strategies such as debt consolidation or refinancing can also help in managing payments and reducing financial strain."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a key strategy for managing debt?",
+          "options": [
+            "Ignoring debt obligations",
+            "Creating a budget",
+            "Paying only the minimum amount",
+            "Taking on more debt"
+          ],
+          "correctAnswer": "Creating a budget"
+        },
+        {
+          "question": "What is debt consolidation?",
+          "options": [
+            "Combining multiple debts into a single payment",
+            "Transferring debt to a credit card",
+            "Taking out a loan to pay off expenses",
+            "Increasing the amount of debt"
+          ],
+          "correctAnswer": "Combining multiple debts into a single payment"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "The Impact of Debt on Credit Score",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Debt has a significant impact on an individual's credit score. Understanding the factors that affect credit scores can help in making informed decisions about borrowing and managing existing debt. Lower debt levels and consistent, on-time payments contribute positively while high debt levels can damage one's creditworthiness."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What can negatively impact your credit score?",
+          "options": [
+            "Making payments on time",
+            "High debt-to-income ratio",
+            "Low credit utilization",
+            "Having a variety of credit types"
+          ],
+          "correctAnswer": "High debt-to-income ratio"
+        },
+        {
+          "question": "Why is a good credit score important?",
+          "options": [
+            "It can lead to lower interest rates",
+            "It affects loan approvals",
+            "It can save money over time",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Avoiding Debt Traps",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Debt traps occur when individuals are unable to pay off debts, leading to a cycle of borrowing that compounds financial problems. Awareness of terms of loans, total costs, and understanding the consequences of missing payments can help in avoiding these traps."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a debt trap?",
+          "options": [
+            "A situation where debt is easily manageable",
+            "A situation of taking on more debt to pay existing debt",
+            "A financial strategy for wealth building",
+            "None of the above"
+          ],
+          "correctAnswer": "A situation of taking on more debt to pay existing debt"
+        },
+        {
+          "question": "How can one avoid falling into a debt trap?",
+          "options": [
+            "Borrowing aggressively",
+            "Paying only minimum payments",
+            "Staying informed about loan terms",
+            "Ignoring payment dates"
+          ],
+          "correctAnswer": "Staying informed about loan terms"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Recognizing Signs of Debt Distress",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Recognizing signs of debt distress early can help in seeking assistance and taking proactive measures. Signs may include missed payments, frequent borrowing, and escalating debt levels, which should prompt a review of your financial situation."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a sign of debt distress?",
+          "options": [
+            "Paying bills on time",
+            "Using savings to pay off debt",
+            "Frequent late payments",
+            "Reducing expenses"
+          ],
+          "correctAnswer": "Frequent late payments"
+        },
+        {
+          "question": "What should you do if you recognize debt distress?",
+          "options": [
+            "Avoid addressing it",
+            "Seek financial guidance",
+            "Consolidate without research",
+            "Increase borrowing"
+          ],
+          "correctAnswer": "Seek financial guidance"
+        }
+      ]
+    }
+  ]
+}

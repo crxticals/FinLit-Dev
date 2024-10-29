@@ -1,0 +1,165 @@
+{
+  "unit": "Understanding Consumer Rights",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to Consumer Rights",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Consumer rights are laws that protect the interests of consumers. They ensure that consumers are treated fairly and have access to accurate information."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are consumer rights?",
+          "options": [
+            "Rights related to employment",
+            "Rights related to public services",
+            "Laws that protect consumers in transactions",
+            "None of the above"
+          ],
+          "correctAnswer": "Laws that protect consumers in transactions"
+        },
+        {
+          "question": "Why are consumer rights important?",
+          "options": [
+            "They reduce competition",
+            "They enhance consumer protection",
+            "They increase product prices",
+            "They limit choices"
+          ],
+          "correctAnswer": "They enhance consumer protection"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Understanding Product Information",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Consumers have the right to know crucial information about the products or services they purchase. This includes details about safety, quality, and pricing."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What information should consumers receive before a purchase?",
+          "options": [
+            "Expected delivery time",
+            "Product safety and quality information",
+            "Competitors' prices",
+            "Seller's credit score"
+          ],
+          "correctAnswer": "Product safety and quality information"
+        },
+        {
+          "question": "What is misleading advertising?",
+          "options": [
+            "Providing clear product details",
+            "Exaggerating product claims",
+            "Comparing prices honestly",
+            "Offering discounts"
+          ],
+          "correctAnswer": "Exaggerating product claims"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Fair Business Practices",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Consumers should be treated fairly by businesses. This includes fair pricing practices, clear contracts, and non-discriminatory treatment."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What constitutes a fair business practice?",
+          "options": [
+            "Hidden fees",
+            "Transparent pricing",
+            "Discriminatory pricing",
+            "False advertising"
+          ],
+          "correctAnswer": "Transparent pricing"
+        },
+        {
+          "question": "What should consumers do if they experience unfair practices?",
+          "options": [
+            "Ignore the issue",
+            "File a complaint with consumer protection agencies",
+            "Share their experience online only",
+            "Accept it as normal"
+          ],
+          "correctAnswer": "File a complaint with consumer protection agencies"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Consumer Complaints and Redress",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Consumers have the right to file complaints against businesses. Understanding the complaint process can help consumers seek redress effectively."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a common way for consumers to seek redress?",
+          "options": [
+            "Publicly shame the business",
+            "File a lawsuit immediately",
+            "Contact consumer protection agencies",
+            "Avoid future purchases"
+          ],
+          "correctAnswer": "Contact consumer protection agencies"
+        },
+        {
+          "question": "What should consumers include in their complaints?",
+          "options": [
+            "Personal opinions",
+            "Detailed account of the issue",
+            "Social media links",
+            "Their favorite products"
+          ],
+          "correctAnswer": "Detailed account of the issue"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Know Your Rights",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Education about consumer rights helps consumers make informed decisions and empowers them to hold businesses accountable."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is it important to know consumer rights?",
+          "options": [
+            "To negotiate better prices only",
+            "To hold businesses accountable",
+            "To ignore bad practices",
+            "To avoid reading contracts"
+          ],
+          "correctAnswer": "To hold businesses accountable"
+        },
+        {
+          "question": "Where can consumers learn about their rights?",
+          "options": [
+            "Social media",
+            "Consumer protection websites",
+            "Friends' opinions",
+            "Advertisements"
+          ],
+          "correctAnswer": "Consumer protection websites"
+        }
+      ]
+    }
+  ]
+}

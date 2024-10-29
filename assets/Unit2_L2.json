@@ -1,0 +1,229 @@
+{
+  "unit": "Investing",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to Investing",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Investing involves the process of allocating your funds to various assets with the expectation of generating a return over time. By understanding different investment vehicles and market trends, you can make informed decisions that contribute to wealth accumulation. A well-structured investment strategy helps in achieving financial goals, preparing for retirement, and increasing overall financial security. Regularly reviewing and adjusting your investment portfolio can lead to better performance and a deeper understanding of market dynamics."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is investing?",
+          "options": [
+            "Allocating funds to generate returns",
+            "Saving money for expenses",
+            "Trading goods and services",
+            "A form of budgeting"
+          ],
+          "correctAnswer": "Allocating funds to generate returns"
+        },
+        {
+          "question": "Why is investing important?",
+          "options": [
+            "It helps grow your wealth",
+            "It protects against inflation",
+            "It can provide passive income",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Types of Investments",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Understanding different types of investments, such as stocks, bonds, mutual funds, and real estate, is essential for building a diverse portfolio. Each asset class has its own risk and return profile, and a successful investment strategy should align with your financial goals and risk tolerance."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are common types of investments?",
+          "options": [
+            "Stocks and bonds",
+            "Real estate and commodities",
+            "Mutual funds and ETFs",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "Which investment carries the highest risk?",
+          "options": [
+            "Bonds",
+            "Real estate",
+            "Stocks",
+            "Savings accounts"
+          ],
+          "correctAnswer": "Stocks"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Creating an Investment Strategy",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Developing an investment strategy involves setting clear financial goals, determining your risk tolerance, and selecting the appropriate investment vehicles. A successful strategy should be well-researched, flexible, and regularly reviewed to reflect changes in market conditions and personal circumstances."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a key component of an investment strategy?",
+          "options": [
+            "Market timing",
+            "Random selection",
+            "Risk tolerance",
+            "Avoiding all risks"
+          ],
+          "correctAnswer": "Risk tolerance"
+        },
+        {
+          "question": "What should be done regularly with your investment strategy?",
+          "options": [
+            "Ignore it",
+            "Review and adjust it",
+            "Change it frequently",
+            "Stick to a rigid plan"
+          ],
+          "correctAnswer": "Review and adjust it"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Monitoring Your Investments",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Monitoring your investments is crucial for understanding how they are performing and ensuring they align with your goals. This process involves regularly checking on your portfolio's performance, assessing market trends, and making necessary adjustments."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is monitoring your investments important?",
+          "options": [
+            "To track performance",
+            "To manage risks",
+            "To align with financial goals",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What tools can be used for monitoring investments?",
+          "options": [
+            "Investment apps",
+            "Financial news websites",
+            "Brokerage account platforms",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Common Investment Mistakes",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Common investment mistakes can hinder your financial progress. These may include not diversifying your portfolio, reacting emotionally to market fluctuations, and failing to conduct proper research or due diligence before investing."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a common mistake in investing?",
+          "options": [
+            "Failing to diversify",
+            "Investing based on fear",
+            "Ignoring market research",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "How can you avoid investment mistakes?",
+          "options": [
+            "Conduct thorough research",
+            "Seek professional advice",
+            "Both A and B",
+            "Invest without preparation"
+          ],
+          "correctAnswer": "Both A and B"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Setting Investment Goals",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Setting investment goals is a fundamental aspect of your investing journey. These goals can be short-term or long-term and should clearly define what you aim to achieve, such as saving for a new home, funding education, or building a retirement nest egg."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is it important to set investment goals?",
+          "options": [
+            "To provide focus to your investments",
+            "To maximize short-term profits",
+            "To avoid unnecessary risks",
+            "It is not important"
+          ],
+          "correctAnswer": "To provide focus to your investments"
+        },
+        {
+          "question": "What types of investment goals can you set?",
+          "options": [
+            "Short-term and long-term",
+            "Only short-term",
+            "Only long-term",
+            "No specific types"
+          ],
+          "correctAnswer": "Short-term and long-term"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Adjusting Your Investment Portfolio",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Adjusting your investment portfolio is necessary in response to market shifts, changes in personal financial situations, or evaluations of your investment performance. Being proactive and willing to modify your portfolio can help you stay aligned with your financial objectives."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "When should you adjust your investment portfolio?",
+          "options": [
+            "After market downturns",
+            "When your goals change",
+            "At regular intervals",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What is a benefit of adjusting your investment portfolio?",
+          "options": [
+            "Increased volatility",
+            "Better alignment with financial goals",
+            "Higher chances of loss",
+            "None of the above"
+          ],
+          "correctAnswer": "Better alignment with financial goals"
+        }
+      ]
+    }
+  ]
+}
