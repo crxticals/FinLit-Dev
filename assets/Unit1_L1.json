@@ -9,9 +9,7 @@
             "Budgeting involves the process of creating a plan to allocate your income towards various expenses, savings, and investments. By tracking your spending and setting financial goals, you can ensure that your resources are distributed wisely and effectively. A well-structured budget helps in managing debts, preparing for emergencies, and achieving long-term financial stability. Regularly reviewing and adjusting your budget can lead to better financial decision-making and increased awareness of your financial health."
           ]
         }
-
       ],
-      
       "questions": [
         {
           "question": "What is a budget?",
@@ -37,6 +35,13 @@
     },
     {
       "lessonTitle": "Creating a Budget",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Creating a budget involves identifying your income sources, estimating your expenses, and deciding how much money to allocate to different categories. A successful budget should be realistic, flexible, and sustainable over time. It should also reflect your personal financial goals and help guide your spending decisions."
+          ]
+        }
+      ],
       "questions": [
         {
           "question": "What are the primary components of a budget?",
@@ -62,6 +67,13 @@
     },
     {
       "lessonTitle": "Tracking Your Budget",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Tracking your budget is essential to understanding your spending habits and ensuring you stay within your financial limits. This process can involve regularly recording your transactions and comparing them to your budgeted amounts to identify any discrepancies or areas for improvement."
+          ]
+        }
+      ],
       "questions": [
         {
           "question": "What is the purpose of tracking your budget?",
@@ -87,6 +99,13 @@
     },
     {
       "lessonTitle": "Common Budgeting Mistakes",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Common budgeting mistakes can undermine your financial planning efforts. These may include failing to account for irregular expenses, not adjusting the budget to reflect changes in income or expenses, and not regularly reviewing or revising the budget as needed."
+          ]
+        }
+      ],
       "questions": [
         {
           "question": "What is a common mistake when budgeting?",
@@ -107,6 +126,70 @@
             "Ignore past mistakes"
           ],
           "correctAnswer": "Both A and B"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Setting Financial Goals",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Setting financial goals is a crucial aspect of budgeting. These goals can be short-term, such as saving for a vacation, or long-term, such as saving for retirement. Clearly defined goals help to motivate you and provide a target for your budgeting efforts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is it important to set financial goals?",
+          "options": [
+            "To give direction to your budget",
+            "To increase spending",
+            "To ignore unnecessary expenses",
+            "It is not important"
+          ],
+          "correctAnswer": "To give direction to your budget"
+        },
+        {
+          "question": "What types of financial goals can you set?",
+          "options": [
+            "Short-term and long-term",
+            "Only short-term",
+            "Only long-term",
+            "No specific types"
+          ],
+          "correctAnswer": "Short-term and long-term"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Adapting Your Budget",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Adapting your budget is necessary in response to changes in income, expenses, or life circumstances. Being flexible and willing to adjust your budget can help you stay on track towards meeting your financial goals, even when unexpected changes occur."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "When should you adapt your budget?",
+          "options": [
+            "After a significant change in income",
+            "When expenses increase",
+            "When your financial goals change",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What is a benefit of adapting your budget?",
+          "options": [
+            "Increased financial stress",
+            "Better alignment with financial goals",
+            "Higher chances of overspending",
+            "None of the above"
+          ],
+          "correctAnswer": "Better alignment with financial goals"
         }
       ]
     }
