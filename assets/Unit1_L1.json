@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Budgeting",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -35,6 +36,7 @@
     },
     {
       "lessonTitle": "Creating a Budget",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -67,6 +69,7 @@
     },
     {
       "lessonTitle": "Tracking Your Budget",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -99,6 +102,7 @@
     },
     {
       "lessonTitle": "Common Budgeting Mistakes",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -131,6 +135,7 @@
     },
     {
       "lessonTitle": "Setting Financial Goals",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -163,6 +168,7 @@
     },
     {
       "lessonTitle": "Adapting Your Budget",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
