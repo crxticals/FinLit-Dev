@@ -24,20 +24,27 @@ class NameListScreenState extends State<NameListScreen> {
   Future<void> loadNames() async {
     String fileName;
 
-    if (widget.index == 0) {
-      fileName = 'assets/Unit1_L1.json';
-    } else if (widget.index == 1) {
-      fileName = 'assets/Unit2_L2.json';
-    } else if (widget.index == 2) {
-      fileName = 'assets/Unit3_L3.json';
-    } else if (widget.index == 3) {
-      fileName = 'assets/Unit4_L4.json';
-    } else if (widget.index == 4) {
-      fileName = 'assets/Unit5_L5.json';
-    } else if (widget.index == 5) {
-      fileName = 'assets/Unit6_L6.json';
-    } else {
-      fileName = 'assets/default.json'; // default assignment
+    switch (widget.index) {
+      case 0:
+        fileName = 'assets/Unit1.json';
+        break;
+      case 1:
+        fileName = 'assets/Unit2.json';
+        break;
+      case 2:
+        fileName = 'assets/Unit3.json';
+        break;
+      case 3:
+        fileName = 'assets/Unit4.json';
+        break;
+      case 4:
+        fileName = 'assets/Unit5.json';
+        break;
+      case 5:
+        fileName = 'assets/Unit6.json';
+        break;
+      default:
+        fileName = 'assets/default.json'; // default assignment
     }
 
     final String response = await rootBundle.rootBundle.loadString(fileName);
@@ -65,7 +72,7 @@ class NameListScreenState extends State<NameListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Unit ${widget.index + 1} Names'),
+        title: Text('Unit ${widget.index + 1} Lesson Titles'),
       ),
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView.builder(

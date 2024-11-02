@@ -112,14 +112,84 @@
       ],
       "questions": [
         {
-          "question": "What is a common mistake when budgeting?",
+          "question": "What is a zero-based budget?",
           "options": [
-            "Not including all expenses",
-            "Underestimating income",
-            "Setting unrealistic goals",
+            "A budget where income equals expenses",
+            "A budget where every dollar is assigned a purpose",
+            "A budget created without considering previous expenses",
+            "A budget that tracks only fixed expenses"
+          ],
+          "correctAnswer": "A budget where every dollar is assigned a purpose"
+        },
+        {
+          "question": "Why is it important to track your spending?",
+          "options": [
+            "To identify unnecessary expenses",
+            "To know your total income",
+            "To impress others with your financial skills",
+            "None of the above"
+          ],
+          "correctAnswer": "To identify unnecessary expenses"
+        },
+        {
+          "question": "What is the 50/30/20 rule?",
+          "options": [
+            "50% for needs, 30% for wants, 20% for savings",
+            "50% for savings, 30% for expenses, 20% for investments",
+            "50% for debt repayment, 30% for needs, 20% for wants",
+            "50% for entertainment, 30% for necessities, 20% for savings"
+          ],
+          "correctAnswer": "50% for needs, 30% for wants, 20% for savings"
+        },
+        {
+          "question": "What should you do if you go over budget?",
+          "options": [
+            "Ignore it and move on",
+            "Adjust future budgets to account for it",
+            "Cut expenses from other categories",
             "All of the above"
           ],
           "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What is an emergency fund?",
+          "options": [
+            "Savings set aside for planned expenses",
+            "Money allocated for daily expenses",
+            "Funds reserved for unexpected expenses",
+            "Investment in stocks or bonds"
+          ],
+          "correctAnswer": "Funds reserved for unexpected expenses"
+        },
+        {
+          "question": "Which of the following is not a method of budgeting?",
+          "options": [
+            "Envelope system",
+            "Line item budgeting",
+            "Random spending",
+            "Percentage-based budgeting"
+          ],
+          "correctAnswer": "Random spending"
+        },
+        {
+          "question": "How often should you review your budget?",
+          "options": [
+            "Once a year",
+            "Monthly",
+            "Weekly",
+            "Only when there's a financial change"
+          ],
+          "correctAnswer": "Monthly"
+        },
+        {
+          "question": "What is the main goal of budgeting?",
+          "options": [
+            "To restrict spending",
+            "To allocate funds effectively",
+            "To track income",
+            "To impress financial advisors"
+          ],
+          "correctAnswer": "To allocate funds effectively"
         },
         {
           "question": "How can you avoid budgeting mistakes?",
