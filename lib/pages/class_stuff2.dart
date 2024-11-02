@@ -84,12 +84,12 @@ class ContentListScreenState extends State<ContentListScreen> {
                   })),
                   ElevatedButton(
                     onPressed: () {
-                      String quizFileName = widget.index == 0 ? 'assets/Unit1_Quiz.json' :
-                                          widget.index == 1 ? 'assets/Unit2_Quiz.json' :
-                                          widget.index == 2 ? 'assets/Unit3_Quiz.json' :
-                                          widget.index == 3 ? 'assets/Unit4_Quiz.json' :
-                                          widget.index == 4 ? 'assets/Unit5_Quiz.json' :
-                                          widget.index == 5 ? 'assets/Unit6_Quiz.json' :
+                      String quizFileName = widget.index == 0 ? 'assets/Unit1.json' :
+                                          widget.index == 1 ? 'assets/Unit2.json' :
+                                          widget.index == 2 ? 'assets/Unit3.json' :
+                                          widget.index == 3 ? 'assets/Unit4.json' :
+                                          widget.index == 4 ? 'assets/Unit5.json' :
+                                          widget.index == 5 ? 'assets/Unit6.json' :
                                           'assets/default_quiz.json';
 
                       Navigator.push(
