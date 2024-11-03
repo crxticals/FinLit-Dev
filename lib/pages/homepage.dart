@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   tag: index,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
-                    child: Container(
+                    child: SizedBox(
                       width: MediaQuery.of(context).size.width,
                       height: adaptiveHeight,
                       child: Image.asset(

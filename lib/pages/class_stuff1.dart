@@ -78,9 +78,17 @@ class NameListScreenState extends State<NameListScreen> {
       body: ListView.builder(
         itemCount: names.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(names[index]),
-            onTap: () => navigateToDetail(index),  // Pass the current lesson index
+          return Card(
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            child: InkWell(
+              onTap: () => navigateToDetail(index),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  names[index],
+                ),
+              ),
+            ),
           );
         },
       ),
