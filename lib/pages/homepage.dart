@@ -1,11 +1,9 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:project_name/pages/class_stuff1.dart';
 // ignore: unused_import
 import 'dart:io' show Platform;
-import 'package:flutter/foundation.dart' show kIsWeb;
 
-final List imgAssets = [
+final List<String> imgAssets = [
   'assets/Unit1.png',
   'assets/Unit2.png',
   'assets/Unit3.png',
@@ -22,53 +20,27 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final PageController _pageController = PageController(viewportFraction: 1.0);
+  int _selectedIndex = 0; // Track the selected tab index
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  // Handle bottom navigation tab changes
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      // Add logic to navigate to different screens if needed
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    // Set height as 70% of screen height
-    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.7;
-    
-    // Determine width multiplier based on platform
-    const double widthMultiplier = kIsWeb ? 0.21 : 0.8;
-    final double adaptiveWidth = MediaQuery.of(context).size.width * widthMultiplier;
-
-    final List<Widget> imageSliders = imgAssets
-        .asMap()
-        .entries
-        .map((entry) => GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NameListScreen(
-                      imageUrl: entry.value,
-                      index: entry.key,
-                    ),
-                  ),
-                );
-              },
-              child: Container(
-                margin: const EdgeInsets.all(5.0),
-                width: adaptiveWidth, // Use adaptive width
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                  child: Stack(
-                    children: <Widget>[
-                      Image.asset(entry.value,
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: double.infinity),
-                      Positioned(
-                        bottom: 0.0,
-                        left: 0.0,
-                        right: 0.0,
-                        child: Container(),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ))
-        .toList();
+    // Set height as 70% of screen height to allow space for app bar and other content
+    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.73;
 
     return Scaffold(
       appBar: AppBar(
@@ -77,15 +49,64 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       backgroundColor: const Color.fromRGBO(69, 80, 80, 1),
       body: Center(
-        child: CarouselSlider(
-          options: CarouselOptions(
-            height: adaptiveHeight,
-            enlargeCenterPage: true,
-            enableInfiniteScroll: true,
-            autoPlay: false,
+        child: SizedBox(
+          height: adaptiveHeight,
+          width: MediaQuery.of(context).size.width,
+          child: PageView.builder(
+            controller: _pageController,
+            itemCount: imgAssets.length,
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NameListScreen(
+                      imageUrl: imgAssets[index],
+                      index: index,
+                    ),
+                  ),
+                );
+              },
+              child: Center(
+                child: Hero(
+                  tag: index,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: adaptiveHeight,
+                      child: Image.asset(
+                        imgAssets[index],
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
-          items: imageSliders,
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blueGrey[900],
+        selectedItemColor: Colors.tealAccent,
+        unselectedItemColor: Colors.grey,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Account',
+          ),
+        ],
       ),
     );
   }
