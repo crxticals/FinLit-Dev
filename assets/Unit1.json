@@ -1,0 +1,273 @@
+{
+  "unit": "Budgeting",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to Budgeting",
+      "lessonIndex": 0,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Budgeting involves the process of creating a plan to allocate your income towards various expenses, savings, and investments. By tracking your spending and setting financial goals, you can ensure that your resources are distributed wisely and effectively. A well-structured budget helps in managing debts, preparing for emergencies, and achieving long-term financial stability. Regularly reviewing and adjusting your budget can lead to better financial decision-making and increased awareness of your financial health."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a budget?",
+          "options": [
+            "A plan for spending and saving",
+            "A list of expenses",
+            "A form of investment",
+            "A financial statement"
+          ],
+          "correctAnswer": "A plan for spending and saving"
+        },
+        {
+          "question": "Why is budgeting important?",
+          "options": [
+            "It helps track expenses",
+            "It prevents overspending",
+            "It aids in saving for goals",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Creating a Budget",
+      "lessonIndex": 1,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Creating a budget involves identifying your income sources, estimating your expenses, and deciding how much money to allocate to different categories. A successful budget should be realistic, flexible, and sustainable over time. It should also reflect your personal financial goals and help guide your spending decisions."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the primary components of a budget?",
+          "options": [
+            "Income and expenditure",
+            "Assets and liabilities",
+            "Income and assets",
+            "Expenses and investments"
+          ],
+          "correctAnswer": "Income and expenditure"
+        },
+        {
+          "question": "Which method can be used to create a budget?",
+          "options": [
+            "Zero-based budgeting",
+            "Cash flow forecasting",
+            "Both A and B",
+            "Retrospective analysis"
+          ],
+          "correctAnswer": "Both A and B"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Tracking Your Budget",
+      "lessonIndex": 2,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Tracking your budget is essential to understanding your spending habits and ensuring you stay within your financial limits. This process can involve regularly recording your transactions and comparing them to your budgeted amounts to identify any discrepancies or areas for improvement."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the purpose of tracking your budget?",
+          "options": [
+            "To ensure you stick to your budget",
+            "To analyze spending patterns",
+            "To adjust for unexpected expenses",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What tools can be used for tracking a budget?",
+          "options": [
+            "Spreadsheets",
+            "Mobile apps",
+            "Pen and paper",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Common Budgeting Mistakes",
+      "lessonIndex": 3,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Common budgeting mistakes can undermine your financial planning efforts. These may include failing to account for irregular expenses, not adjusting the budget to reflect changes in income or expenses, and not regularly reviewing or revising the budget as needed."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a zero-based budget?",
+          "options": [
+            "A budget where income equals expenses",
+            "A budget where every dollar is assigned a purpose",
+            "A budget created without considering previous expenses",
+            "A budget that tracks only fixed expenses"
+          ],
+          "correctAnswer": "A budget where every dollar is assigned a purpose"
+        },
+        {
+          "question": "Why is it important to track your spending?",
+          "options": [
+            "To identify unnecessary expenses",
+            "To know your total income",
+            "To impress others with your financial skills",
+            "None of the above"
+          ],
+          "correctAnswer": "To identify unnecessary expenses"
+        },
+        {
+          "question": "What is the 50/30/20 rule?",
+          "options": [
+            "50% for needs, 30% for wants, 20% for savings",
+            "50% for savings, 30% for expenses, 20% for investments",
+            "50% for debt repayment, 30% for needs, 20% for wants",
+            "50% for entertainment, 30% for necessities, 20% for savings"
+          ],
+          "correctAnswer": "50% for needs, 30% for wants, 20% for savings"
+        },
+        {
+          "question": "What should you do if you go over budget?",
+          "options": [
+            "Ignore it and move on",
+            "Adjust future budgets to account for it",
+            "Cut expenses from other categories",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What is an emergency fund?",
+          "options": [
+            "Savings set aside for planned expenses",
+            "Money allocated for daily expenses",
+            "Funds reserved for unexpected expenses",
+            "Investment in stocks or bonds"
+          ],
+          "correctAnswer": "Funds reserved for unexpected expenses"
+        },
+        {
+          "question": "Which of the following is not a method of budgeting?",
+          "options": [
+            "Envelope system",
+            "Line item budgeting",
+            "Random spending",
+            "Percentage-based budgeting"
+          ],
+          "correctAnswer": "Random spending"
+        },
+        {
+          "question": "How often should you review your budget?",
+          "options": [
+            "Once a year",
+            "Monthly",
+            "Weekly",
+            "Only when there's a financial change"
+          ],
+          "correctAnswer": "Monthly"
+        },
+        {
+          "question": "What is the main goal of budgeting?",
+          "options": [
+            "To restrict spending",
+            "To allocate funds effectively",
+            "To track income",
+            "To impress financial advisors"
+          ],
+          "correctAnswer": "To allocate funds effectively"
+        },
+        {
+          "question": "How can you avoid budgeting mistakes?",
+          "options": [
+            "Regularly review and adjust your budget",
+            "Set reminders for bills",
+            "Both A and B",
+            "Ignore past mistakes"
+          ],
+          "correctAnswer": "Both A and B"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Setting Financial Goals",
+      "lessonIndex": 4,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Setting financial goals is a crucial aspect of budgeting. These goals can be short-term, such as saving for a vacation, or long-term, such as saving for retirement. Clearly defined goals help to motivate you and provide a target for your budgeting efforts."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is it important to set financial goals?",
+          "options": [
+            "To give direction to your budget",
+            "To increase spending",
+            "To ignore unnecessary expenses",
+            "It is not important"
+          ],
+          "correctAnswer": "To give direction to your budget"
+        },
+        {
+          "question": "What types of financial goals can you set?",
+          "options": [
+            "Short-term and long-term",
+            "Only short-term",
+            "Only long-term",
+            "No specific types"
+          ],
+          "correctAnswer": "Short-term and long-term"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Adapting Your Budget",
+      "lessonIndex": 5,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Adapting your budget is necessary in response to changes in income, expenses, or life circumstances. Being flexible and willing to adjust your budget can help you stay on track towards meeting your financial goals, even when unexpected changes occur."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "When should you adapt your budget?",
+          "options": [
+            "After a significant change in income",
+            "When expenses increase",
+            "When your financial goals change",
+            "All of the above"
+          ],
+          "correctAnswer": "All of the above"
+        },
+        {
+          "question": "What is a benefit of adapting your budget?",
+          "options": [
+            "Increased financial stress",
+            "Better alignment with financial goals",
+            "Higher chances of overspending",
+            "None of the above"
+          ],
+          "correctAnswer": "Better alignment with financial goals"
+        }
+      ]
+    }
+  ]
+}

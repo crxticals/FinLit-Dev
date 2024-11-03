@@ -1,0 +1,197 @@
+{
+  "unit": "401k and Retirement",
+  "lessons": [
+    {
+      "lessonTitle": "Introduction to 401k",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "A 401k is a retirement savings plan that allows employees to save and invest a portion of their paycheck before taxes are taken out. It is an essential tool for long-term financial planning."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a 401k?",
+          "options": [
+            "A type of insurance plan",
+            "A retirement savings plan",
+            "A government grant",
+            "A short-term investment account"
+          ],
+          "correctAnswer": "A retirement savings plan"
+        },
+        {
+          "question": "What advantage does a 401k provide?",
+          "options": [
+            "Immediate cash withdrawal",
+            "Pre-tax contributions",
+            "No investment options",
+            "Unlimited contributions"
+          ],
+          "correctAnswer": "Pre-tax contributions"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Contribution Limits and Benefits",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "401k plans have specific contribution limits which can change annually. Employees aged 50 or older can make additional catch-up contributions. These plans provide tax benefits and sometimes employer matching."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the standard contribution limit for a 401k?",
+          "options": [
+            "5000",
+            "19500",
+            "30000",
+            "58000"
+          ],
+          "correctAnswer": "19500"
+        },
+        {
+          "question": "What is an employer match?",
+          "options": [
+            "An investment choice",
+            "A type of tax credit",
+            "Employer contributions to your 401k",
+            "Loan assistance"
+          ],
+          "correctAnswer": "Employer contributions to your 401k"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Understanding Retirement Planning",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Effective retirement planning involves estimating expenses, understanding income sources, and ensuring savings are sufficient to maintain a desired lifestyle during retirement."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a key consideration in retirement planning?",
+          "options": [
+            "Minimizing personal expenses",
+            "Estimating future expenses",
+            "Eliminating all debts",
+            "Investing only in stocks"
+          ],
+          "correctAnswer": "Estimating future expenses"
+        },
+        {
+          "question": "What should you assess when planning for retirement?",
+          "options": [
+            "Current savings",
+            "Family size",
+            "Personal interests",
+            "Hobbies"
+          ],
+          "correctAnswer": "Current savings"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Withdrawal Rules and Penalties",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Withdrawing funds from a 401k before age 59.5 can result in penalties and taxes. Understanding the rules regarding eligible withdrawals is crucial for financial planning."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "At what age can you withdraw from your 401k without penalty?",
+          "options": [
+            "50",
+            "59.5",
+            "65",
+            "70"
+          ],
+          "correctAnswer": "59.5"
+        },
+        {
+          "question": "What is the penalty for early withdrawal?",
+          "options": [
+            "5%",
+            "10%",
+            "20%",
+            "No penalty"
+          ],
+          "correctAnswer": "10%"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "The Importance of Diversification",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Diversification within a 401k can help manage risk and improve potential returns. Understanding different investment options, such as mutual funds and stocks, is vital."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does diversification mean?",
+          "options": [
+            "Investing in a single stock",
+            "Spreading investments across various assets",
+            "Investing only in bonds",
+            "Keeping cash only"
+          ],
+          "correctAnswer": "Spreading investments across various assets"
+        },
+        {
+          "question": "Which is a common investment option in a 401k?",
+          "options": [
+            "Checking account",
+            "Stocks",
+            "Cryptocurrency",
+            "Real estate"
+          ],
+          "correctAnswer": "Stocks"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Evaluating Retirement Needs",
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "It is essential to evaluate retirement needs based on lifestyle goals, healthcare costs, and longevity. Adjusting savings strategies to meet future requirements can ensure a comfortable retirement."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What should you consider for retirement needs?",
+          "options": [
+            "Future healthcare costs",
+            "Current spending on entertainment",
+            "Preferences for travel",
+            "Home improvements"
+          ],
+          "correctAnswer": "Future healthcare costs"
+        },
+        {
+          "question": "How can you adjust your savings strategy?",
+          "options": [
+            "Increase contributions",
+            "Reduce all investments",
+            "Ignore market fluctuations",
+            "Only invest in real estate"
+          ],
+          "correctAnswer": "Increase contributions"
+        }
+      ]
+    }
+  ]
+}
