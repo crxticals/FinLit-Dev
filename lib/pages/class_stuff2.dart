@@ -82,20 +82,21 @@ class ContentListScreenState extends State<ContentListScreen> {
                       })),
                     );
                   })),
+                  // Adjust the onPressed method to pass interlessonindex to QuizPage
                   ElevatedButton(
                     onPressed: () {
                       String quizFileName = widget.index == 0 ? 'assets/Unit1.json' :
-                                          widget.index == 1 ? 'assets/Unit2.json' :
-                                          widget.index == 2 ? 'assets/Unit3.json' :
-                                          widget.index == 3 ? 'assets/Unit4.json' :
-                                          widget.index == 4 ? 'assets/Unit5.json' :
-                                          widget.index == 5 ? 'assets/Unit6.json' :
-                                          'assets/default_quiz.json';
+                                            widget.index == 1 ? 'assets/Unit2.json' :
+                                            widget.index == 2 ? 'assets/Unit3.json' :
+                                            widget.index == 3 ? 'assets/Unit4.json' :
+                                            widget.index == 4 ? 'assets/Unit5.json' :
+                                            widget.index == 5 ? 'assets/Unit6.json' :
+                                            'assets/default_quiz.json';
 
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => QuizPage(fileName: quizFileName),
+                          builder: (context) => QuizPage(fileName: quizFileName, lessonIndex: widget.interlessonindex),
                         ),
                       );
                     },

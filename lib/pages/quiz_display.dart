@@ -4,8 +4,9 @@ import 'package:flutter/services.dart' as rootBundle;
 
 class QuizPage extends StatefulWidget {
   final String fileName;
+  final int lessonIndex; // Add this line
 
-  const QuizPage({super.key, required this.fileName});
+  const QuizPage({super.key, required this.fileName, required this.lessonIndex});
 
   @override
   _QuizPageState createState() => _QuizPageState();
@@ -30,7 +31,6 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
       duration: const Duration(milliseconds: 500),
       vsync: this,
     );
-    _feedbackColorAnimation = ColorTween().animate(_animationController);
   }
 
   @override
@@ -44,10 +44,9 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
     final data = json.decode(response);
 
     setState(() {
-      questions = data['lessons'][0]['questions'];
+      questions = data['lessons'][widget.lessonIndex]['questions']; // Use lessonIndex here
     });
   }
-
   void answerQuestion(String option) {
     // Check if answer is correct
     bool correct = option == questions[currentQuestionIndex]['correctAnswer'];
@@ -55,6 +54,8 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
       showFeedback = true;
       feedbackMessage = correct ? 'Correct' : 'Incorrect';
       if (correct) score++; // Increase score for correct answers
+      
+      // Set up feedback color based on answer correctness
       _feedbackColorAnimation = ColorTween(
         begin: Colors.transparent,
         end: correct ? Colors.green.withOpacity(0.7) : Colors.red.withOpacity(0.7),
@@ -70,7 +71,6 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
           if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
           } else {
-            // Show score and reset currentQuestionIndex to the last screen
             _showScoreDialog();
           }
         });
@@ -155,17 +155,22 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                   ),
                 ),
           if (showFeedback)
-            FadeTransition(
-              opacity: _animationController,
-              child: Container(
-                color: _feedbackColorAnimation.value,
-                child: Center(
-                  child: Text(
-                    feedbackMessage,
-                    style: const TextStyle(fontSize: 36, color: Colors.white),
+            AnimatedBuilder(
+              animation: _feedbackColorAnimation,
+              builder: (context, child) {
+                return FadeTransition(
+                  opacity: _animationController,
+                  child: Container(
+                    color: _feedbackColorAnimation.value,
+                    child: Center(
+                      child: Text(
+                        feedbackMessage,
+                        style: const TextStyle(fontSize: 36, color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-              ),
+                );
+              },
             ),
         ],
       ),
