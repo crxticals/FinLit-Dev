@@ -59,6 +59,7 @@ flutter:
     - assets/Unit4.png
     - assets/Unit5.png
     - assets/Unit6.png
+    - assets/Testing.webp
     - assets/Unit1.json
     - assets/Unit2.json
     - assets/Unit3.json
@@ -82,11 +83,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #   - family: Schyler
+  #   - family: Anek Gujaranti
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  #       - asset: fonts/AbekGujarati.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

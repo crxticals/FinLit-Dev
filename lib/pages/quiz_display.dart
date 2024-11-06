@@ -14,8 +14,9 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin {
   List<dynamic> questions = [];
   int currentQuestionIndex = 0;
+  int score = 0; // Track the user's score
   bool showFeedback = false;
-  bool isCorrect = false;
+  String feedbackMessage = '';
   late AnimationController _animationController;
   late Animation<Color?> _feedbackColorAnimation;
 
@@ -48,29 +49,53 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
   }
 
   void answerQuestion(String option) {
-    // Check if answer is correct and trigger feedback animation
-    bool correct = option == questions[currentQuestionIndex]['answer'];
+    // Check if answer is correct
+    bool correct = option == questions[currentQuestionIndex]['correctAnswer'];
     setState(() {
-      isCorrect = correct;
       showFeedback = true;
+      feedbackMessage = correct ? 'Correct' : 'Incorrect';
+      if (correct) score++; // Increase score for correct answers
       _feedbackColorAnimation = ColorTween(
         begin: Colors.transparent,
-        end: isCorrect ? Colors.green.withOpacity(0.7) : Colors.red.withOpacity(0.7),
+        end: correct ? Colors.green.withOpacity(0.7) : Colors.red.withOpacity(0.7),
       ).animate(_animationController);
     });
 
     // Start animation and advance to next question after delay
     _animationController.forward().then((_) {
-      Future.delayed(const Duration(milliseconds: 500), () {
+      Future.delayed(const Duration(milliseconds: 1000), () {
         _animationController.reverse();
         setState(() {
           showFeedback = false;
           if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
+          } else {
+            // Show score and reset currentQuestionIndex to the last screen
+            _showScoreDialog();
           }
         });
       });
     });
+  }
+
+  void _showScoreDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text('Your score is: $score/${questions.length}'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); // Go back to the previous screen
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -109,7 +134,7 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                               padding: const EdgeInsets.symmetric(vertical: 8.0),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  minimumSize: const Size.fromHeight(50), // Full-width buttons
+                                  minimumSize: const Size.fromHeight(50),
                                   backgroundColor: Colors.blueGrey,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
@@ -126,25 +151,6 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                           },
                         ),
                       ),
-                      if (currentQuestionIndex < questions.length - 1)
-                        Expanded(
-                          flex: 1,
-                          child: Align(
-                            alignment: Alignment.bottomCenter,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: const Size.fromHeight(50),
-                                backgroundColor: Colors.teal,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  currentQuestionIndex++;
-                                });
-                              },
-                              child: const Text("Next Question"),
-                            ),
-                          ),
-                        ),
                     ],
                   ),
                 ),
@@ -153,6 +159,12 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
               opacity: _animationController,
               child: Container(
                 color: _feedbackColorAnimation.value,
+                child: Center(
+                  child: Text(
+                    feedbackMessage,
+                    style: const TextStyle(fontSize: 36, color: Colors.white),
+                  ),
+                ),
               ),
             ),
         ],

@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' as rootBundle;
 class NameListScreen extends StatefulWidget {
   final String imageUrl;
   final int index;
+  final String imageTesturl = 'assets/Testing.webp';
   const NameListScreen({super.key, required this.imageUrl, required this.index});
 
   @override
@@ -61,7 +62,7 @@ class NameListScreenState extends State<NameListScreen> {
       MaterialPageRoute(
         builder: (context) => ContentListScreen(
           imageUrl: widget.imageUrl,
-          index: widget.index, // use widget.index here
+          index: widget.index,
           interlessonindex: lessonIndex,
         ),
       ),
@@ -70,28 +71,68 @@ class NameListScreenState extends State<NameListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Unit ${widget.index + 1} Lesson Titles'),
-      ),
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      body: ListView.builder(
-        itemCount: names.length,
-        itemBuilder: (context, index) {
-          return Card(
-            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            child: InkWell(
-              onTap: () => navigateToDetail(index),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  names[index],
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Unit ${widget.index + 1} - Lessons'),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
+        backgroundColor: const Color.fromARGB(255, 240, 240, 240),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Image or Carousel section
+              Image.asset(
+                widget.imageTesturl, // using image URL for the header
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: 200,
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Basic Budgets',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 16),
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 1 / 1.2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                  ),
+                  itemCount: names.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () => navigateToDetail(index),
+                      child: Card(
+                        color: Colors.green,
+                        elevation: 5,
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              names[index],
+                              style: const TextStyle(color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
-            ),
-          );
-        },
-      ),
-    );
+            ],
+          ),
+        ),
+      );
+    }
   }
-}

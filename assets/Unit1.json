@@ -268,6 +268,72 @@
           "correctAnswer": "Better alignment with financial goals"
         }
       ]
+    },
+    {
+      "lessonTitle": "Advanced Budgeting Strategies",
+      "lessonIndex": 6,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Advanced budgeting strategies involve tailoring your budgeting process to fit more complex financial situations. This includes techniques such as incremental budgeting, activity-based budgeting, and flexible budgeting. Understanding the advanced principles of budget management can help optimize resource allocation and improve overall financial performance."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is incremental budgeting?",
+          "options": [
+            "A budget method that uses previous budgets for new budgeting",
+            "A flexible budget approach",
+            "A zero-based budgeting strategy",
+            "None of the above"
+          ],
+          "correctAnswer": "A budget method that uses previous budgets for new budgeting"
+        },
+        {
+          "question": "What is activity-based budgeting?",
+          "options": [
+            "Budgeting based on the activities that incur costs",
+            "Budgeting that considers past performance only",
+            "A method that ignores fixed costs",
+            "A budget focused solely on revenues"
+          ],
+          "correctAnswer": "Budgeting based on the activities that incur costs"
+        }
+      ]
+    },
+    {
+      "lessonTitle": "Leveraging Technology for Budgeting",
+      "lessonIndex": 7,
+      "ClassContent": [
+        {
+          "ReadingContent": [
+            "Leveraging technology can greatly enhance your budgeting process. Use budgeting software and applications that help streamline the tracking and management of your finances. These tools often come with features like automated reminders, data analysis, and real-time collaboration with financial advisors."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are budgeting apps primarily used for?",
+          "options": [
+            "Tracking and managing expenses",
+            "Increasing debt",
+            "Ignoring financial goals",
+            "Making random purchases"
+          ],
+          "correctAnswer": "Tracking and managing expenses"
+        },
+        {
+          "question": "Which of the following is an advantage of automated budgeting tools?",
+          "options": [
+            "Frequency of errors decreases",
+            "They are always free",
+            "They eliminate the need for a budget",
+            "None of the above"
+          ],
+          "correctAnswer": "Frequency of errors decreases"
+        }
+      ]
     }
   ]
 }
