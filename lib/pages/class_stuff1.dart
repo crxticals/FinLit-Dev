@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:project_name/pages/class_stuff2.dart';
 import 'package:flutter/services.dart' as rootBundle;
+import 'package:carousel_slider/carousel_slider.dart';
 
 class NameListScreen extends StatefulWidget {
   final String imageUrl;
@@ -69,70 +70,96 @@ class NameListScreenState extends State<NameListScreen> {
     );
   }
 
+  void _onItemTapped(int index) {
+    setState(() {
+    });
+    // Implement navigation logic based on index if needed
+  }
+
   @override
   Widget build(BuildContext context) {
-      return Scaffold(
-        appBar: AppBar(
-          title: Text('Unit ${widget.index + 1} - Lessons'),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Unit ${widget.index + 1} - Lessons'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        backgroundColor: const Color.fromARGB(255, 240, 240, 240),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Image or Carousel section
-              Image.asset(
-                widget.imageTesturl, // using image URL for the header
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: 200,
-              ),
-              const SizedBox(height: 16),
-              Text(
-                'Basic Budgets',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(height: 16),
-              Expanded(
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 1 / 1.2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                  ),
-                  itemCount: names.length,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () => navigateToDetail(index),
-                      child: Card(
-                        color: Colors.green,
-                        elevation: 5,
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Text(
-                              names[index],
-                              style: const TextStyle(color: Colors.white),
-                              textAlign: TextAlign.center,
-                            ),
+      ),
+      backgroundColor: const Color.fromARGB(255, 240, 240, 240),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Image or Carousel section
+            Image.asset(
+              widget.imageTesturl, // using image URL for the header
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: 200,
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'Basic Budgets',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: CarouselSlider.builder(
+                itemCount: names.length,
+                itemBuilder: (context, index, realIndex) {
+                  return GestureDetector(
+                    onTap: () => navigateToDetail(index),
+                    child: Card(
+                      color: Colors.green,
+                      elevation: 5,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            names[index],
+                            style: const TextStyle(color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                       ),
-                    );
-                  },
+                    ),
+                  );
+                },
+                options: CarouselOptions(
+                  height: 250, // Set height according to your design
+                  enlargeCenterPage: true,
+                  enableInfiniteScroll: true,
+                  autoPlay: true,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      );
-    }
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blueGrey[900],
+        selectedItemColor: Colors.tealAccent,
+        unselectedItemColor: Colors.grey,
+        onTap: _onItemTapped,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notifications',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Account',
+          ),
+        ],
+      ),
+    );
   }
+}

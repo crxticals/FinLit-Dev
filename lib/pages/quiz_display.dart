@@ -98,82 +98,91 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Quiz"),
-        centerTitle: true,
-      ),
-      body: Stack(
-        children: [
-          questions.isEmpty
-              ? const Center(child: CircularProgressIndicator())
-              : Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        flex: 4,
-                        child: Center(
-                          child: Text(
-                            questions[currentQuestionIndex]['question'],
-                            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
+@override
+Widget build(BuildContext context) {
+  double progress = (currentQuestionIndex + 1) / questions.length; // Calculate progress
+
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text("Quiz"),
+      centerTitle: true,
+    ),
+    body: Stack(
+      children: [
+        questions.isEmpty
+            ? const Center(child: CircularProgressIndicator())
+            : Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // Progress Indicator
+                    LinearProgressIndicator(
+                      value: progress,
+                      backgroundColor: Colors.grey,
+                      color: Colors.blue,
+                    ),
+                    const SizedBox(height: 10), // Add some space
+                    Expanded(
+                      flex: 4,
+                      child: Center(
+                        child: Text(
+                          questions[currentQuestionIndex]['question'],
+                          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.center,
                         ),
-                      ),
-                      Expanded(
-                        flex: 4,
-                        child: ListView.builder(
-                          itemCount: questions[currentQuestionIndex]['options'].length,
-                          itemBuilder: (context, index) {
-                            String option = questions[currentQuestionIndex]['options'][index];
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  minimumSize: const Size.fromHeight(50),
-                                  backgroundColor: Colors.blueGrey,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                ),
-                                onPressed: () => answerQuestion(option),
-                                child: Text(
-                                  option,
-                                  style: const TextStyle(fontSize: 18),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-          if (showFeedback)
-            AnimatedBuilder(
-              animation: _feedbackColorAnimation,
-              builder: (context, child) {
-                return FadeTransition(
-                  opacity: _animationController,
-                  child: Container(
-                    color: _feedbackColorAnimation.value,
-                    child: Center(
-                      child: Text(
-                        feedbackMessage,
-                        style: const TextStyle(fontSize: 36, color: Colors.black),
                       ),
                     ),
+                    Expanded(
+                      flex: 4,
+                      child: ListView.builder(
+                        itemCount: questions[currentQuestionIndex]['options'].length,
+                        itemBuilder: (context, index) {
+                          String option = questions[currentQuestionIndex]['options'][index];
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                minimumSize: const Size.fromHeight(50),
+                                backgroundColor: Colors.blueGrey,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                              ),
+                              onPressed: () => answerQuestion(option),
+                              child: Text(
+                                option,
+                                style: const TextStyle(fontSize: 18),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+        if (showFeedback)
+          AnimatedBuilder(
+            animation: _feedbackColorAnimation,
+            builder: (context, child) {
+              return FadeTransition(
+                opacity: _animationController,
+                child: Container(
+                  color: _feedbackColorAnimation.value,
+                  child: Center(
+                    child: Text(
+                      feedbackMessage,
+                      style: const TextStyle(fontSize: 36, color: Colors.black),
+                    ),
                   ),
-                );
-              },
-            ),
-        ],
-      ),
-    );
-  }
+                ),
+              );
+            },
+          ),
+      ],
+    ),
+  );
+}
 }
