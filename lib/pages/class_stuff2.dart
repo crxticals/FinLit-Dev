@@ -54,12 +54,16 @@ class ContentListScreenState extends State<ContentListScreen> {
         fileName = 'assets/default.json';
     }
 
-    final String response = await rootBundle.rootBundle.loadString(fileName);
-    final Map<String, dynamic> data = json.decode(response);
+    try {
+      final String response = await rootBundle.rootBundle.loadString(fileName);
+      final Map<String, dynamic> data = json.decode(response);
 
-    setState(() {
-      lessonContent = data['lessons'][widget.interlessonindex];
-    });
+      setState(() {
+        lessonContent = data['lessons'][widget.interlessonindex];
+      });
+    } catch (e) {
+      print('Error loading lesson: $e');
+    }
   }
 
   @override

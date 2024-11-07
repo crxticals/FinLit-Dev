@@ -65,6 +65,7 @@ flutter:
     - assets/Unit3.json
     - assets/Unit4.json
     - assets/Unit5.json
+    - assets/Unit6.json
     
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

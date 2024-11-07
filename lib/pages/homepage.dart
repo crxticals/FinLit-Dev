@@ -21,7 +21,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final PageController _pageController = PageController(viewportFraction: 1.0);
-  int _selectedIndex = 0; // Track the selected tab index
+  int _selectedIndex = 0;
 
   @override
   void dispose() {
@@ -29,25 +29,22 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  // Handle bottom navigation tab changes
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      // Add logic to navigate to different screens if needed
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // Set height as 70% of screen height to allow space for app bar and other content
-    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.73;
+    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.85;
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('FinLit'),
         centerTitle: true,
       ),
-      backgroundColor: const Color.fromRGBO(69, 80, 80, 1),
+      backgroundColor: const Color.fromARGB(255, 44, 54, 63),
       body: Center(
         child: SizedBox(
           height: adaptiveHeight,
@@ -73,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.of(context).size.width - 50,
                       height: adaptiveHeight,
                       child: Image.asset(
                         imgAssets[index],
@@ -88,9 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blueGrey[900],
-        selectedItemColor: Colors.tealAccent,
-        unselectedItemColor: Colors.grey,
+        backgroundColor: const Color.fromARGB(212, 242, 245, 234),
+        selectedItemColor: const Color.fromRGBO(242, 255, 207, 1),
+        unselectedItemColor: Colors.black,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [
