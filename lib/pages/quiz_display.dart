@@ -120,7 +120,8 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                       LinearProgressIndicator(
                         value: progress,
                         backgroundColor: Colors.grey,
-                        color: Colors.blue,
+                        color: const Color(0xFFE75A7C), // Set the color to E75A7C
+                        minHeight: 10,
                       ),
                       const SizedBox(height: 10),
                       Expanded(
@@ -152,7 +153,7 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                                 onPressed: () => answerQuestion(option),
                                 child: Text(
                                   option,
-                                  style: const TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18, color: Color(0xFFF2F5EA)), // Set the text color to F2F5EA
                                   textAlign: TextAlign.center,
                                 ),
                               ),

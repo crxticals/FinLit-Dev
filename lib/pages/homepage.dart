@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_name/pages/class_stuff1.dart';
-// ignore: unused_import
-import 'dart:io' show Platform;
+import 'dart:convert';
+import 'package:flutter/services.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -20,8 +20,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final PageController _pageController = PageController(viewportFraction: 1.0);
+  final PageController _pageController = PageController(viewportFraction: 0.8);
   int _selectedIndex = 0;
+  Map<String, dynamic> userData = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserData();
+  }
+
+  Future<void> _loadUserData() async {
+    final String response = await rootBundle.loadString('assets/user_data.json');
+    final data = json.decode(response);
+    setState(() {
+      userData = data['user'] ?? {}; // safe access
+    });
+  }
 
   @override
   void dispose() {
@@ -37,56 +52,165 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final double adaptiveHeight = MediaQuery.of(context).size.height * 0.85;
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('FinLit'),
-        centerTitle: true,
-      ),
-      backgroundColor: const Color.fromARGB(255, 44, 54, 63),
-      body: Center(
-        child: SizedBox(
-          height: adaptiveHeight,
-          width: MediaQuery.of(context).size.width,
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: imgAssets.length,
-            itemBuilder: (context, index) => GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NameListScreen(
-                      imageUrl: imgAssets[index],
-                      index: index,
-                    ),
-                  ),
-                );
-              },
-              child: Center(
-                child: Hero(
-                  tag: index,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width - 50,
-                      height: adaptiveHeight,
-                      child: Image.asset(
-                        imgAssets[index],
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xFF3D3F6B),
+                  Color(0xFF121E28),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
             ),
           ),
-        ),
+          Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(30.0),
+                alignment: Alignment.topCenter,
+                child: const Text(
+                  'FinLit',
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 5),
+              Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12.0),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 1.0,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      alignment: Alignment.centerRight,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Hello, ${userData['name'] ?? 'User'}',
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 1),
+                          const Text(
+                            'Ready to learn?',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Divider(),
+                    Container(
+                      color: const Color(0xFFF2F5EA),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            children: [
+                              const Text('Level'),
+                              Text('${userData['level'] ?? 'N/A'}'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              const Text('Rank'),
+                              Text('Rank #${userData['rank'] ?? 'N/A'}'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              const Text('Day Streak'),
+                              Text('${userData['dayStreak'] ?? 'N/A'}'),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    itemCount: imgAssets.length,
+                    itemBuilder: (context, index) {
+                      return AnimatedBuilder(
+                        animation: _pageController,
+                        builder: (context, child) {
+                          double value = 1.0;
+                          if (_pageController.position.haveDimensions) {
+                            value = (_pageController.page! - index).abs();
+                            value = (1 - (value * 0.3)).clamp(0.0, 1.0);
+                          }
+                          return Center(
+                            child: Transform.scale(
+                              scale: value,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => NameListScreen(
+                                        imageUrl: imgAssets[index],
+                                        index: index,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Hero(
+                                  tag: 'image$index',
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    child: SizedBox(
+                                      width: MediaQuery.of(context).size.width - 120,
+                                      height: (MediaQuery.of(context).size.height * 0.8) - 50,
+                                      child: Image.asset(
+                                        imgAssets[index],
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(212, 242, 245, 234),
-        selectedItemColor: const Color.fromRGBO(242, 255, 207, 1),
+        selectedItemColor: const Color(0xFF121E28),
         unselectedItemColor: Colors.black,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
