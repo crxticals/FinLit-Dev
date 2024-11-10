@@ -58,6 +58,7 @@ class NameListScreenState extends State<NameListScreen> {
       });
 
     } catch (e) {
+      // ignore: avoid_print
       print('Error loading names: $e');
     }
   }

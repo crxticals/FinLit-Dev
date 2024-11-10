@@ -32,6 +32,16 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Budget",
+          "definition": "A plan for spending and saving."
+        },
+        {
+          "term": "Financial Goals",
+          "definition": "Targets for your budgeting efforts, which can be short-term or long-term."
+        }
       ]
     },
     {
@@ -64,6 +74,16 @@
             "Retrospective analysis"
           ],
           "correctAnswer": "Both A and B"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Realistic Budget",
+          "definition": "A budget that is achievable based on actual income and expenses."
+        },
+        {
+          "term": "Flexible Budget",
+          "definition": "A budget that can be adjusted based on variable expenses."
         }
       ]
     },
@@ -98,6 +118,16 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Spending Habits",
+          "definition": "Patterns in how you use your money."
+        },
+        {
+          "term": "Discrepancies",
+          "definition": "Differences between planned budgets and actual expenditures."
+        }
       ]
     },
     {
@@ -130,76 +160,16 @@
             "None of the above"
           ],
           "correctAnswer": "To identify unnecessary expenses"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Budgeting Mistakes",
+          "definition": "Errors that can hinder effective financial planning."
         },
         {
-          "question": "What is the 50/30/20 rule?",
-          "options": [
-            "50% for needs, 30% for wants, 20% for savings",
-            "50% for savings, 30% for expenses, 20% for investments",
-            "50% for debt repayment, 30% for needs, 20% for wants",
-            "50% for entertainment, 30% for necessities, 20% for savings"
-          ],
-          "correctAnswer": "50% for needs, 30% for wants, 20% for savings"
-        },
-        {
-          "question": "What should you do if you go over budget?",
-          "options": [
-            "Ignore it and move on",
-            "Adjust future budgets to account for it",
-            "Cut expenses from other categories",
-            "All of the above"
-          ],
-          "correctAnswer": "All of the above"
-        },
-        {
-          "question": "What is an emergency fund?",
-          "options": [
-            "Savings set aside for planned expenses",
-            "Money allocated for daily expenses",
-            "Funds reserved for unexpected expenses",
-            "Investment in stocks or bonds"
-          ],
-          "correctAnswer": "Funds reserved for unexpected expenses"
-        },
-        {
-          "question": "Which of the following is not a method of budgeting?",
-          "options": [
-            "Envelope system",
-            "Line item budgeting",
-            "Random spending",
-            "Percentage-based budgeting"
-          ],
-          "correctAnswer": "Random spending"
-        },
-        {
-          "question": "How often should you review your budget?",
-          "options": [
-            "Once a year",
-            "Monthly",
-            "Weekly",
-            "Only when there's a financial change"
-          ],
-          "correctAnswer": "Monthly"
-        },
-        {
-          "question": "What is the main goal of budgeting?",
-          "options": [
-            "To restrict spending",
-            "To allocate funds effectively",
-            "To track income",
-            "To impress financial advisors"
-          ],
-          "correctAnswer": "To allocate funds effectively"
-        },
-        {
-          "question": "How can you avoid budgeting mistakes?",
-          "options": [
-            "Regularly review and adjust your budget",
-            "Set reminders for bills",
-            "Both A and B",
-            "Ignore past mistakes"
-          ],
-          "correctAnswer": "Both A and B"
+          "term": "Irregular Expenses",
+          "definition": "Costs that do not occur regularly and can disrupt a budget."
         }
       ]
     },
@@ -234,6 +204,16 @@
           ],
           "correctAnswer": "Short-term and long-term"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Short-term Goals",
+          "definition": "Financial objectives that can be achieved in a short period."
+        },
+        {
+          "term": "Long-term Goals",
+          "definition": "Financial objectives that are aimed at outcomes several years down the line."
+        }
       ]
     },
     {
@@ -266,6 +246,16 @@
             "None of the above"
           ],
           "correctAnswer": "Better alignment with financial goals"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Flexible Budgeting",
+          "definition": "The ability to change a budget based on variable circumstances."
+        },
+        {
+          "term": "Financial Alignment",
+          "definition": "Ensuring your budget reflects your changing financial situation and goals."
         }
       ]
     },
@@ -300,6 +290,16 @@
           ],
           "correctAnswer": "Budgeting based on the activities that incur costs"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Incremental Budgeting",
+          "definition": "A budgeting process that tweaks existing budgets based on past figures."
+        },
+        {
+          "term": "Activity-Based Budgeting",
+          "definition": "A budgeting approach that assigns costs based on activities that incur them."
+        }
       ]
     },
     {
@@ -332,6 +332,16 @@
             "None of the above"
           ],
           "correctAnswer": "Frequency of errors decreases"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Budgeting Software",
+          "definition": "Tools designed to facilitate the budgeting process and financial management."
+        },
+        {
+          "term": "Automated Reminders",
+          "definition": "Notifications that help manage deadlines for expenses and budgets."
         }
       ]
     }

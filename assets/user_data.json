@@ -1,9 +1,24 @@
-
 {
   "user": {
     "name": "Alex Nguyen",
     "level": 5,
     "rank": 50,
-    "dayStreak": 10
+    "dayStreak": 10,
+    "email": "alex.nguyen@example.com",
+    "joinedDate": "2022-01-15",
+    "lastLogin": "2023-10-01",
+    "settings": {
+      "notifications": true,
+      "privacy": "friends",
+      "language": "en"
+    },
+    "progressStatus":{
+      "Unit1": 999999999,
+      "Unit2": 0,
+      "Unit3": 0,
+      "Unit4": 0,
+      "Unit5": 0,
+      "Unit6": 0
+    }
   }
 }

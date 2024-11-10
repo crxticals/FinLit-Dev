@@ -20,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final PageController _pageController = PageController(viewportFraction: 0.8);
+  final PageController _pageController = PageController(viewportFraction: 0.4);
   int _selectedIndex = 0;
   Map<String, dynamic> userData = {};
 
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final String response = await rootBundle.loadString('assets/user_data.json');
     final data = json.decode(response);
     setState(() {
-      userData = data['user'] ?? {}; // safe access
+      userData = data['user'] ?? {};
     });
   }
 
@@ -70,18 +70,19 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             children: [
               Container(
-                padding: const EdgeInsets.all(30.0),
-                alignment: Alignment.topCenter,
+                color: Colors.transparent,
+                padding: const EdgeInsets.all(16.0),
+                alignment: Alignment.center,
                 child: const Text(
-                  'FinLit',
+                  'Welcome',
                   style: TextStyle(
-                    fontSize: 32,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 1),
               Container(
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
@@ -164,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           double value = 1.0;
                           if (_pageController.position.haveDimensions) {
                             value = (_pageController.page! - index).abs();
-                            value = (1 - (value * 0.3)).clamp(0.0, 1.0);
+                            value = (1 - (value * 0.1)).clamp(0.0, 1.0);
                           }
                           return Center(
                             child: Transform.scale(
@@ -186,11 +187,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10.0),
                                     child: SizedBox(
-                                      width: MediaQuery.of(context).size.width - 120,
-                                      height: (MediaQuery.of(context).size.height * 0.8) - 50,
+                                      width: MediaQuery.of(context).size.width,
+                                      height: MediaQuery.of(context).size.height * 0.6,
                                       child: Image.asset(
                                         imgAssets[index],
-                                        fit: BoxFit.cover,
+                                        fit: BoxFit.contain,
                                       ),
                                     ),
                                   ),

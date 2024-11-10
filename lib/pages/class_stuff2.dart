@@ -88,27 +88,52 @@ class ContentListScreenState extends State<ContentListScreen> {
                     enlargeCenterPage: true,
                     enableInfiniteScroll: false,
                   ),
-                  items: lessonContent!['ClassContent'].map<Widget>((classContent) {
-                    return Card(
-                      elevation: 4,
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: List<Widget>.from(classContent['ReadingContent'].map<Widget>((reading) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0),
-                              child: Text(
-                                reading,
+                  items: [
+                    ...lessonContent!['ClassContent'].map<Widget>((classContent) {
+                      return Card(
+                        elevation: 0,
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: List<Widget>.from(classContent['ReadingContent'].map<Widget>((reading) {
+                              return Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                child: Text(
+                                  reading,
+                                  style: const TextStyle(fontSize: 16),
+                                ),
+                              );
+                            })),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                    ...lessonContent!['flashCards'].map<Widget>((flashCard) {
+                      return Card(
+                        elevation: 0,
+                        margin: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                flashCard['term'],
+                                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                flashCard['definition'],
                                 style: const TextStyle(fontSize: 16),
                               ),
-                            );
-                          })),
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  }).toList(),
+                      );
+                    }).toList(),
+                  ],
                 ),
                 ElevatedButton(
                   onPressed: () {
