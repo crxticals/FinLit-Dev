@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Investing",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -31,10 +32,21 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Investing",
+          "definition": "Allocating funds to various assets with the expectation of generating a return over time."
+        },
+        {
+          "term": "Investment Strategy",
+          "definition": "A plan for investing that aligns with financial goals and risk tolerance."
+        }
       ]
     },
     {
       "lessonTitle": "Types of Investments",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -63,10 +75,21 @@
           ],
           "correctAnswer": "Stocks"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Stocks",
+          "definition": "Shares representing a portion of ownership in a company."
+        },
+        {
+          "term": "Bonds",
+          "definition": "Debt securities representing a loan made by an investor to a borrower."
+        }
       ]
     },
     {
       "lessonTitle": "Creating an Investment Strategy",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -95,10 +118,17 @@
           ],
           "correctAnswer": "Review and adjust it"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Risk Tolerance",
+          "definition": "An investor's ability and willingness to lose some or all of their original investment."
+        }
       ]
     },
     {
       "lessonTitle": "Monitoring Your Investments",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -127,10 +157,17 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Portfolio",
+          "definition": "A collection of financial investments like stocks, bonds, commodities, etc."
+        }
       ]
     },
     {
       "lessonTitle": "Common Investment Mistakes",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -159,10 +196,17 @@
           ],
           "correctAnswer": "Both A and B"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Diversification",
+          "definition": "The practice of spreading investments across various financial instruments to reduce risk."
+        }
       ]
     },
     {
       "lessonTitle": "Setting Investment Goals",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -191,10 +235,17 @@
           ],
           "correctAnswer": "Short-term and long-term"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Investment Goals",
+          "definition": "Clear objectives that guide your investment decisions, defining what you want to achieve."
+        }
       ]
     },
     {
       "lessonTitle": "Adjusting Your Investment Portfolio",
+      "lessonIndex": 6,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -222,6 +273,12 @@
             "None of the above"
           ],
           "correctAnswer": "Better alignment with financial goals"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Market Shifts",
+          "definition": "Changes in the investment market that can affect portfolio performance."
         }
       ]
     }

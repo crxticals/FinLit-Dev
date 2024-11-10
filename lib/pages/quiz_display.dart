@@ -4,8 +4,9 @@ import 'package:flutter/services.dart' as rootBundle;
 
 class QuizPage extends StatefulWidget {
   final String fileName;
+  final int lessonIndex;
 
-  const QuizPage({super.key, required this.fileName});
+  const QuizPage({super.key, required this.fileName, required this.lessonIndex});
 
   @override
   _QuizPageState createState() => _QuizPageState();
@@ -14,8 +15,9 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin {
   List<dynamic> questions = [];
   int currentQuestionIndex = 0;
+  int score = 0;
   bool showFeedback = false;
-  bool isCorrect = false;
+  String feedbackMessage = '';
   late AnimationController _animationController;
   late Animation<Color?> _feedbackColorAnimation;
 
@@ -24,12 +26,10 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
     super.initState();
     loadQuestions();
 
-    // Initialize animation controller and feedback animation
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 500),
       vsync: this,
     );
-    _feedbackColorAnimation = ColorTween().animate(_animationController);
   }
 
   @override
@@ -39,42 +39,70 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
   }
 
   Future<void> loadQuestions() async {
-    final String response = await rootBundle.rootBundle.loadString(widget.fileName);
-    final data = json.decode(response);
+    try {
+      final String response = await rootBundle.rootBundle.loadString(widget.fileName);
+      final data = json.decode(response);
 
-    setState(() {
-      questions = data['lessons'][0]['questions'];
-    });
+      setState(() {
+        questions = data['lessons'][widget.lessonIndex]['questions'];
+      });
+    } catch (e) {
+      print('Error loading questions: $e');
+    }
   }
 
   void answerQuestion(String option) {
-    // Check if answer is correct and trigger feedback animation
-    bool correct = option == questions[currentQuestionIndex]['answer'];
+    bool correct = option == questions[currentQuestionIndex]['correctAnswer'];
     setState(() {
-      isCorrect = correct;
       showFeedback = true;
+      feedbackMessage = correct ? 'Correct' : 'Incorrect';
+      if (correct) score++;
+
       _feedbackColorAnimation = ColorTween(
         begin: Colors.transparent,
-        end: isCorrect ? Colors.green.withOpacity(0.7) : Colors.red.withOpacity(0.7),
+        end: correct ? Colors.green.withOpacity(0.7) : Colors.red.withOpacity(0.7),
       ).animate(_animationController);
     });
 
-    // Start animation and advance to next question after delay
     _animationController.forward().then((_) {
-      Future.delayed(const Duration(milliseconds: 500), () {
+      Future.delayed(const Duration(milliseconds: 1000), () {
         _animationController.reverse();
         setState(() {
           showFeedback = false;
           if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
+          } else {
+            _showScoreDialog();
           }
         });
       });
     });
   }
 
+  void _showScoreDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text('Your score is: $score/${questions.length}'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    double progress = (currentQuestionIndex + 1) / questions.length;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Quiz"),
@@ -89,6 +117,13 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      LinearProgressIndicator(
+                        value: progress,
+                        backgroundColor: Colors.grey,
+                        color: const Color(0xFFE75A7C), // Set the color to E75A7C
+                        minHeight: 10,
+                      ),
+                      const SizedBox(height: 10),
                       Expanded(
                         flex: 4,
                         child: Center(
@@ -109,7 +144,7 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                               padding: const EdgeInsets.symmetric(vertical: 8.0),
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  minimumSize: const Size.fromHeight(50), // Full-width buttons
+                                  minimumSize: const Size.fromHeight(50),
                                   backgroundColor: Colors.blueGrey,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
@@ -118,7 +153,7 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                                 onPressed: () => answerQuestion(option),
                                 child: Text(
                                   option,
-                                  style: const TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18, color: Color(0xFFF2F5EA)), // Set the text color to F2F5EA
                                   textAlign: TextAlign.center,
                                 ),
                               ),
@@ -126,34 +161,26 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
                           },
                         ),
                       ),
-                      if (currentQuestionIndex < questions.length - 1)
-                        Expanded(
-                          flex: 1,
-                          child: Align(
-                            alignment: Alignment.bottomCenter,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: const Size.fromHeight(50),
-                                backgroundColor: Colors.teal,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  currentQuestionIndex++;
-                                });
-                              },
-                              child: const Text("Next Question"),
-                            ),
-                          ),
-                        ),
                     ],
                   ),
                 ),
           if (showFeedback)
-            FadeTransition(
-              opacity: _animationController,
-              child: Container(
-                color: _feedbackColorAnimation.value,
-              ),
+            AnimatedBuilder(
+              animation: _feedbackColorAnimation,
+              builder: (context, child) {
+                return FadeTransition(
+                  opacity: _animationController,
+                  child: Container(
+                    color: _feedbackColorAnimation.value,
+                    child: Center(
+                      child: Text(
+                        feedbackMessage,
+                        style: const TextStyle(fontSize: 36, color: Colors.black),
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
         ],
       ),
