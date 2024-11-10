@@ -20,8 +20,7 @@ class HomeScreen1 extends StatefulWidget {
 }
 
 class _HomeScreenState1 extends State<HomeScreen1> {
-  final PageController _pageController = PageController(viewportFraction: 0.8);
-  // ignore: unused_field
+  final PageController _pageController = PageController(viewportFraction: 0.9);
   int _selectedIndex = 0;
   Map<String, dynamic> userData = {};
 
@@ -56,7 +55,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
     return Scaffold(
       body: Row(
         children: [
-          // Permanent Navigation Drawer
+          // Navigation Drawer
           Container(
             width: 250,
             color: Colors.black,
@@ -89,111 +88,89 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                   onTap: () => _onItemTapped(3),
                 ),
                 const Spacer(),
-                // User stats
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Text('Hello, ${userData['name'] ?? 'User'}', style: const TextStyle(color: Colors.white)),
-                      Text('Level: ${userData['level'] ?? 'N/A'}', style: const TextStyle(color: Colors.white)),
-                      Text('Rank: #${userData['rank'] ?? 'N/A'}', style: const TextStyle(color: Colors.white)),
+                      Text('Hello, ${userData['name'] ?? 'User'}', 
+                          style: const TextStyle(color: Colors.white)),
+                      Text('Level: ${userData['level'] ?? 'N/A'}', 
+                          style: const TextStyle(color: Colors.white)),
+                      Text('Rank: #${userData['rank'] ?? 'N/A'}', 
+                          style: const TextStyle(color: Colors.white)),
                     ],
                   ),
                 ),
+                const SizedBox(height: 20),
               ],
             ),
           ),
-          // Main content area
+          // Carousel Area with Gradient Background
           Expanded(
-            child: Stack(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color(0xFF3D3F6B),
-                        Color(0xFF121E28),
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+            child: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF3D3F6B),
+                    Color(0xFF121E28),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: SizedBox(
+                    width: 400,
+                    height: 600,
+                    child: PageView.builder(
+                      controller: _pageController,
+                      itemCount: imgAssets.length,
+                      itemBuilder: (context, index) {
+                        return AnimatedBuilder(
+                          animation: _pageController,
+                          builder: (context, child) {
+                            double value = 1.0;
+                            if (_pageController.position.haveDimensions) {
+                              value = (_pageController.page! - index).abs();
+                              value = 1 - (value * 0.3).clamp(0.0, 1.0);
+                            }
+                            return Transform.scale(
+                              scale: value,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: child,
+                              ),
+                            );
+                          },
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => NameListScreen(
+                                    imageUrl: imgAssets[index],
+                                    index: index,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Hero(
+                              tag: 'image$index',
+                              child: Image.asset(
+                                imgAssets[index],
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      color: Colors.transparent,
-                      padding: const EdgeInsets.all(16.0),
-                      alignment: Alignment.center,
-                      child: const Text(
-                        '',
-                        style: TextStyle(
-                          fontSize: 1,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 1),
-                    Expanded(
-                      child: Center(
-                        child: Container(
-                          width: 400, // Set the width of the carousel
-                          height: 800, // Set the height of the carousel
-                          child: PageView.builder(
-                            controller: _pageController,
-                            itemCount: imgAssets.length,
-                            itemBuilder: (context, index) {
-                              return AnimatedBuilder(
-                                animation: _pageController,
-                                builder: (context, child) {
-                                  double value = 1.0;
-                                  if (_pageController.position.haveDimensions) {
-                                    value = (_pageController.page! - index).abs();
-                                    value = (1 - (value * 0.1)).clamp(0.0, 1.0);
-                                  }
-                                  return Center(
-                                    child: Transform.scale(
-                                      scale: value,
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => NameListScreen(
-                                                imageUrl: imgAssets[index],
-                                                index: index,
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                        child: Hero(
-                                          tag: 'image$index',
-                                          child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(10.0),
-                                            child: SizedBox(
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                              child: Image.asset(
-                                                imgAssets[index],
-                                                fit: BoxFit.contain,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              ),
             ),
           ),
         ],
