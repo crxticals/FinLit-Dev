@@ -1,9 +1,20 @@
+// ignore_for_file: unused_import
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:project_name/firebase_options.dart';
 import 'package:project_name/pages/homepage.dart';
 import 'package:project_name/pages/homepage_desktop.dart';
+import 'package:project_name/pages/migrate_data.dart';
 
-void main() => runApp(const MyApp());
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

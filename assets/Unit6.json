@@ -31,6 +31,16 @@
           ],
           "correctAnswer": "They enhance consumer protection"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Consumer Rights",
+          "definition": "Laws and regulations designed to protect the interests and safety of consumers in the marketplace."
+        },
+        {
+          "term": "Fair Treatment",
+          "definition": "Ensuring that consumers are not exploited and are provided with accurate information about products or services."
+        }
       ]
     },
     {
@@ -62,6 +72,16 @@
             "Offering discounts"
           ],
           "correctAnswer": "Exaggerating product claims"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Product Information",
+          "definition": "Details about a product, including its safety, quality, and pricing, which are essential for consumers to make informed decisions."
+        },
+        {
+          "term": "Misleading Advertising",
+          "definition": "False or exaggerated claims made about a product to deceive consumers."
         }
       ]
     },
@@ -95,6 +115,16 @@
           ],
           "correctAnswer": "File a complaint with consumer protection agencies"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Fair Business Practices",
+          "definition": "Business operations that are honest and transparent, ensuring fair treatment of consumers."
+        },
+        {
+          "term": "Consumer Complaint",
+          "definition": "A formal grievance filed by a consumer against a business for unfair or deceptive practices."
+        }
       ]
     },
     {
@@ -127,6 +157,16 @@
           ],
           "correctAnswer": "Detailed account of the issue"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Redress",
+          "definition": "Remedy or compensation sought by consumers when businesses violate their rights."
+        },
+        {
+          "term": "Consumer Protection Agency",
+          "definition": "Organizations that help enforce consumer rights and address complaints against businesses."
+        }
       ]
     },
     {
@@ -158,6 +198,16 @@
             "Advertisements"
           ],
           "correctAnswer": "Consumer protection websites"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Consumer Education",
+          "definition": "Teaching consumers about their rights and how to make informed decisions."
+        },
+        {
+          "term": "Accountability",
+          "definition": "The obligation of businesses to answer for their actions and ensure fair treatment of consumers."
         }
       ]
     }

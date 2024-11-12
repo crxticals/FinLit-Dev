@@ -1,9 +1,9 @@
-
 {
   "unit": "Debt",
   "lessons": [
     {
       "lessonTitle": "Introduction to Debt",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -32,10 +32,21 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Debt",
+          "definition": "The amount of money borrowed by one party from another."
+        },
+        {
+          "term": "Credit",
+          "definition": "The ability to borrow money or access goods or services with the understanding that you'll pay later."
+        }
       ]
     },
     {
       "lessonTitle": "Types of Debt",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -64,10 +75,21 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Secured Debt",
+          "definition": "Debt that is backed by collateral."
+        },
+        {
+          "term": "Unsecured Debt",
+          "definition": "Debt that is not backed by collateral."
+        }
       ]
     },
     {
       "lessonTitle": "Understanding Interest Rates",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -96,10 +118,21 @@
           ],
           "correctAnswer": "Increased repayment costs"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Interest Rate",
+          "definition": "The cost of borrowing money expressed as a percentage."
+        },
+        {
+          "term": "Fixed Rate",
+          "definition": "An interest rate that remains the same throughout the loan."
+        }
       ]
     },
     {
       "lessonTitle": "Managing Debt Effectively",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -128,10 +161,21 @@
           ],
           "correctAnswer": "Combining multiple debts into a single payment"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Debt Management",
+          "definition": "Strategies used to handle and pay off debt effectively."
+        },
+        {
+          "term": "Debt Consolidation",
+          "definition": "Combining multiple debts into a single loan or payment."
+        }
       ]
     },
     {
       "lessonTitle": "The Impact of Debt on Credit Score",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -160,10 +204,21 @@
           ],
           "correctAnswer": "All of the above"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Credit Score",
+          "definition": "A numerical representation of a borrower's creditworthiness."
+        },
+        {
+          "term": "Debt-to-Income Ratio",
+          "definition": "A measure that compares an individual's total debt to their income."
+        }
       ]
     },
     {
       "lessonTitle": "Avoiding Debt Traps",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -192,10 +247,21 @@
           ],
           "correctAnswer": "Staying informed about loan terms"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Debt Trap",
+          "definition": "A situation where an individual takes on more debt to pay off existing debt."
+        },
+        {
+          "term": "Loan Terms",
+          "definition": "Conditions agreed upon when borrowing money, including interest rates and repayment schedules."
+        }
       ]
     },
     {
       "lessonTitle": "Recognizing Signs of Debt Distress",
+      "lessonIndex": 6,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -223,6 +289,16 @@
             "Increase borrowing"
           ],
           "correctAnswer": "Seek financial guidance"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Debt Distress",
+          "definition": "A situation where an individual is struggling to manage their debt effectively."
+        },
+        {
+          "term": "Financial Guidance",
+          "definition": "Advice provided to help manage finances and debt effectively."
         }
       ]
     }
