@@ -1,9 +1,9 @@
-// ignore_for_file: unused_field
-
 import 'package:flutter/material.dart';
 import 'package:project_name/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:project_name/pages/login.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -25,6 +25,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
   final PageController _pageController = PageController(viewportFraction: 0.9);
   int _selectedIndex = 0;
   Map<String, dynamic> userData = {};
+  final Color drawerColor = const Color(0xFF797a82);
 
   @override
   void initState() {
@@ -38,6 +39,13 @@ class _HomeScreenState1 extends State<HomeScreen1> {
     setState(() {
       userData = data['user'] ?? {};
     });
+  }
+
+  Future<void> _signOut() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => LoginPage()),
+    );
   }
 
   @override
@@ -57,57 +65,113 @@ class _HomeScreenState1 extends State<HomeScreen1> {
     return Scaffold(
       body: Row(
         children: [
-          // Navigation Drawer
-          Container(
-            width: 250,
-            color: Colors.black,
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                const Text(
-                  'FinLit',
-                  style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+          // Navigation Drawer with rounded corners
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 4,
+              bottom: 4,
+              right: 4,
+            ),
+            child: Container(
+              width: 280,
+              decoration: BoxDecoration(
+                color: drawerColor,
+                borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(20),
+                  bottomRight: Radius.circular(20)
                 ),
-                const Divider(color: Colors.white),
-                ListTile(
-                  leading: const Icon(Icons.home, color: Colors.white),
-                  title: const Text('Home', style: TextStyle(color: Colors.white)),
-                  onTap: () => _onItemTapped(0),
-                ),
-                ListTile(
-                  leading: const Icon(Icons.book, color: Colors.white),
-                  title: const Text('Vocabulary', style: TextStyle(color: Colors.white)),
-                  onTap: () => _onItemTapped(1),
-                ),
-                ListTile(
-                  leading: const Icon(Icons.assignment, color: Colors.white),
-                  title: const Text('Tests', style: TextStyle(color: Colors.white)),
-                  onTap: () => _onItemTapped(2),
-                ),
-                ListTile(
-                  leading: const Icon(Icons.leaderboard, color: Colors.white),
-                  title: const Text('Leader board', style: TextStyle(color: Colors.white)),
-                  onTap: () => _onItemTapped(3),
-                ),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text('Hello, ${userData['name'] ?? 'User'}', 
-                          style: const TextStyle(color: Colors.white)),
-                      Text('Level: ${userData['level'] ?? 'N/A'}', 
-                          style: const TextStyle(color: Colors.white)),
-                      Text('Rank: #${userData['rank'] ?? 'N/A'}', 
-                          style: const TextStyle(color: Colors.white)),
-                    ],
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 4,
+                    offset: const Offset(2, 0),
                   ),
-                ),
-                const SizedBox(height: 20),
-              ],
+                ],
+              ),
+              child: Column(
+                children: [
+                  const SizedBox(height: 36),
+                  const Text(
+                    'FinLit',
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color:Colors.black,
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  NavigationDrawerItem(
+                    icon: Icons.home_rounded,
+                    label: 'Home',
+                    isSelected: _selectedIndex == 0,
+                    onTap: () => _onItemTapped(0),
+                  ),
+                  NavigationDrawerItem(
+                    icon: Icons.translate_rounded,
+                    label: 'Vocabulary',
+                    isSelected: _selectedIndex == 1,
+                    onTap: () => _onItemTapped(1),
+                  ),
+                  NavigationDrawerItem(
+                    icon: Icons.quiz_rounded,
+                    label: 'Tests',
+                    isSelected: _selectedIndex == 2,
+                    onTap: () => _onItemTapped(2),
+                  ),
+                  NavigationDrawerItem(
+                    icon: Icons.leaderboard_rounded,
+                    label: 'Leaderboard',
+                    isSelected: _selectedIndex == 3,
+                    onTap: () => _onItemTapped(3),
+                  ),
+                  const Spacer(),
+                  // User Profile Section
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        const CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage('profile.jpeg'),
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          userData['name'] ?? 'User',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          'Level ${userData['level'] ?? 'N/A'}',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white.withOpacity(0.7),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Settings and Account Section
+                  NavigationDrawerItem(
+                    icon: Icons.settings,
+                    label: 'Settings',
+                    isSelected: _selectedIndex == 4,
+                    onTap: () => _onItemTapped(4),
+                  ),
+                  NavigationDrawerItem(
+                    icon: Icons.person_outline,
+                    label: 'Account',
+                    isSelected: _selectedIndex == 5,
+                    onTap: () => _onItemTapped(5),
+                  ),
+                  const SizedBox(height: 20),
+                ],
+              ),
             ),
           ),
-          // Carousel Area with Gradient Background
+          // Carousel Area
           Expanded(
             child: Container(
               decoration: const BoxDecoration(
@@ -176,6 +240,57 @@ class _HomeScreenState1 extends State<HomeScreen1> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class NavigationDrawerItem extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  const NavigationDrawerItem({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(28),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.white.withOpacity(0.2) : Colors.transparent,
+            borderRadius: BorderRadius.circular(28),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                size: 24,
+                color: isSelected ? const Color(0xFFE0E0E0) : const Color(0xFFCCCCCC),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: isSelected ? const Color(0xFFE0E0E0) : const Color(0xFFCCCCCC),
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

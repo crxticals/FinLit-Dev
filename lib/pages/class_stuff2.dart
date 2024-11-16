@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -62,7 +63,9 @@ class ContentListScreenState extends State<ContentListScreen> {
         lessonContent = data['lessons'][widget.interlessonindex];
       });
     } catch (e) {
-      print('Error loading lesson: $e');
+      if (kDebugMode) {
+        print('Error loading lesson: $e');
+      }
     }
   }
 

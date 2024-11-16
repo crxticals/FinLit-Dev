@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_name/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -50,6 +51,11 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  // Sign out method
+  void _signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,9 +80,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(16.0),
                 alignment: Alignment.center,
                 child: const Text(
-                  'Welcome',
+                  '',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 1,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -119,6 +125,20 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 18,
                               color: Colors.white,
                             ),
+                          ),
+                          const SizedBox(height: 8), // Spacer
+                          Row( // Wrap the button in a Row
+                            mainAxisAlignment: MainAxisAlignment.start, // Align to the start of the row
+                            children: [
+                              ElevatedButton(
+                                onPressed: _signOut,
+                                style: ElevatedButton.styleFrom(
+                                  foregroundColor: Colors.white, 
+                                  backgroundColor: Colors.red, // Text color
+                                ),
+                                child: const Text('Sign Out'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
