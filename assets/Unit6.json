@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Consumer Rights",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -45,6 +46,7 @@
     },
     {
       "lessonTitle": "Understanding Product Information",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -87,6 +89,7 @@
     },
     {
       "lessonTitle": "Fair Business Practices",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -129,6 +132,7 @@
     },
     {
       "lessonTitle": "Consumer Complaints and Redress",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -171,6 +175,7 @@
     },
     {
       "lessonTitle": "Know Your Rights",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [

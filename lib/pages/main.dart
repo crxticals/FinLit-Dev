@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                   if (constraints.maxWidth > constraints.maxHeight) {
                     return const HomeScreen1(); // Landscape
                   } else {
-                    return const MigrateData(); // Portrait
+                    return const HomeScreen(); // Portrait
                   }
                 },
               );

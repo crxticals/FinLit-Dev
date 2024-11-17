@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:flutter/services.dart' as rootBundle;
+import 'package:project_name/pages/firestore_service.dart';
 
 class QuizPage extends StatefulWidget {
-  final String fileName;
+  final String unitName;
   final int lessonIndex;
 
-  const QuizPage({super.key, required this.fileName, required this.lessonIndex});
+  const QuizPage({super.key, required this.unitName, required this.lessonIndex});
 
   @override
   _QuizPageState createState() => _QuizPageState();
 }
 
 class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin {
-  List<dynamic> questions = [];
+  final FirestoreService _firestoreService = FirestoreService();
+  List<Map<String, dynamic>> questions = [];
   int currentQuestionIndex = 0;
   int score = 0;
   bool showFeedback = false;
   String feedbackMessage = '';
+  bool isLoading = true;
   late AnimationController _animationController;
   late Animation<Color?> _feedbackColorAnimation;
 
@@ -40,14 +41,20 @@ class _QuizPageState extends State<QuizPage> with SingleTickerProviderStateMixin
 
   Future<void> loadQuestions() async {
     try {
-      final String response = await rootBundle.rootBundle.loadString(widget.fileName);
-      final data = json.decode(response);
+      final questionData = await _firestoreService.getQuizQuestions(
+        widget.unitName,
+        widget.lessonIndex,
+      );
 
       setState(() {
-        questions = data['lessons'][widget.lessonIndex]['questions'];
+        questions = questionData;
+        isLoading = false;
       });
     } catch (e) {
       print('Error loading questions: $e');
+      setState(() {
+        isLoading = false;
+      });
     }
   }
 

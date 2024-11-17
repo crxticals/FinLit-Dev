@@ -247,14 +247,18 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                                         ),
                                       ),
                                     ),
-                                    ArcProgressBar( // Add the progress bar here
-                                      percentage: progressPercentage,
-                                      arcThickness: 5,
-                                      innerPadding: 16,
-                                      animateFromLastPercent: true,
-                                      handleSize: 10,
-                                      backgroundColor: Colors.black12,
-                                      foregroundColor: Colors.black,
+                                    SizedBox(
+                                      width: 220,  // Constrain the progress bar size
+                                      height: 220,
+                                      child: ArcProgressBar(
+                                        percentage: progressPercentage,
+                                        arcThickness: 5,
+                                        innerPadding: 16,
+                                        animateFromLastPercent: true,
+                                        handleSize: 10,
+                                        backgroundColor: Colors.black12,
+                                        foregroundColor: Colors.black,
+                                      ),
                                     ),
                                     Positioned(
                                       bottom: 10,
@@ -262,7 +266,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                                         '${progressPercentage.toStringAsFixed(0)}%',
                                         style: const TextStyle(
                                           color: Colors.white,
-                                          fontSize: 16,
+                                          fontSize: 14,  // Reduced from 16
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),

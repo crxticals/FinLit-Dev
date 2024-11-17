@@ -1,8 +1,6 @@
-import 'dart:convert';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' as rootBundle;
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:project_name/pages/firestore_service.dart';
 import 'quiz_display.dart';
 
 class ContentListScreen extends StatefulWidget {
@@ -22,7 +20,9 @@ class ContentListScreen extends StatefulWidget {
 }
 
 class ContentListScreenState extends State<ContentListScreen> {
+  final FirestoreService _firestoreService = FirestoreService();
   Map<String, dynamic>? lessonContent;
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -31,41 +31,25 @@ class ContentListScreenState extends State<ContentListScreen> {
   }
 
   Future<void> loadLesson() async {
-    String fileName;
-    switch (widget.index) {
-      case 0:
-        fileName = 'assets/Unit1.json';
-        break;
-      case 1:
-        fileName = 'assets/Unit2.json';
-        break;
-      case 2:
-        fileName = 'assets/Unit3.json';
-        break;
-      case 3:
-        fileName = 'assets/Unit4.json';
-        break;
-      case 4:
-        fileName = 'assets/Unit5.json';
-        break;
-      case 5:
-        fileName = 'assets/Unit6.json';
-        break;
-      default:
-        fileName = 'assets/default.json';
-    }
-
     try {
-      final String response = await rootBundle.rootBundle.loadString(fileName);
-      final Map<String, dynamic> data = json.decode(response);
+      // Get the unit name based on the index
+      String unitName = _firestoreService.getUnitName(widget.index);
+      
+      // Fetch lesson content from Firestore
+      final content = await _firestoreService.getLessonContent(
+        unitName,
+        widget.interlessonindex,
+      );
 
       setState(() {
-        lessonContent = data['lessons'][widget.interlessonindex];
+        lessonContent = content;
+        isLoading = false;
       });
     } catch (e) {
-      if (kDebugMode) {
-        print('Error loading lesson: $e');
-      }
+      print('Error loading lesson: $e');
+      setState(() {
+        isLoading = false;
+      });
     }
   }
 
@@ -76,89 +60,90 @@ class ContentListScreenState extends State<ContentListScreen> {
         title: Text('Unit ${widget.index + 1} Lesson'),
       ),
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      body: lessonContent == null
+      body: isLoading
           ? const Center(child: CircularProgressIndicator())
-          : Column(
-              children: [
-                Text(
-                  lessonContent!['lessonTitle'],
-                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 20),
-                CarouselSlider(
-                  options: CarouselOptions(
-                    height: 400.0,
-                    enlargeCenterPage: true,
-                    enableInfiniteScroll: false,
-                  ),
-                  items: [
-                    ...lessonContent!['ClassContent'].map<Widget>((classContent) {
-                      return Card(
-                        elevation: 0,
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: List<Widget>.from(classContent['ReadingContent'].map<Widget>((reading) {
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  reading,
-                                  style: const TextStyle(fontSize: 16),
-                                ),
-                              );
-                            })),
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                    ...lessonContent!['flashCards'].map<Widget>((flashCard) {
-                      return Card(
-                        elevation: 0,
-                        margin: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                flashCard['term'],
-                                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          : lessonContent == null
+              ? const Center(child: Text('Error loading lesson content'))
+              : Column(
+                  children: [
+                    Text(
+                      lessonContent!['lessonTitle'],
+                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 20),
+                    CarouselSlider(
+                      options: CarouselOptions(
+                        height: 400.0,
+                        enlargeCenterPage: true,
+                        enableInfiniteScroll: false,
+                      ),
+                      items: [
+                        ...List<Widget>.from(lessonContent!['ClassContent'].map((classContent) {
+                          return Card(
+                            elevation: 0,
+                            margin: const EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: List<Widget>.from(classContent['ReadingContent'].map((reading) {
+                                  return Padding(
+                                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                                    child: Text(
+                                      reading,
+                                      style: const TextStyle(fontSize: 16),
+                                    ),
+                                  );
+                                })),
                               ),
-                              const SizedBox(height: 8),
-                              Text(
-                                flashCard['definition'],
-                                style: const TextStyle(fontSize: 16),
+                            ),
+                          );
+                        })),
+                        ...List<Widget>.from(lessonContent!['flashCards'].map((flashCard) {
+                          return Card(
+                            elevation: 0,
+                            margin: const EdgeInsets.symmetric(horizontal: 10),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    flashCard['term'],
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    flashCard['definition'],
+                                    style: const TextStyle(fontSize: 16),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
+                          );
+                        })),
+                      ],
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        String unitName = _firestoreService.getUnitName(widget.index);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => QuizPage(
+                              unitName: unitName,
+                              lessonIndex: widget.interlessonindex,
+                            ),
                           ),
-                        ),
-                      );
-                    }).toList(),
+                        );
+                      },
+                      child: const Text('Open Questions'),
+                    ),
                   ],
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    String quizFileName = widget.index == 0 ? 'assets/Unit1.json' :
-                                          widget.index == 1 ? 'assets/Unit2.json' :
-                                          widget.index == 2 ? 'assets/Unit3.json' :
-                                          widget.index == 3 ? 'assets/Unit4.json' :
-                                          widget.index == 4 ? 'assets/Unit5.json' :
-                                          widget.index == 5 ? 'assets/Unit6.json' :
-                                          'assets/default_quiz.json';
-
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => QuizPage(fileName: quizFileName, lessonIndex: widget.interlessonindex),
-                      ),
-                    );
-                  },
-                  child: const Text('Open Questions'),
-                ),
-              ],
-            ),
     );
   }
 }
