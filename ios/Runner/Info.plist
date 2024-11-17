@@ -46,7 +46,11 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>CFBundleLocalizations</key>
-	<array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need access to photos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Need access to save photos.</string>
+		<array>
 	<string>pl</string>
 	<string>en</string>
 	<string>sk</string>
