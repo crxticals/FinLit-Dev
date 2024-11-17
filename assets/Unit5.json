@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to 401k",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -45,6 +46,7 @@
     },
     {
       "lessonTitle": "Contribution Limits and Benefits",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -87,6 +89,7 @@
     },
     {
       "lessonTitle": "Understanding Retirement Planning",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -129,6 +132,7 @@
     },
     {
       "lessonTitle": "Withdrawal Rules and Penalties",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -171,6 +175,7 @@
     },
     {
       "lessonTitle": "The Importance of Diversification",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -213,6 +218,7 @@
     },
     {
       "lessonTitle": "Evaluating Retirement Needs",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [

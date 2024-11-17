@@ -13,12 +13,12 @@
       "language": "en"
     },
     "progressStatus":{
-      "Unit1": 0,
-      "Unit2": 0,
-      "Unit3": 0,
-      "Unit4": 0,
-      "Unit5": 0,
-      "Unit6": 0
+      "Unit1": 100,
+      "Unit2": 25,
+      "Unit3": 50,
+      "Unit4": 75,
+      "Unit5": 32,
+      "Unit6": 40
     }
   }
 }

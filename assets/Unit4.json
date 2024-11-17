@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Taxes",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -45,6 +46,7 @@
     },
     {
       "lessonTitle": "Types of Taxes",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -87,6 +89,7 @@
     },
     {
       "lessonTitle": "Understanding Tax Deductions",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -129,6 +132,7 @@
     },
     {
       "lessonTitle": "Filing Taxes",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -171,6 +175,7 @@
     },
     {
       "lessonTitle": "Understanding Tax Credits",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -213,6 +218,7 @@
     },
     {
       "lessonTitle": "Consequences of Tax Evasion",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -255,6 +261,7 @@
     },
     {
       "lessonTitle": "Planning for Taxes",
+      "lessonIndex": 6,
       "ClassContent": [
         {
           "ReadingContent": [

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class FirestoreService {
+class FirestoreServiceImport {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   // Add a lesson to a specific unit
@@ -20,4 +20,5 @@ class FirestoreService {
         .collection('lessons')           // Collection for lessons within the unit
         .add(lessonData);                // Add the lesson data to Firestore
   }
+  
 }

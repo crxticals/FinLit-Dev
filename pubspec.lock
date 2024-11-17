@@ -38,6 +38,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.4"
+  arc_progress_bar_new:
+    dependency: "direct main"
+    description:
+      name: arc_progress_bar_new
+      sha256: "06f62301f78c2d62d34bce9c69e6219557779a53d02a80c8bc0e425d5778845f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   args:
     dependency: transitive
     description:

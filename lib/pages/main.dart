@@ -8,6 +8,7 @@ import 'package:project_name/pages/homepage.dart';
 import 'package:project_name/pages/homepage_desktop.dart';
 import 'package:project_name/pages/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:project_name/pages/migrate_data.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
                   if (constraints.maxWidth > constraints.maxHeight) {
                     return const HomeScreen1(); // Landscape
                   } else {
-                    return const HomeScreen(); // Portrait
+                    return const MigrateData(); // Portrait
                   }
                 },
               );

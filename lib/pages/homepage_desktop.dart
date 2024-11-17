@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_name/pages/login.dart';
+import 'package:arc_progress_bar_new/arc_progress_bar_new.dart'; // Add this line
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -25,6 +26,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
   final PageController _pageController = PageController(viewportFraction: 0.9);
   int _selectedIndex = 0;
   Map<String, dynamic> userData = {};
+  Map<String, double> unitProgress = {}; // Add this line
   final Color drawerColor = const Color(0xFF797a82);
 
   @override
@@ -38,7 +40,19 @@ class _HomeScreenState1 extends State<HomeScreen1> {
     final data = json.decode(response);
     setState(() {
       userData = data['user'] ?? {};
+      
+      // Initialize progress data for each unit
+      if (userData['progressStatus'] != null) {
+        Map<String, dynamic> progressStatus = userData['progressStatus'];
+        unitProgress = progressStatus.map((key, value) => 
+          MapEntry(key, value.toDouble()));
+      }
     });
+  }
+
+  double getUnitProgress(int index) {
+    String unitName = imgAssets[index].split('/').last.split('.').first;
+    return unitProgress[unitName] ?? 0.0;
   }
 
   Future<void> _signOut() async {
@@ -96,7 +110,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
-                      color:Colors.black,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(height: 40),
@@ -201,36 +215,63 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                             double value = 1.0;
                             if (_pageController.position.haveDimensions) {
                               value = (_pageController.page! - index).abs();
-                              value = 1 - (value * 0.3).clamp(0.0, 1.0);
+                              value = (1 - (value * 0.3)).clamp(0.0, 1.0);
                             }
+                            
+                            double progressPercentage = getUnitProgress(index); // Get the progress
+
                             return Transform.scale(
                               scale: value,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                                child: child,
+                                child: Stack(
+                                  alignment: Alignment.center,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => NameListScreen(
+                                              imageUrl: imgAssets[index],
+                                              index: index,
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                      child: Hero(
+                                        tag: 'image$index',
+                                        child: Image.asset(
+                                          imgAssets[index],
+                                          fit: BoxFit.contain,
+                                        ),
+                                      ),
+                                    ),
+                                    ArcProgressBar( // Add the progress bar here
+                                      percentage: progressPercentage,
+                                      arcThickness: 5,
+                                      innerPadding: 16,
+                                      animateFromLastPercent: true,
+                                      handleSize: 10,
+                                      backgroundColor: Colors.black12,
+                                      foregroundColor: Colors.black,
+                                    ),
+                                    Positioned(
+                                      bottom: 10,
+                                      child: Text(
+                                        '${progressPercentage.toStringAsFixed(0)}%',
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           },
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => NameListScreen(
-                                    imageUrl: imgAssets[index],
-                                    index: index,
-                                  ),
-                                ),
-                              );
-                            },
-                            child: Hero(
-                              tag: 'image$index',
-                              child: Image.asset(
-                                imgAssets[index],
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                          ),
                         );
                       },
                     ),
