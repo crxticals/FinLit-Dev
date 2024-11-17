@@ -41,6 +41,7 @@ dependencies:
   animate_do: ^3.3.4
   fluttertoast: ^8.2.8
   arc_progress_bar_new: ^1.0.4
+  glassmorphism_ui: ^0.3.0
 
 dev_dependencies:
   flutter_test:
