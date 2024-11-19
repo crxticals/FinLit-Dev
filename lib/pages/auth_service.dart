@@ -3,9 +3,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:project_name/pages/homepage.dart';
-import 'package:project_name/pages/homepage_desktop.dart';
-import 'package:project_name/pages/login.dart';
+import 'package:FinLit/pages/homepage.dart';
+import 'package:FinLit/pages/homepage_desktop.dart';
+import 'package:FinLit/pages/login.dart';
 
 class AuthService {
 

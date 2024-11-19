@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:project_name/pages/class_stuff2.dart';
-import 'package:project_name/pages/firestore_service.dart';
+import 'package:FinLit/pages/class_stuff2.dart';
+import 'package:FinLit/pages/firestore_service.dart';
 
 class NameListScreen extends StatefulWidget {
   final String imageUrl;

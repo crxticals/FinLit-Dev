@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:project_name/pages/firestore_service.dart';
+import 'package:FinLit/pages/firestore_service.dart';
 import 'quiz_display.dart';
 
 class ContentListScreen extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:project_name/pages/firestore_service_import.dart'; // Import your Firestore service
+import 'package:FinLit/pages/firestore_service_import.dart'; // Import your Firestore service
 
 class MigrateData extends StatefulWidget {
   const MigrateData({super.key});

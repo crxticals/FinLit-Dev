@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project_name/pages/class_stuff1.dart';
+import 'package:FinLit/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:arc_progress_bar_new/arc_progress_bar_new.dart';
@@ -52,15 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   double getUnitProgress(int index) {
-    // Get unit name from asset path (e.g., 'Unit1' from 'assets/Unit1.png')
     String unitName = imgAssets[index].split('/').last.split('.').first;
     return unitProgress[unitName] ?? 0.0;
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
   }
 
   void _onItemTapped(int index) {
