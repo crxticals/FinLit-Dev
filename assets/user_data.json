@@ -1,15 +1,13 @@
 {
   "user": {
-    "name": "Alex Nguyen",
+    "user": "Alex Nguyen",
     "level": 5,
     "rank": 50,
     "dayStreak": 10,
     "email": "alex.nguyen@example.com",
     "joinedDate": "2022-01-15",
-    "lastLogin": "2023-10-01",
     "settings": {
       "notifications": true,
-      "privacy": "friends",
       "language": "en"
     },
     "progressStatus":{

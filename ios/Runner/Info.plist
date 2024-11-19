@@ -31,8 +31,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -46,14 +44,14 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>CFBundleLocalizations</key>
+	<array>
+		<string>pl</string>
+		<string>en</string>
+		<string>sk</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Need access to photos.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Need access to save photos.</string>
-		<array>
-	<string>pl</string>
-	<string>en</string>
-	<string>sk</string>
-	</array>
 </dict>
 </plist>

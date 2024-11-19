@@ -52,8 +52,15 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   double getUnitProgress(int index) {
+    // Get unit name from asset path (e.g., 'Unit1' from 'assets/Unit1.png')
     String unitName = imgAssets[index].split('/').last.split('.').first;
     return unitProgress[unitName] ?? 0.0;
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   void _onItemTapped(int index) {
@@ -93,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: const Text(
                   '',
                   style: TextStyle(
-                    fontSize: 1,
+                    fontSize: 10,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -238,18 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             handleSize: 10,
                                             backgroundColor: Colors.black12,
                                             foregroundColor: Colors.black,
-                                          ),
-                                          Positioned(
-                                            bottom: 10,
-                                            child: Text(
-                                              '${progressPercentage.toStringAsFixed(0)}%',
-                                              style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ),
+                                          )
                                         ],
                                       ),
                                     ),
