@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155852623216",
+    "project_id": "finlit-app-b0faf",
+    "storage_bucket": "finlit-app-b0faf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155852623216:android:f1836939ddebbcb37d93b5",
+        "android_client_info": {
+          "package_name": "com.finlit.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9terk-6bGcPp6XC4C94RN_ELBzLICG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

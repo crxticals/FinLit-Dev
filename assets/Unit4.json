@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to Taxes",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -31,10 +32,21 @@
           ],
           "correctAnswer": "To fund government activities"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Taxes",
+          "definition": "Mandatory financial charges imposed by the government on individuals and businesses."
+        },
+        {
+          "term": "Public Services",
+          "definition": "Services provided by the government funded by taxes, such as healthcare, education, and infrastructure."
+        }
       ]
     },
     {
       "lessonTitle": "Types of Taxes",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -63,10 +75,21 @@
           ],
           "correctAnswer": "Value-added tax (VAT)"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Income Tax",
+          "definition": "Tax imposed on an individual's or entity's earnings."
+        },
+        {
+          "term": "Sales Tax",
+          "definition": "A tax on the sale of goods and services, often added at the point of sale."
+        }
       ]
     },
     {
       "lessonTitle": "Understanding Tax Deductions",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -95,10 +118,21 @@
           ],
           "correctAnswer": "Mortgage interest"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Tax Deduction",
+          "definition": "An expense that can be subtracted from gross income to reduce taxable income."
+        },
+        {
+          "term": "Mortgage Interest",
+          "definition": "Interest paid on a home loan, often deductible from taxable income."
+        }
       ]
     },
     {
       "lessonTitle": "Filing Taxes",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -127,10 +161,21 @@
           ],
           "correctAnswer": "To avoid penalties and interest charges"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Tax Return",
+          "definition": "A form submitted to the government detailing income, deductions, and tax liability."
+        },
+        {
+          "term": "Filing Deadline",
+          "definition": "The date by which tax returns must be submitted to avoid penalties."
+        }
       ]
     },
     {
       "lessonTitle": "Understanding Tax Credits",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -159,10 +204,21 @@
           ],
           "correctAnswer": "Child tax credit"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Tax Credit",
+          "definition": "A direct reduction in tax owed, often providing greater financial benefit than a deduction."
+        },
+        {
+          "term": "Child Tax Credit",
+          "definition": "A tax credit given to families with dependent children, reducing the total tax owed."
+        }
       ]
     },
     {
       "lessonTitle": "Consequences of Tax Evasion",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -191,10 +247,21 @@
           ],
           "correctAnswer": "Possible fines and penalties"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Tax Evasion",
+          "definition": "The illegal act of not paying taxes owed by underreporting income or inflating expenses."
+        },
+        {
+          "term": "Penalties",
+          "definition": "Punishments or fines imposed for failing to comply with tax laws."
+        }
       ]
     },
     {
       "lessonTitle": "Planning for Taxes",
+      "lessonIndex": 6,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -222,6 +289,16 @@
             "Certificate of deposit"
           ],
           "correctAnswer": "Retirement account"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Tax Planning",
+          "definition": "The process of organizing finances to minimize tax liability and maximize savings."
+        },
+        {
+          "term": "Retirement Account",
+          "definition": "An account, like a 401(k) or IRA, that provides tax benefits to encourage saving for retirement."
         }
       ]
     }

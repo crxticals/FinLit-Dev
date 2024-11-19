@@ -3,6 +3,7 @@
   "lessons": [
     {
       "lessonTitle": "Introduction to 401k",
+      "lessonIndex": 0,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -31,10 +32,21 @@
           ],
           "correctAnswer": "Pre-tax contributions"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "401k",
+          "definition": "A retirement savings plan that allows pre-tax contributions to grow tax-deferred until withdrawal."
+        },
+        {
+          "term": "Pre-tax Contributions",
+          "definition": "Money deposited into a retirement account before taxes are deducted, reducing current taxable income."
+        }
       ]
     },
     {
       "lessonTitle": "Contribution Limits and Benefits",
+      "lessonIndex": 1,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -63,10 +75,21 @@
           ],
           "correctAnswer": "Employer contributions to your 401k"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Contribution Limit",
+          "definition": "The maximum amount you can contribute to a 401k plan each year, set by the IRS."
+        },
+        {
+          "term": "Employer Match",
+          "definition": "A benefit where employers contribute to your 401k, often matching a percentage of your contributions."
+        }
       ]
     },
     {
       "lessonTitle": "Understanding Retirement Planning",
+      "lessonIndex": 2,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -95,10 +118,21 @@
           ],
           "correctAnswer": "Current savings"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Retirement Planning",
+          "definition": "The process of determining retirement income goals and the actions necessary to achieve them."
+        },
+        {
+          "term": "Future Expenses",
+          "definition": "Projected costs for housing, healthcare, and lifestyle needs during retirement."
+        }
       ]
     },
     {
       "lessonTitle": "Withdrawal Rules and Penalties",
+      "lessonIndex": 3,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -127,10 +161,21 @@
           ],
           "correctAnswer": "10%"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Early Withdrawal",
+          "definition": "Taking money out of a retirement account before reaching the age of 59.5, often subject to a penalty."
+        },
+        {
+          "term": "Penalty",
+          "definition": "A 10% charge on early 401k withdrawals, in addition to regular income taxes."
+        }
       ]
     },
     {
       "lessonTitle": "The Importance of Diversification",
+      "lessonIndex": 4,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -159,10 +204,21 @@
           ],
           "correctAnswer": "Stocks"
         }
+      ],
+      "flashCards": [
+        {
+          "term": "Diversification",
+          "definition": "The practice of spreading investments across different assets to reduce risk."
+        },
+        {
+          "term": "Mutual Fund",
+          "definition": "An investment vehicle made up of a pool of funds collected from many investors to invest in securities like stocks and bonds."
+        }
       ]
     },
     {
       "lessonTitle": "Evaluating Retirement Needs",
+      "lessonIndex": 5,
       "ClassContent": [
         {
           "ReadingContent": [
@@ -190,6 +246,16 @@
             "Only invest in real estate"
           ],
           "correctAnswer": "Increase contributions"
+        }
+      ],
+      "flashCards": [
+        {
+          "term": "Retirement Needs",
+          "definition": "The financial requirements necessary to maintain a desired lifestyle after retiring."
+        },
+        {
+          "term": "Longevity Risk",
+          "definition": "The risk of outliving your savings, requiring careful planning for an extended retirement period."
         }
       ]
     }
