@@ -1,6 +1,6 @@
 {
-    "name": "project_name",
-    "short_name": "project_name",
+    "name": "finlit",
+    "short_name": "finlit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
