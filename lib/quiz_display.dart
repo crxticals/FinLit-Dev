@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:FinLit/pages/firestore_service.dart';
+import 'package:FinLit/firestore_service.dart';
 
 class QuizPage extends StatefulWidget {
   final String unitName;

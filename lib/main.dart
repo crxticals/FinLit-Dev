@@ -4,11 +4,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:FinLit/firebase_options.dart';
-import 'package:FinLit/pages/homepage.dart';
-import 'package:FinLit/pages/homepage_desktop.dart';
-import 'package:FinLit/pages/login.dart';
+import 'package:FinLit/homepage.dart';
+import 'package:FinLit/homepage_desktop.dart';
+import 'package:FinLit/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:FinLit/pages/migrate_data.dart';
+import 'package:FinLit/migrate_data.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
