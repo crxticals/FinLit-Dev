@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:project_name/pages/login.dart';
 import 'package:arc_progress_bar_new/arc_progress_bar_new.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
+import 'package:project_name/pages/vocabulary.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -138,7 +139,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
                       icon: Icons.translate_rounded,
                       label: 'Vocabulary',
                       isSelected: _selectedIndex == 1,
-                      onTap: () => _onItemTapped(1),
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Vocabulary())),
                     ),
                     NavigationDrawerItem(
                       icon: Icons.quiz_rounded,
