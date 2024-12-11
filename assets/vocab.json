@@ -1,0 +1,34 @@
+{
+  "Unit 1: The Time Value of Money": {
+    "1.1: Introduction of the Timeline": [
+      {
+        "term": "Stream of Cash Flows",
+        "definition": "A series of payments or receipts of income occurring over multiple time periods."
+      },
+      {
+        "term": "Timeline",
+        "definition": "A visual tool showing specific dates to track the timing of each cash flow."
+      },
+      {
+        "term": "Date 0",
+        "definition": "The starting point on a timeline, typically representing the present."
+      },
+      {
+        "term": "Inflows",
+        "definition": "Positive cash flows, or money received."
+      },
+      {
+        "term": "Outflows",
+        "definition": "Negative cash flows, or money paid out."
+      },
+      {
+        "term": "Time Period",
+        "definition": "The time frame interval between dates on a timeline, such as a year, month, or day."
+      },
+      {
+        "term": "Cash Flow Sign Convention",
+        "definition": "A method for differentiating inflows (positive) and outflows (negative) on the timeline."
+      }
+    ]
+  }
+}
