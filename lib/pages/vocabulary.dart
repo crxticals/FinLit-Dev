@@ -1,12 +1,6 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'vocab.dart';
-
-class Vocab {
-  final String word;
-  final String definition;
-
-  Vocab(this.word, this.definition);
-}
+import 'package:flutter/services.dart' show rootBundle;
 
 class Vocabulary extends StatefulWidget {
   const Vocabulary({super.key});
@@ -16,6 +10,22 @@ class Vocabulary extends StatefulWidget {
 }
 
 class _VocabularyState extends State<Vocabulary> {
+  Map<String, dynamic>? vocabulary;
+
+  Future<void> loadJsonAsset() async {
+    final String jsonString = await rootBundle.loadString('vocab.json');
+    final Map<String, dynamic> data = jsonDecode(jsonString);
+    setState(() {
+      vocabulary = data;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadJsonAsset();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,34 +40,32 @@ class _VocabularyState extends State<Vocabulary> {
           ),
         ),
       ),
-      body: ExpansionTile(
-        title: const Text('Unit 1: The Time Value of Money'),
-        children: <Widget>[
-          ExpansionTile(
-            title: const Text('1.1 Introduction of the Timeline'),
-            children: <Widget>[
-              ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: vocab.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ListTile(
-                    title: Text(vocab[index].word),
-                    subtitle: Text(vocab[index].definition),
-                  );
-                },
-              ),
-            ],
-          ),
-          ExpansionTile(
-            title: const Text('1.2 The three rules of time travel'),
-            children: <Widget>[
-              const ListTile(title: Text('Item 3')),
-              const ListTile(title: Text('Item 4')),
-            ],
-          ),
-        ],
-      ),
+      body: vocabulary == null
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: vocabulary!.keys.length,
+              itemBuilder: (BuildContext context, int unitIndex) {
+                String unitKey = vocabulary!.keys.elementAt(unitIndex);
+                Map<String, dynamic> unitData = vocabulary![unitKey];
+
+                return ExpansionTile(
+                  title: Text(unitKey),
+                  children: unitData.keys.map((subUnitKey) {
+                    List<dynamic> subUnitData = unitData[subUnitKey];
+
+                    return ExpansionTile(
+                      title: Text(subUnitKey),
+                      children: subUnitData.map((vocabItem) {
+                        return ListTile(
+                          title: Text(vocabItem['term']),
+                          subtitle: Text(vocabItem['definition']),
+                        );
+                      }).toList(),
+                    );
+                  }).toList(),
+                );
+              },
+            ),
     );
   }
 }
