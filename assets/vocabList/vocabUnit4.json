@@ -1,0 +1,304 @@
+{
+    "Unit 4: Stock and Bond": {
+        "4.1 The Stock Market": [
+            {
+                "term": "Private Companies",
+                "definition": "A company whose shares do not trade on a public market."
+            },
+            {
+                "term": "Public Companies",
+                "definition": "Corporations whose stock is traded on a stock market, providing shareholders the ability to easily and quickly convert their investment into cash."
+            },
+            {
+                "term": "Stock Market/Stock Exchange",
+                "definition": "An organized market on which the shares of many corporations are publicly traded."
+            },
+            {
+                "term": "Liquid",
+                "definition": "An investment that can easily be turned into cash."
+            },
+            {
+                "term": "Primary Market",
+                "definition": "The market used when a corporation itself issues new shares of stock and sells them to investors."
+            },
+            {
+                "term": "Secondary Market",
+                "definition": "The market where shares continue to trade after the initial transaction between the corporation and investors."
+            },
+            {
+                "term": "Market Makers/Specialists",
+                "definition": "Individuals on the trading floor of a stock exchange who match buyers with sellers."
+            },
+            {
+                "term": "Bid Price",
+                "definition": "The price at which a market maker or specialist is willing to buy a security/stock/bond."
+            },
+            {
+                "term": "Ask Price",
+                "definition": "The price at which a market maker or specialist is willing to sell a security/stock/bond."
+            },
+            {
+                "term": "Liquidity",
+                "definition": "The extent to which the market for an asset is liquid."
+            },
+            {
+                "term": "Bid-Ask Spread",
+                "definition": "The amount by which the ask price exceeds the bid price."
+            },
+            {
+                "term": "Transaction Cost",
+                "definition": "An expense, such as a broker commission and the bid-ask spread, that investors must pay to trade securities."
+            },
+            {
+                "term": "Limit Order",
+                "definition": "An order to buy or sell a set amount of a security at a fixed price."
+            },
+            {
+                "term": "Limit Order Book",
+                "definition": "A collection of all current limit orders for a given security."
+            },
+            {
+                "term": "Market Orders",
+                "definition": "Orders to trade immediately at the best outstanding limit order available."
+            },
+            {
+                "term": "High-Frequency Traders (HFTs)",
+                "definition": "Traders who place, update, cancel, and execute trades many times per second."
+            },
+            {
+                "term": "Dark Pools",
+                "definition": "Trading venues in which the size and price of orders are not disclosed to participants."
+            }
+        ],
+        "4.2 Bond Cash Flows, Prices, and Yields": [
+            {
+                "term": "Bond Certificate",
+                "definition": "Indicates the amounts and dates of all payments to be made."
+            },
+            {
+                "term": "Maturity Date",
+                "definition": "The final repayment date of the bond."
+            },
+            {
+                "term": "Term",
+                "definition": "The time remaining until the repayment date."
+            },
+            {
+                "term": "Coupons",
+                "definition": "The promised interest payments of a bond."
+            },
+            {
+                "term": "Face Value",
+                "definition": "The principal of the bond."
+            },
+            {
+                "term": "Zero-Coupon Bonds",
+                "definition": "A type of bond that does not make coupon payments. The only cash payment the investor receives is the face value of the bond on the maturity date."
+            },
+            {
+                "term": "Treasury Bills",
+                "definition": "U.S. government bonds with a maturity of up to one year, which are zero-coupon bonds."
+            },
+            {
+                "term": "Pure Discount Bonds",
+                "definition": "Zero-coupon bonds that trade at a discount (a price lower than the face value)."
+            },
+            {
+                "term": "Yield to Maturity (YTM)",
+                "definition": "The discount rate that sets the present value of the promised bond payments equal to the current market price of the bond."
+            },
+            {
+                "term": "Spot Interest Rates",
+                "definition": "Default-free, zero-coupon yields."
+            }
+        ],
+        "4.3 Dynamic Behavior of Bond Prices": [
+            {
+                "term": "Premium",
+                "definition": "The amount by which a bond's market price exceeds its face value, often due to its higher interest rate than current market rates."
+            },
+            {
+                "term": "Par",
+                "definition": "The face value of a bond, which is the amount the issuer agrees to repay the bondholder at maturity, typically $1,000."
+            },
+            {
+                "term": "Bonds’ Duration",
+                "definition": "Measures how much a bond's price will change in response to interest rate fluctuations, with longer durations indicating greater sensitivity."
+            }
+        ],
+        "4.4 Corporate Bonds": [
+            {
+                "term": "Corporate Bonds",
+                "definition": "Debt securities issued by companies to raise funds for operations, projects, or refinancing. Investors lend money in exchange for regular interest payments (coupons) and repayment of the principal at maturity."
+            },
+            {
+                "term": "Investment-Grade Bond",
+                "definition": "Low-risk bonds issued by companies with strong credit ratings."
+            },
+            {
+                "term": "Junk Bond",
+                "definition": "High-yield, high-risk bonds with lower credit ratings."
+            },
+            {
+                "term": "Convertible Bond",
+                "definition": "A bond that can be converted into company stock."
+            }
+        ],
+        "4.5 The Dividend-Discount Model": [
+            {
+                "term": "Equity Cost of Capital",
+                "definition": "The rate of return a company has to provide to its investors to compensate for the associated risks."
+            },
+            {
+                "term": "Dividend Discount Model",
+                "definition": "Theory that predicts the price of a company’s stock, using the present-day price. The future price is the present price plus all future dividend payments."
+            },
+            {
+                "term": "Dividend Yield",
+                "definition": "Annual payments to stockholders, expressed as a percentage of the current stock price."
+            },
+            {
+                "term": "Capital Gain",
+                "definition": "Profits from selling an asset."
+            },
+            {
+                "term": "Capital Gain Rate",
+                "definition": "Capital gain divided by the current stock price."
+            },
+            {
+                "term": "Total Return",
+                "definition": "Dividend yield plus capital gain rate."
+            }
+        ],
+        "4.6 Valuation Based on Comparable Firms": [
+            {
+                "term": "Methods of Comparables",
+                "definition": "Estimating the firm's value based on the value of other comparable firms or investments that are expected to generate similar cash flows in the future."
+            },
+            {
+                "term": "Valuation Multiple",
+                "definition": "Ratio of the value to some measure of the firm’s scale."
+            },
+            {
+                "term": "Price-Earning Ratio",
+                "definition": "Equal to the share price divided by its earnings per share."
+            },
+            {
+                "term": "Forward Earnings",
+                "definition": "Expected earnings over the next twelve months."
+            },
+            {
+                "term": "Trailing Earnings",
+                "definition": "Earnings over the prior twelve months."
+            },
+            {
+                "term": "Enterprise Value Multiples",
+                "definition": "Represents the total value of the firm’s underlying business rather than only the value of equity."
+            },
+            {
+                "term": "Other Multiples",
+                "definition": "Possibility for many other valuation multiples."
+            }
+        ],
+        "4.7 Information, Competition, and Stock Prices": [
+            {
+                "term": "Stock",
+                "definition": "A type of security representing ownership in a company, giving the holder a claim on part of the company’s assets and earnings."
+            },
+            {
+                "term": "Industry Trends",
+                "definition": "Patterns or movements in a specific industry that can affect business performance."
+            },
+            {
+                "term": "Dividends",
+                "definition": "Payments made by a company to its shareholders as a reward for their investment."
+            },
+            {
+                "term": "Market Price",
+                "definition": "The current price at which a stock or other asset is bought and sold in the market."
+            },
+            {
+                "term": "Consensus Estimate",
+                "definition": "The average prediction of a stock’s value or performance, based on analyses by multiple experts or investors."
+            },
+            {
+                "term": "Valuation Models",
+                "definition": "Mathematical frameworks used to determine the intrinsic value of a stock or asset."
+            },
+            {
+                "term": "Share Price",
+                "definition": "The price of a single share of a company's stock as quoted on the stock exchange."
+            },
+            {
+                "term": "Enterprise Value",
+                "definition": "A measure of a company's total value, often used in financial analysis."
+            },
+            {
+                "term": "Efficient Markets Hypothesis",
+                "definition": "A theory stating that stock prices fully reflect all available information."
+            },
+            {
+                "term": "Competitive Advantage",
+                "definition": "A unique feature or resource that allows a company to perform better than competitors."
+            },
+            {
+                "term": "Accounting Earnings",
+                "definition": "The profits of a company as reported in its financial statements."
+            },
+            {
+                "term": "Accounting Illusions",
+                "definition": "Misleading financial metrics or reports that may appear to enhance performance but do not reflect true economic value."
+            },
+            {
+                "term": "Raising Capital",
+                "definition": "The process by which a company secures funding to finance its operations or investments."
+            },
+            {
+                "term": "Fair Price",
+                "definition": "The price at which an asset is reasonably valued based on its intrinsic worth and market conditions."
+            },
+            {
+                "term": "Free Competition",
+                "definition": "A market environment where buyers and sellers operate without significant barriers."
+            }
+        ],
+        "4.8 The Expected Return of a Portfolio": [
+            {
+                "term": "Portfolio Weights",
+                "definition": "The fraction of the total investment allocated to a specific security in the portfolio."
+            },
+            {
+                "term": "Return of the Portfolio",
+                "definition": "The weighted average of the returns of the individual securities in the portfolio."
+            },
+            {
+                "term": "Expected Return of the Portfolio",
+                "definition": "The weighted average of the expected returns of the individual investments in the portfolio."
+            },
+            {
+                "term": "Expected Return",
+                "definition": "The anticipated return on an individual security based on historical or projected data."
+            },
+            {
+                "term": "Risk-Free Interest Rate",
+                "definition": "The theoretical return on an investment with zero risk, often represented by government bonds."
+            },
+            {
+                "term": "Correlation",
+                "definition": "Measures the degree to which two securities’ returns move together, ranging from -1 to +1."
+            },
+            {
+                "term": "Covariance",
+                "definition": "Quantifies the extent to which two securities’ returns change together."
+            },
+            {
+                "term": "Volatility",
+                "definition": "The standard deviation of a security's return, representing its risk."
+            },
+            {
+                "term": "Variance",
+                "definition": "The square of the standard deviation, indicating the degree of spread in the security's return."
+            }
+        ]
+    }
+}

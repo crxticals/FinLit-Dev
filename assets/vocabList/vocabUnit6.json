@@ -1,0 +1,94 @@
+{
+    "Unit 6: Risk Management": {
+        "6.1 Common Measures of Risk and Return": [
+            {
+                "term": "Probability Distribution",
+                "definition": "All possible values and the probability of each value that an average can take within a range."
+            },
+            {
+                "term": "Expected Return",
+                "definition": "Weighted average of possible returns."
+            },
+            {
+                "term": "Variance",
+                "definition": "Squared deviation from the mean."
+            },
+            {
+                "term": "Standard Deviation",
+                "definition": "Square root of variance."
+            },
+            {
+                "term": "Volatility",
+                "definition": "The standard deviation of a return."
+            }
+        ],
+        "6.2 Measuring Systematic Risk": [
+            {
+                "term": "Efficient Portfolio",
+                "definition": "A portfolio that contains only systematic risks, and any changes in this portfolio will correspond to the systematic shocks of the economy."
+            },
+            {
+                "term": "Market Portfolio",
+                "definition": "Portfolio of all stocks and securities traded in a capital market."
+            },
+            {
+                "term": "Beta of the Security",
+                "definition": "The expected percentage change in its return given a 1% change in the return of the market portfolio."
+            },
+            {
+                "term": "Systematic Risk",
+                "definition": "The inherent market-wide risk that affects all investments."
+            },
+            {
+                "term": "Real-Firm Betas",
+                "definition": "Measure a company's systematic risk compared to the market, based on actual historical data."
+            },
+            {
+                "term": "Interpreting Betas",
+                "definition": "Measure risk for firms in high-growth or dynamic sectors, reflecting the variability in returns due to advancements, innovation, or market conditions."
+            }
+        ],
+        "6.3 The Volatility of a Large Portfolio": [
+            {
+                "term": "Diversification",
+                "definition": "The practice of reducing risk by investing in a variety of assets with differing risk profiles."
+            },
+            {
+                "term": "Portfolio",
+                "definition": "A collection of financial assets such as stocks, bonds, or other securities held by an investor."
+            },
+            {
+                "term": "Volatility",
+                "definition": "A statistical measure of the dispersion of returns, often expressed as standard deviation."
+            },
+            {
+                "term": "Average Return",
+                "definition": "The mean of an asset's returns over a period, representing its typical performance."
+            },
+            {
+                "term": "Standard Deviation",
+                "definition": "A measure of the variability or risk associated with the return on an investment."
+            },
+            {
+                "term": "Correlation",
+                "definition": "The degree to which two stocks move together, positively or negatively."
+            },
+            {
+                "term": "Negative Correlation",
+                "definition": "A relationship where one stock performs well while the other performs poorly, reducing overall portfolio risk."
+            },
+            {
+                "term": "Common Risks",
+                "definition": "Risks that affect multiple stocks simultaneously, leading to higher correlation."
+            },
+            {
+                "term": "Idiosyncratic Risk",
+                "definition": "Risk unique to a specific asset that can be mitigated through diversification."
+            },
+            {
+                "term": "Systematic Risk",
+                "definition": "The portion of risk that is common to all stocks in the market, which cannot be eliminated through diversification."
+            }
+        ]
+    }
+}
