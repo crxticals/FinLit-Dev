@@ -39,45 +39,46 @@ class _VocabularyState extends State<Vocabulary> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xFF3D3F6B),
-          title: const Text(
-            'Vocabulary',
-            style: 
-            TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-            )
-        ),
-        body: ListView.builder(
-            itemBuilder: (BuildContext context, int index) {
-            return ExpansionTile(
-                title: Text('Unit 1: The Time Value of Money'),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF3D3F6B),
+        title: const Text(
+          'Vocabulary',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        )
+      ),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return ExpansionTile(
+            title: Text('Unit 1: The Time Value of Money'),
+            children: <Widget>[
+              ExpansionTile(
+                title: Text('1.1 Introduction of the Timeline '),
                 children: <Widget>[
+                  for (var item in vocab) 
                     ExpansionTile(
-                      title: Text('1.1 Introduction of the Timeline '),
-                          children: <Widget>[
-                            ExpansionTile(title: Text(vocab[index].word),
-                            children: <Widget>[
-                              ListTile(title: Text(vocab[index].definition)),
-                            ]
-                            )
-                              ],
-                    ),
-                    ExpansionTile(
-                      title: Text('1.2 The three rules of time travel'),
+                      title: Text(item.word),
                       children: <Widget>[
-                        ListTile(title: Text('Item 3')),
-                        ListTile(title: Text('Item 4')),
+                        ListTile(title: Text(item.definition)),
                       ],
-    ),
-  ],
-);
-          },
-          itemCount: vocab.length,
-        ),
-              );
+                    ),
+                ],
+              ),
+              ExpansionTile(
+                title: Text('1.2 The three rules of time travel'),
+                children: <Widget>[
+                  ListTile(title: Text('Item 3')),
+                  ListTile(title: Text('Item 4')),
+                ],
+              ),
+            ],
+          );
+        },
+        itemCount: 1,
+      ),
+    );
   }
 }

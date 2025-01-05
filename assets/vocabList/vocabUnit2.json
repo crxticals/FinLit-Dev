@@ -1,0 +1,46 @@
+{
+    "Unit 2: Interest rate and the relationship between different rates": {
+        "2.1 Interest rate quotes and adjustments": [
+            {
+                "term": "Effective Annual Rate (EAR)",
+                "definition": "The actual amount of interest that will be earned at the end of the year."
+            }
+        ],
+        "2.2 Application: Discount rates and loans": [
+            {
+                "term": "Amortizing Loans",
+                "definition": "Loans that are paid periodically, e.g., a mortgage that is paid each month and each time a small amount of the loan balance plus its interest."
+            }
+        ],
+        "2.3 The determinants of interest rate": [
+            {
+                "term": "Adjustable Rate Mortgages (ARMs)",
+                "definition": "A mortgage with an interest rate that adjusts periodically based on a benchmark index, leading to fluctuating monthly payments over the loan term."
+            },
+            {
+                "term": "Nominal Interest Rates",
+                "definition": "The stated or advertised interest rate on a loan or investment, not accounting for inflation's impact on purchasing power."
+            },
+            {
+                "term": "Real Interest Rate",
+                "definition": "The inflation-adjusted interest rate that reflects the actual cost of borrowing or the real return on an investment."
+            },
+            {
+                "term": "Term Structure",
+                "definition": "The theory that explains the relationship between bond yields and time to maturity."
+            },
+            {
+                "term": "Yield Curve",
+                "definition": "The actual graphical representation of the term structure."
+            },
+            {
+                "term": "Federal Funds Rate",
+                "definition": "The interest rate at which banks lend reserve balances to each other overnight, influencing broader interest rates and monetary policy."
+            },
+            {
+                "term": "Interest Rate Expectations",
+                "definition": "Anticipations of future interest rate trends, influenced by economic data, inflation forecasts, and central bank policy."
+            }
+        ]
+    }
+}

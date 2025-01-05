@@ -1,0 +1,206 @@
+{
+    "Unit 5: Financial Statement and Balance Sheet": {
+        "5.1 Firms’ Disclosure of Financial Information": [
+            {
+                "term": "Financial Statements",
+                "definition": "Accounting reports with past performance information that a firm issues periodically."
+            },
+            {
+                "term": "10-Q",
+                "definition": "A comprehensive unaudited report of financial performance that must be submitted quarterly by all public companies to the Securities and Exchange Commission (SEC)."
+            },
+            {
+                "term": "10-K",
+                "definition": "A comprehensive report filed annually by a publicly traded company about its financial performance and required by the Securities and Exchange Commission (SEC)."
+            },
+            {
+                "term": "Annual Report",
+                "definition": "A document that public corporations must provide annually to shareholders that describes their operations and financial conditions."
+            },
+            {
+                "term": "Generally Accepted Accounting Principles (GAAP)",
+                "definition": "A set of accounting rules, standards, and procedures issued."
+            }
+        ],
+        "5.2 The Balance Sheet": [
+            {
+                "term": "Balance Sheet",
+                "definition": "A list of a firm’s assets and liabilities that provides a snapshot of the firm’s financial position at a given point in time."
+            },
+            {
+                "term": "Statement of Financial Position",
+                "definition": "List of the firm’s assets and liabilities that provides a snapshot of the firm’s financial position at a given point in time."
+            },
+            {
+                "term": "Assets",
+                "definition": "The cash, inventory, property, plant and equipment, and other investments a company has made."
+            },
+            {
+                "term": "Liabilities",
+                "definition": "A firm’s obligations to its creditors."
+            },
+            {
+                "term": "Stockholders’ Equity",
+                "definition": "An accounting measure of a firm’s net worth that represents the difference between the firm’s assets and its liabilities."
+            },
+            {
+                "term": "Current Assets",
+                "definition": "Cash or assets convertible to cash within one year, including securities, receivables, inventories, and prepaid expenses."
+            },
+            {
+                "term": "Marketable Securities",
+                "definition": "Short-term, low-risk investments easily convertible to cash, like government debt maturing within a year."
+            },
+            {
+                "term": "Accounts Receivable",
+                "definition": "Amounts owed to a firm by customers who have purchased goods or services on credit."
+            },
+            {
+                "term": "Inventories",
+                "definition": "A firm’s raw materials as well as its work-in-progress and finished goods."
+            },
+            {
+                "term": "Long-Term Assets",
+                "definition": "Net property, plant, equipment, unused property, start-up costs, long-term investments, and property for sale."
+            },
+            {
+                "term": "Depreciation Expense",
+                "definition": "Amount deducted, for accounting purposes, from an asset’s value to reflect wear and tear over a given period."
+            },
+            {
+                "term": "Accumulated Depreciation",
+                "definition": "The cumulative depreciation of an asset up to a given point in its life; equal to the last period’s accumulated depreciation plus the current period’s depreciation expense."
+            },
+            {
+                "term": "Book Value",
+                "definition": "The acquisition cost of an asset less its accumulated depreciation."
+            },
+            {
+                "term": "Intangible Assets",
+                "definition": "Non-physical assets like intellectual property, trademarks, and goodwill, recorded as the excess of acquisition price over tangible assets' book value."
+            },
+            {
+                "term": "Amortization",
+                "definition": "A charge that captures the change in value of acquired assets. Like depreciation, amortization is not an actual cash expense."
+            },
+            {
+                "term": "Impairment Charge",
+                "definition": "Captures the change in value of the acquired assets; is not an actual cash expense."
+            },
+            {
+                "term": "Current Liabilities",
+                "definition": "Liabilities due within one year, such as payables, short-term debt, current portions of long-term debt, salaries, taxes, and unearned revenue."
+            },
+            {
+                "term": "Accounts Payable",
+                "definition": "The amounts owed to creditors for products or services purchased with credit."
+            },
+            {
+                "term": "Short-Term Debt",
+                "definition": "Debt with a maturity of less than one year."
+            },
+            {
+                "term": "Net Working Capital",
+                "definition": "The difference between current assets and liabilities, showing short-term capital for the business."
+            },
+            {
+                "term": "Long-Term Debt",
+                "definition": "Any loan or debt obligation with a maturity of more than a year."
+            },
+            {
+                "term": "Capital Leases",
+                "definition": "A lease treated as an acquisition, recording the asset and liability on the lessee's balance sheet. Depreciation and interest expenses are deducted over time."
+            },
+            {
+                "term": "Deferred Taxes",
+                "definition": "An asset or liability arising from differences between reported tax expenses and taxes paid."
+            },
+            {
+                "term": "Book Value of Equity",
+                "definition": "The difference between the book value of a firm’s assets and its liabilities, also called stockholders’ equity, represents the net worth of a firm from an accounting perspective."
+            },
+            {
+                "term": "Market Capitalization",
+                "definition": "The total market value of equity; equals the market price per share times the number of shares."
+            },
+            {
+                "term": "Market-to-Book Ratio",
+                "definition": "The ratio of a firm’s market (equity) capitalization to the book value of its stockholders’ equity. Also referred to as the price-to-book or P/B ratio."
+            },
+            {
+                "term": "Value Stocks",
+                "definition": "Firms with low market-to-book ratios."
+            },
+            {
+                "term": "Growth Stocks",
+                "definition": "Firms with high market-to-book ratios."
+            },
+            {
+                "term": "Enterprise Value",
+                "definition": "The firm's equity and debt market value minus cash and securities, reflecting its business value."
+            }
+        ],
+        "5.3 The Income Statement": [
+            {
+                "term": "Income Statement",
+                "definition": "Lists the firm’s revenues and expenses over a period of time."
+            },
+            {
+                "term": "Net Income",
+                "definition": "Total amount of disposable income after all deductions."
+            },
+            {
+                "term": "Gross Profit",
+                "definition": "The difference between sales revenues and the costs."
+            },
+            {
+                "term": "Operating Expenses",
+                "definition": "Expenses from the ordinary course of running the business that are not directly related to producing the goods or services being sold."
+            },
+            {
+                "term": "Operating Income",
+                "definition": "The firm’s gross profit net of operating expenses."
+            },
+            {
+                "term": "Convertible Bonds",
+                "definition": "A form of debt that can be converted to shares."
+            },
+            {
+                "term": "Dilution",
+                "definition": "An increase in total shares to divide the amount of earnings, causing each share to have less dividend."
+            }
+        ],
+        "5.4 The Statement of Cash Flows": [
+            {
+                "term": "Statement of Cash Flow",
+                "definition": "A financial statement that summarizes a company’s cash inflows and outflows from operating, investing, and financing activities over a specific period."
+            },
+            {
+                "term": "Capital Expenditures (CapEx)",
+                "definition": "Funds a company uses to acquire, upgrade, or maintain physical assets such as property, buildings, or equipment."
+            },
+            {
+                "term": "Retained Earnings",
+                "definition": "The portion of a company’s net income that is reinvested into the business rather than distributed as dividends to shareholders."
+            }
+        ],
+        "5.5 Financial Statement Analysis": [
+            {
+                "term": "Financial Statement Analysis",
+                "definition": "Involves evaluating a company’s financial health by reviewing its key financial statements: Income Statement, Balance Sheet, and Cash Flow Statement. This helps investors, creditors, and management make informed decisions."
+            },
+            {
+                "term": "Income Statement",
+                "definition": "Shows profitability over a period (Revenue, COGS, Gross Profit, Operating Expenses, Net Income)."
+            },
+            {
+                "term": "Balance Sheet",
+                "definition": "A snapshot of assets, liabilities, and equity at a point in time (Assets = Liabilities + Equity)."
+            },
+            {
+                "term": "Cash Flow Statement",
+                "definition": "Tracks cash inflows and outflows (Operating, Investing, and Financing activities)."
+            }
+        ]
+    }
+}

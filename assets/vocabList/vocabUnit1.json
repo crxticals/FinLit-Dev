@@ -1,0 +1,66 @@
+{
+    "Unit 1: The Time Value of Money": {
+        "1.1 Introduction of the Timeline": [
+            {
+                "term": "Stream of Cash Flows",
+                "definition": "A series of payments or receipts of income occurring over multiple time periods."
+            },
+            {
+                "term": "Timeline",
+                "definition": "A visual tool showing specific dates to track the timing of each cash flow."
+            },
+            {
+                "term": "Date 0",
+                "definition": "The starting point on a timeline, typically representing the present."
+            },
+            {
+                "term": "Inflows",
+                "definition": "Positive cash flows, or money received."
+            },
+            {
+                "term": "Outflows",
+                "definition": "Negative cash flows, or money paid out."
+            },
+            {
+                "term": "Time Period",
+                "definition": "The time frame interval between dates on a timeline, such as a year, month, or day."
+            },
+            {
+                "term": "Cash Flow Sign Convention",
+                "definition": "A method for differentiating inflows (positive) and outflows (negative) on the timeline."
+            }
+        ],
+        "1.2 The three rules of time travel": [
+            {
+                "term": "Compound Interest",
+                "definition": "Interest accumulated from a principal sum and previously accumulated interest."
+            },
+            {
+                "term": "Compounding",
+                "definition": "The process of earning interest on both the principal amount and any previously earned interest or returns."
+            },
+            {
+                "term": "Discounting",
+                "definition": "The process of moving a value or cash flow backward in time."
+            },
+            {
+                "term": "Simple Interest",
+                "definition": "The interest charge on borrowing that's calculated using an original principal amount only and an interest rate that never changes."
+            }
+        ],
+        "1.3 Valuing a Stream of Cash Flow (pg 138)": [
+            {
+                "term": "Net Present Value (NPV)",
+                "definition": "The present value of benefits subtracted by the present value of costs."
+            },
+            {
+                "term": "Perpetuity",
+                "definition": "A stream of equal cash flows that occur at regular intervals and last forever."
+            },
+            {
+                "term": "Annuity",
+                "definition": "A stream of N equal cash flows paid at regular intervals."
+            }
+        ]
+    }
+}
