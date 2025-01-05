@@ -1,6 +1,6 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'vocab.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class Vocabulary extends StatefulWidget {
   const Vocabulary({super.key});
@@ -10,32 +10,22 @@ class Vocabulary extends StatefulWidget {
 }
 
 class _VocabularyState extends State<Vocabulary> {
+  Map<String, dynamic>? vocabulary;
 
-    final _containerHeight = 700.0;
-    final ScrollController _scrollController = ScrollController();
-    int _currentScrollIndex = 0;
-  
+  Future<void> loadJsonAsset() async {
+    final String jsonString = await rootBundle.loadString('vocab.json');
+    final Map<String, dynamic> data = jsonDecode(jsonString);
+    setState(() {
+      vocabulary = data;
+    });
+  }
+
   @override
-  void initState(){
+  void initState() {
     super.initState();
-
-    _scrollController.addListener(_updateScrollIndicator);
+    loadJsonAsset();
   }
 
-  void _updateScrollIndicator(){
-    setState(() {
-      _currentScrollIndex = _scrollController.offset ~/ _containerHeight;
-    });
-  }
-
-  void _onNumberTap(int index){
-    _scrollController.animateTo(index * _containerHeight, 
-    duration: const Duration(seconds: 1), curve: Curves.easeIn);
-
-    setState(() {
-      _currentScrollIndex = index;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,37 +38,40 @@ class _VocabularyState extends State<Vocabulary> {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
-        )
+        ),
       ),
-      body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return ExpansionTile(
-            title: Text('Unit 1: The Time Value of Money'),
-            children: <Widget>[
-              ExpansionTile(
-                title: Text('1.1 Introduction of the Timeline '),
-                children: <Widget>[
-                  for (var item in vocab) 
-                    ExpansionTile(
-                      title: Text(item.word),
-                      children: <Widget>[
-                        ListTile(title: Text(item.definition)),
-                      ],
-                    ),
-                ],
-              ),
-              ExpansionTile(
-                title: Text('1.2 The three rules of time travel'),
-                children: <Widget>[
-                  ListTile(title: Text('Item 3')),
-                  ListTile(title: Text('Item 4')),
-                ],
-              ),
-            ],
-          );
-        },
-        itemCount: 1,
-      ),
+      body: vocabulary == null
+          ? const Center(child: CircularProgressIndicator())
+          : ListView.builder(
+              itemCount: vocabulary!.keys.length,
+              itemBuilder: (BuildContext context, int unitIndex) {
+                String unitKey = vocabulary!.keys.elementAt(unitIndex);
+                Map<String, dynamic> unitData = vocabulary![unitKey];
+
+                return ExpansionTile(
+                  title: Text(unitKey),
+                  children: unitData.keys.map((subUnitKey) {
+                    List<dynamic> subUnitData = unitData[subUnitKey];
+
+                    return ExpansionTile(
+                      title: Text(subUnitKey),
+                      children: subUnitData.map((vocabItem) {
+                        return ListTile(
+                          title: Text(vocabItem['term']),
+                          subtitle: Text(vocabItem['definition']),
+                        );
+                      }).toList(),
+                    );
+                  }).toList(),
+                );
+              },
+            ),
     );
   }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: Vocabulary(),
+  ));
 }
