@@ -1,0 +1,200 @@
+{
+    "Unit 3: Type of company and structure, budgeting, and valuation of cost and asset": {
+        "3.1 The four types of firms": [
+            {
+                "term": "Sole Proprietorship",
+                "definition": "A business owned by one person, with full control and personal liability. Profits are taxed as personal income."
+            },
+            {
+                "term": "Partnership",
+                "definition": "A business owned by two or more people, sharing profits, responsibilities, and liabilities. Taxed at the individual partner level."
+            },
+            {
+                "term": "Corporation",
+                "definition": "A separate legal entity owned by shareholders, offering limited liability. Profits may be taxed twice (at corporate and shareholder levels)."
+            },
+            {
+                "term": "Limited Liability Company (LLC)",
+                "definition": "A flexible hybrid structure with limited liability and pass-through taxation, combining features of corporations and partnerships."
+            },
+            {
+                "term": "Capital Structure",
+                "definition": "How a firm finances its operations (debt vs. equity)."
+            },
+            {
+                "term": "Liabilities",
+                "definition": "Financial obligations or debts owed."
+            },
+            {
+                "term": "Assets",
+                "definition": "Resources owned by the firm."
+            },
+            {
+                "term": "Equity",
+                "definition": "Owner’s claim after liabilities."
+            },
+            {
+                "term": "Debt",
+                "definition": "Borrowed money to finance operations."
+            },
+            {
+                "term": "Profit and Loss (P&L)",
+                "definition": "Income statement showing earnings and expenses."
+            },
+            {
+                "term": "Cash Flow",
+                "definition": "Movement of money in and out of the business."
+            },
+            {
+                "term": "Valuation",
+                "definition": "Estimation of the firm’s worth."
+            }
+        ],
+        "3.2 Forecasting earnings": [
+            {
+                "term": "Capital Budget",
+                "definition": "Future projects and investments that a company will take."
+            },
+            {
+                "term": "Capital Budgeting",
+                "definition": "Analysis of projects and investments that the company uses to determine its capital budget."
+            },
+            {
+                "term": "Incremental Earnings",
+                "definition": "How much a company’s earnings are forecasted to change following an investment."
+            },
+            {
+                "term": "Capital Expenditure",
+                "definition": "A fund used by a company to upgrade LONG-TERM assets."
+            },
+            {
+                "term": "Capital Depreciation",
+                "definition": "Decrease in value of a capital asset over time."
+            },
+            {
+                "term": "Straight-line Depreciation",
+                "definition": "Linear decrease in the value of an asset over time."
+            },
+            {
+                "term": "Unlevered Net Income",
+                "definition": "A company’s earnings if it had no debt."
+            },
+            {
+                "term": "Marginal Corporate Tax Rate",
+                "definition": "The amount of tax per dollar made."
+            },
+            {
+                "term": "Opportunity Cost",
+                "definition": "The value an asset could have provided in its best use."
+            }
+        ],
+        "3.3 Determining free cash flow and NPV": [
+            {
+                "term": "Free Cash Flow",
+                "definition": "The amount that is left over after operating expenses and capital expenditures have been paid off."
+            },
+            {
+                "term": "Net Working Capital",
+                "definition": "The difference between the current assets and current liabilities."
+            },
+            {
+                "term": "Trade Credit",
+                "definition": "The difference between receivables and payables is the net amount of the firm’s capital consumed due to credit transactions."
+            },
+            {
+                "term": "Depreciation Tax Shield",
+                "definition": "Tax savings that result from the ability to deduct depreciation."
+            }
+        ],
+        "3.4 The equity cost of capital": [
+            {
+                "term": "Cost of Capital",
+                "definition": "The best expected return available in the market on investments with similar risk."
+            },
+            {
+                "term": "Capital Asset Pricing Model (CAPM)",
+                "definition": "A model used to identify investments with similar risk, and determine the cost of capital."
+            },
+            {
+                "term": "Non-Diversifiable Risk (Systematic Risk)",
+                "definition": "Risk that cannot be eliminated through diversification; associated with market-wide factors."
+            },
+            {
+                "term": "Beta (β)",
+                "definition": "A measure of a security's sensitivity to market risk; it represents how much an asset's price moves relative to the overall market."
+            },
+            {
+                "term": "Security Market Line (SML)",
+                "definition": "A graphical representation of the CAPM equation, which shows the relationship between an investment’s expected return and its beta."
+            },
+            {
+                "term": "Risk Premium",
+                "definition": "The return above the risk-free rate that investors require to take on additional risk."
+            },
+            {
+                "term": "Risk-Free Rate (rf)",
+                "definition": "The return on a theoretically risk-free investment, often associated with government bonds."
+            },
+            {
+                "term": "Equity Cost of Capital",
+                "definition": "The cost of capital specifically for equity investments, determined using the CAPM model."
+            }
+        ],
+        "3.5 The market portfolio": [
+            {
+                "term": "Value Weighted Portfolio",
+                "definition": "A portfolio where each asset is weighted according to its market capitalization or total value."
+            },
+            {
+                "term": "Equal-Ownership Portfolio",
+                "definition": "Holds an equal ownership or share percentage of each company, regardless of its market capitalization."
+            },
+            {
+                "term": "Passive Portfolio",
+                "definition": "With very little trading required to maintain it, a passive portfolio has the goal of tracking the performance of a specific market index or market benchmark."
+            },
+            {
+                "term": "Market Index",
+                "definition": "Reports and tracks the value/performance of a particular portfolio of securities or assets."
+            },
+            {
+                "term": "Free Float",
+                "definition": "The portion of a company’s total shares that are publicly traded and available for purchase by investors, excluding shares held by insiders, governments, or controlling shareholders."
+            },
+            {
+                "term": "Price-Weighted Portfolio",
+                "definition": "Holds an equal number of shares of each stock, independent of their size."
+            },
+            {
+                "term": "Index Funds",
+                "definition": "A type of mutual fund or exchange-traded fund designed to replicate the performance of a specific market index by holding the same assets in the same proportions."
+            },
+            {
+                "term": "Exchange-Traded Fund (ETF)",
+                "definition": "A security that trades directly on an exchange, like a stock, but represents ownership in a portfolio of stocks."
+            },
+            {
+                "term": "Market Proxy",
+                "definition": "A portfolio whose return they believe tracks the true market portfolio or approximates the performance of the overall market or a specific segment."
+            }
+        ],
+        "3.6 A project’s cost of capital": [
+            {
+                "term": "Unlevered Cost of Capital",
+                "definition": "The expected return required by the firm’s investors to hold the firm’s underlying assets."
+            },
+            {
+                "term": "Unlevered Beta",
+                "definition": "Measures the market risk of the company without the impact of debt."
+            },
+            {
+                "term": "Enterprise Value",
+                "definition": "The combined market value of the firm’s equity and debt."
+            },
+            {
+                "term": "Net Debt",
+                "definition": "How much cash would remain if all debts were paid off and if a company has enough liquidity to meet its debt obligations."
+            }
+        ]
+    }
+}
