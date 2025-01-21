@@ -4,6 +4,7 @@ import 'package:finlit/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:arc_progress_bar_new/arc_progress_bar_new.dart';
+import 'package:finlit/pages/onboarding.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -72,6 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // Sign out method
   void _signOut() async {
     await FirebaseAuth.instance.signOut();
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => OnBoarding()));
   }
 
   @override
