@@ -3,7 +3,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project_name/pages/signup.dart';
+import 'package:finlit/pages/signup.dart';
+import 'package:finlit/pages/homepage_desktop.dart';
+import 'package:finlit/pages/homepage.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -82,6 +84,21 @@ class LoginPage extends StatelessWidget {
                               UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
                                 email: emailController.text,
                                 password: passwordController.text,
+                              );
+                              // Add navigation based on screen orientation
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LayoutBuilder(
+                                    builder: (context, constraints) {
+                                      if (constraints.maxWidth > constraints.maxHeight) {
+                                        return const HomeScreen1(); // Landscape
+                                      } else {
+                                        return const HomeScreen(); // Portrait
+                                      }
+                                    },
+                                  ),
+                                ),
                               );
                               // Navigate to your home page or dashboard
                             } on FirebaseAuthException catch (e) {

@@ -26,7 +26,7 @@ class FirestoreService {
       return lessons;
     } catch (e) {
       print('Error getting lessons: $e');
-      throw e;
+      rethrow;
     }
   }
 
@@ -47,7 +47,7 @@ class FirestoreService {
       return lessonDoc.data() as Map<String, dynamic>;
     } catch (e) {
       print('Error getting lesson content: $e');
-      throw e;
+      rethrow;
     }
   }
 
@@ -63,7 +63,7 @@ class FirestoreService {
           .toList();
     } catch (e) {
       print('Error getting unit names: $e');
-      throw e;
+      rethrow;
     }
   }
 
@@ -85,7 +85,7 @@ class FirestoreService {
       return List<Map<String, dynamic>>.from(lessonData['questions'] ?? []);
     } catch (e) {
       print('Error getting quiz questions: $e');
-      throw e;
+      rethrow;
     }
   }
 
@@ -93,17 +93,17 @@ class FirestoreService {
   String getUnitName(int index) {
     switch (index) {
       case 0:
-        return '401k and Retirement';
-      case 1:
         return 'Budgeting';
+      case 1:
+        return 'Investing';
       case 2:
         return 'Debt';
       case 3:
-        return 'Investing';
-      case 4:
         return 'Taxes';
+      case 4:
+        return '401k and Retirement';
       case 5:
-        return 'Understanding Consumer Protection';
+        return 'Understanding Consumer Rights';
       default:
         return 'Unknown Unit';
     }
