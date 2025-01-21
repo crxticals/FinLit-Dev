@@ -1,6 +1,6 @@
 {
   "Unit 1: The Time Value of Money": {
-    "1.1: Introduction of the Timeline": [
+    "1.1 Introduction of the Timeline": [
       {
         "term": "Stream of Cash Flows",
         "definition": "A series of payments or receipts of income occurring over multiple time periods."
@@ -28,6 +28,883 @@
       {
         "term": "Cash Flow Sign Convention",
         "definition": "A method for differentiating inflows (positive) and outflows (negative) on the timeline."
+      }
+    ],
+    "1.2 The three rules of time travel": [
+      {
+        "term": "Compound Interest",
+        "definition": "Interest accumulated from a principal sum and previously accumulated interest."
+      },
+      {
+        "term": "Compounding",
+        "definition": "The process of earning interest on both the principal amount and any previously earned interest or returns."
+      },
+      {
+        "term": "Discounting",
+        "definition": "The process of moving a value or cash flow backward in time."
+      },
+      {
+        "term": "Simple Interest",
+        "definition": "The interest charge on borrowing that's calculated using an original principal amount only and an interest rate that never changes."
+      }
+    ],
+    "1.3 Valuing a Stream of Cash Flow": [
+      {
+        "term": "Net Present Value (NPV)",
+        "definition": "The present value of benefits subtracted by the present value of costs."
+      },
+      {
+        "term": "Perpetuity",
+        "definition": "A stream of equal cash flows that occur at regular intervals and last forever."
+      },
+      {
+        "term": "Annuity",
+        "definition": "A stream of N equal cash flows paid at regular intervals."
+      }
+    ]
+  },
+
+  "Unit 2: Interest rate and the relationship between different rates": {
+    "2.1 Interest rate quotes and adjustments": [
+      {
+        "term": "Effective Annual Rate (EAR)",
+        "definition": "The actual amount of interest that will be earned at the end of the year."
+      }
+    ],
+    "2.2 Application: Discount rates and loans": [
+      {
+        "term": "Amortizing Loans",
+        "definition": "Loans that are paid periodically, e.g., a mortgage that is paid each month and each time a small amount of the loan balance plus its interest."
+      }
+    ],
+    "2.3 The determinants of interest rate": [
+      {
+        "term": "Adjustable Rate Mortgages (ARMs)",
+        "definition": "A mortgage with an interest rate that adjusts periodically based on a benchmark index, leading to fluctuating monthly payments over the loan term."
+      },
+      {
+        "term": "Nominal Interest Rates",
+        "definition": "The stated or advertised interest rate on a loan or investment, not accounting for inflation's impact on purchasing power."
+      },
+      {
+        "term": "Real Interest Rate",
+        "definition": "The inflation-adjusted interest rate that reflects the actual cost of borrowing or the real return on an investment."
+      },
+      {
+        "term": "Term Structure",
+        "definition": "The theory that explains the relationship between bond yields and time to maturity."
+      },
+      {
+        "term": "Yield Curve",
+        "definition": "The actual graphical representation of the term structure."
+      },
+      {
+        "term": "Federal Funds Rate",
+        "definition": "The interest rate at which banks lend reserve balances to each other overnight, influencing broader interest rates and monetary policy."
+      },
+      {
+        "term": "Interest Rate Expectations",
+        "definition": "Anticipations of future interest rate trends, influenced by economic data, inflation forecasts, and central bank policy."
+      }
+    ]
+  },
+
+  "Unit 3: Type of company and structure, budgeting, and valuation of cost and asset": {
+    "3.1 The four types of firms": [
+      {
+        "term": "Sole Proprietorship",
+        "definition": "A business owned by one person, with full control and personal liability. Profits are taxed as personal income."
+      },
+      {
+        "term": "Partnership",
+        "definition": "A business owned by two or more people, sharing profits, responsibilities, and liabilities. Taxed at the individual partner level."
+      },
+      {
+        "term": "Corporation",
+        "definition": "A separate legal entity owned by shareholders, offering limited liability. Profits may be taxed twice (at corporate and shareholder levels)."
+      },
+      {
+        "term": "Limited Liability Company (LLC)",
+        "definition": "A flexible hybrid structure with limited liability and pass-through taxation, combining features of corporations and partnerships."
+      },
+      {
+        "term": "Capital Structure",
+        "definition": "How a firm finances its operations (debt vs. equity)."
+      },
+      {
+        "term": "Liabilities",
+        "definition": "Financial obligations or debts owed."
+      },
+      {
+        "term": "Assets",
+        "definition": "Resources owned by the firm."
+      },
+      {
+        "term": "Equity",
+        "definition": "Owner’s claim after liabilities."
+      },
+      {
+        "term": "Debt",
+        "definition": "Borrowed money to finance operations."
+      },
+      {
+        "term": "Profit and Loss (P&L)",
+        "definition": "Income statement showing earnings and expenses."
+      },
+      {
+        "term": "Cash Flow",
+        "definition": "Movement of money in and out of the business."
+      },
+      {
+        "term": "Valuation",
+        "definition": "Estimation of the firm’s worth."
+      }
+    ],
+    "3.2 Forecasting earnings": [
+      {
+        "term": "Capital Budget",
+        "definition": "Future projects and investments that a company will take."
+      },
+      {
+        "term": "Capital Budgeting",
+        "definition": "Analysis of projects and investments that the company uses to determine its capital budget."
+      },
+      {
+        "term": "Incremental Earnings",
+        "definition": "How much a company’s earnings are forecasted to change following an investment."
+      },
+      {
+        "term": "Capital Expenditure",
+        "definition": "A fund used by a company to upgrade LONG-TERM assets."
+      },
+      {
+        "term": "Capital Depreciation",
+        "definition": "Decrease in value of a capital asset over time."
+      },
+      {
+        "term": "Straight-line Depreciation",
+        "definition": "Linear decrease in the value of an asset over time."
+      },
+      {
+        "term": "Unlevered Net Income",
+        "definition": "A company’s earnings if it had no debt."
+      },
+      {
+        "term": "Marginal Corporate Tax Rate",
+        "definition": "The amount of tax per dollar made."
+      },
+      {
+        "term": "Opportunity Cost",
+        "definition": "The value an asset could have provided in its best use."
+      }
+    ],
+    "3.3 Determining free cash flow and NPV": [
+      {
+        "term": "Free Cash Flow",
+        "definition": "The amount that is left over after operating expenses and capital expenditures have been paid off."
+      },
+      {
+        "term": "Net Working Capital",
+        "definition": "The difference between the current assets and current liabilities."
+      },
+      {
+        "term": "Trade Credit",
+        "definition": "The difference between receivables and payables is the net amount of the firm’s capital consumed due to credit transactions."
+      },
+      {
+        "term": "Depreciation Tax Shield",
+        "definition": "Tax savings that result from the ability to deduct depreciation."
+      }
+    ],
+    "3.4 The equity cost of capital": [
+      {
+        "term": "Cost of Capital",
+        "definition": "The best expected return available in the market on investments with similar risk."
+      },
+      {
+        "term": "Capital Asset Pricing Model (CAPM)",
+        "definition": "A model used to identify investments with similar risk, and determine the cost of capital."
+      },
+      {
+        "term": "Non-Diversifiable Risk (Systematic Risk)",
+        "definition": "Risk that cannot be eliminated through diversification; associated with market-wide factors."
+      },
+      {
+        "term": "Beta (β)",
+        "definition": "A measure of a security's sensitivity to market risk; it represents how much an asset's price moves relative to the overall market."
+      },
+      {
+        "term": "Security Market Line (SML)",
+        "definition": "A graphical representation of the CAPM equation, which shows the relationship between an investment’s expected return and its beta."
+      },
+      {
+        "term": "Risk Premium",
+        "definition": "The return above the risk-free rate that investors require to take on additional risk."
+      },
+      {
+        "term": "Risk-Free Rate (rf)",
+        "definition": "The return on a theoretically risk-free investment, often associated with government bonds."
+      },
+      {
+        "term": "Equity Cost of Capital",
+        "definition": "The cost of capital specifically for equity investments, determined using the CAPM model."
+      }
+    ],
+    "3.5 The market portfolio": [
+      {
+        "term": "Value Weighted Portfolio",
+        "definition": "A portfolio where each asset is weighted according to its market capitalization or total value."
+      },
+      {
+        "term": "Equal-Ownership Portfolio",
+        "definition": "Holds an equal ownership or share percentage of each company, regardless of its market capitalization."
+      },
+      {
+        "term": "Passive Portfolio",
+        "definition": "With very little trading required to maintain it, a passive portfolio has the goal of tracking the performance of a specific market index or market benchmark."
+      },
+      {
+        "term": "Market Index",
+        "definition": "Reports and tracks the value/performance of a particular portfolio of securities or assets."
+      },
+      {
+        "term": "Free Float",
+        "definition": "The portion of a company’s total shares that are publicly traded and available for purchase by investors, excluding shares held by insiders, governments, or controlling shareholders."
+      },
+      {
+        "term": "Price-Weighted Portfolio",
+        "definition": "Holds an equal number of shares of each stock, independent of their size."
+      },
+      {
+        "term": "Index Funds",
+        "definition": "A type of mutual fund or exchange-traded fund designed to replicate the performance of a specific market index by holding the same assets in the same proportions."
+      },
+      {
+        "term": "Exchange-Traded Fund (ETF)",
+        "definition": "A security that trades directly on an exchange, like a stock, but represents ownership in a portfolio of stocks."
+      },
+      {
+        "term": "Market Proxy",
+        "definition": "A portfolio whose return they believe tracks the true market portfolio or approximates the performance of the overall market or a specific segment."
+      }
+    ],
+    "3.6 A project’s cost of capital": [
+      {
+        "term": "Unlevered Cost of Capital",
+        "definition": "The expected return required by the firm’s investors to hold the firm’s underlying assets."
+      },
+      {
+        "term": "Unlevered Beta",
+        "definition": "Measures the market risk of the company without the impact of debt."
+      },
+      {
+        "term": "Enterprise Value",
+        "definition": "The combined market value of the firm’s equity and debt."
+      },
+      {
+        "term": "Net Debt",
+        "definition": "How much cash would remain if all debts were paid off and if a company has enough liquidity to meet its debt obligations."
+      }
+    ]
+  },
+
+  "Unit 4: Stock and Bond": {
+    "4.1 The Stock Market": [
+      {
+        "term": "Private Companies",
+        "definition": "A company whose shares do not trade on a public market."
+      },
+      {
+        "term": "Public Companies",
+        "definition": "Corporations whose stock is traded on a stock market, providing shareholders the ability to easily and quickly convert their investment into cash."
+      },
+      {
+        "term": "Stock Market/Stock Exchange",
+        "definition": "An organized market on which the shares of many corporations are publicly traded."
+      },
+      {
+        "term": "Liquid",
+        "definition": "An investment that can easily be turned into cash."
+      },
+      {
+        "term": "Primary Market",
+        "definition": "The market used when a corporation itself issues new shares of stock and sells them to investors."
+      },
+      {
+        "term": "Secondary Market",
+        "definition": "The market where shares continue to trade after the initial transaction between the corporation and investors."
+      },
+      {
+        "term": "Market Makers/Specialists",
+        "definition": "Individuals on the trading floor of a stock exchange who match buyers with sellers."
+      },
+      {
+        "term": "Bid Price",
+        "definition": "The price at which a market maker or specialist is willing to buy a security/stock/bond."
+      },
+      {
+        "term": "Ask Price",
+        "definition": "The price at which a market maker or specialist is willing to sell a security/stock/bond."
+      },
+      {
+        "term": "Liquidity",
+        "definition": "The extent to which the market for an asset is liquid."
+      },
+      {
+        "term": "Bid-Ask Spread",
+        "definition": "The amount by which the ask price exceeds the bid price."
+      },
+      {
+        "term": "Transaction Cost",
+        "definition": "An expense, such as a broker commission and the bid-ask spread, that investors must pay to trade securities."
+      },
+      {
+        "term": "Limit Order",
+        "definition": "An order to buy or sell a set amount of a security at a fixed price."
+      },
+      {
+        "term": "Limit Order Book",
+        "definition": "A collection of all current limit orders for a given security."
+      },
+      {
+        "term": "Market Orders",
+        "definition": "Orders to trade immediately at the best outstanding limit order available."
+      },
+      {
+        "term": "High-Frequency Traders (HFTs)",
+        "definition": "Traders who place, update, cancel, and execute trades many times per second."
+      },
+      {
+        "term": "Dark Pools",
+        "definition": "Trading venues in which the size and price of orders are not disclosed to participants."
+      }
+    ],
+    "4.2 Bond Cash Flows, Prices, and Yields": [
+      {
+        "term": "Bond Certificate",
+        "definition": "Indicates the amounts and dates of all payments to be made."
+      },
+      {
+        "term": "Maturity Date",
+        "definition": "The final repayment date of the bond."
+      },
+      {
+        "term": "Term",
+        "definition": "The time remaining until the repayment date."
+      },
+      {
+        "term": "Coupons",
+        "definition": "The promised interest payments of a bond."
+      },
+      {
+        "term": "Face Value",
+        "definition": "The principal of the bond."
+      },
+      {
+        "term": "Zero-Coupon Bonds",
+        "definition": "A type of bond that does not make coupon payments. The only cash payment the investor receives is the face value of the bond on the maturity date."
+      },
+      {
+        "term": "Treasury Bills",
+        "definition": "U.S. government bonds with a maturity of up to one year, which are zero-coupon bonds."
+      },
+      {
+        "term": "Pure Discount Bonds",
+        "definition": "Zero-coupon bonds that trade at a discount (a price lower than the face value)."
+      },
+      {
+        "term": "Yield to Maturity (YTM)",
+        "definition": "The discount rate that sets the present value of the promised bond payments equal to the current market price of the bond."
+      },
+      {
+        "term": "Spot Interest Rates",
+        "definition": "Default-free, zero-coupon yields."
+      }
+    ],
+    "4.3 Dynamic Behavior of Bond Prices": [
+      {
+        "term": "Premium",
+        "definition": "The amount by which a bond's market price exceeds its face value, often due to its higher interest rate than current market rates."
+      },
+      {
+        "term": "Par",
+        "definition": "The face value of a bond, which is the amount the issuer agrees to repay the bondholder at maturity, typically $1,000."
+      },
+      {
+        "term": "Bonds’ Duration",
+        "definition": "Measures how much a bond's price will change in response to interest rate fluctuations, with longer durations indicating greater sensitivity."
+      }
+    ],
+    "4.4 Corporate Bonds": [
+      {
+        "term": "Corporate Bonds",
+        "definition": "Debt securities issued by companies to raise funds for operations, projects, or refinancing. Investors lend money in exchange for regular interest payments (coupons) and repayment of the principal at maturity."
+      },
+      {
+        "term": "Investment-Grade Bond",
+        "definition": "Low-risk bonds issued by companies with strong credit ratings."
+      },
+      {
+        "term": "Junk Bond",
+        "definition": "High-yield, high-risk bonds with lower credit ratings."
+      },
+      {
+        "term": "Convertible Bond",
+        "definition": "A bond that can be converted into company stock."
+      }
+    ],
+    "4.5 The Dividend-Discount Model": [
+      {
+        "term": "Equity Cost of Capital",
+        "definition": "The rate of return a company has to provide to its investors to compensate for the associated risks."
+      },
+      {
+        "term": "Dividend Discount Model",
+        "definition": "Theory that predicts the price of a company’s stock, using the present-day price. The future price is the present price plus all future dividend payments."
+      },
+      {
+        "term": "Dividend Yield",
+        "definition": "Annual payments to stockholders, expressed as a percentage of the current stock price."
+      },
+      {
+        "term": "Capital Gain",
+        "definition": "Profits from selling an asset."
+      },
+      {
+        "term": "Capital Gain Rate",
+        "definition": "Capital gain divided by the current stock price."
+      },
+      {
+        "term": "Total Return",
+        "definition": "Dividend yield plus capital gain rate."
+      }
+    ],
+    "4.6 Valuation Based on Comparable Firms": [
+      {
+        "term": "Methods of Comparables",
+        "definition": "Estimating the firm's value based on the value of other comparable firms or investments that are expected to generate similar cash flows in the future."
+      },
+      {
+        "term": "Valuation Multiple",
+        "definition": "Ratio of the value to some measure of the firm’s scale."
+      },
+      {
+        "term": "Price-Earning Ratio",
+        "definition": "Equal to the share price divided by its earnings per share."
+      },
+      {
+        "term": "Forward Earnings",
+        "definition": "Expected earnings over the next twelve months."
+      },
+      {
+        "term": "Trailing Earnings",
+        "definition": "Earnings over the prior twelve months."
+      },
+      {
+        "term": "Enterprise Value Multiples",
+        "definition": "Represents the total value of the firm’s underlying business rather than only the value of equity."
+      },
+      {
+        "term": "Other Multiples",
+        "definition": "Possibility for many other valuation multiples."
+      }
+    ],
+    "4.7 Information, Competition, and Stock Prices": [
+      {
+        "term": "Stock",
+        "definition": "A type of security representing ownership in a company, giving the holder a claim on part of the company’s assets and earnings."
+      },
+      {
+        "term": "Industry Trends",
+        "definition": "Patterns or movements in a specific industry that can affect business performance."
+      },
+      {
+        "term": "Dividends",
+        "definition": "Payments made by a company to its shareholders as a reward for their investment."
+      },
+      {
+        "term": "Market Price",
+        "definition": "The current price at which a stock or other asset is bought and sold in the market."
+      },
+      {
+        "term": "Consensus Estimate",
+        "definition": "The average prediction of a stock’s value or performance, based on analyses by multiple experts or investors."
+      },
+      {
+        "term": "Valuation Models",
+        "definition": "Mathematical frameworks used to determine the intrinsic value of a stock or asset."
+      },
+      {
+        "term": "Share Price",
+        "definition": "The price of a single share of a company's stock as quoted on the stock exchange."
+      },
+      {
+        "term": "Enterprise Value",
+        "definition": "A measure of a company's total value, often used in financial analysis."
+      },
+      {
+        "term": "Efficient Markets Hypothesis",
+        "definition": "A theory stating that stock prices fully reflect all available information."
+      },
+      {
+        "term": "Competitive Advantage",
+        "definition": "A unique feature or resource that allows a company to perform better than competitors."
+      },
+      {
+        "term": "Accounting Earnings",
+        "definition": "The profits of a company as reported in its financial statements."
+      },
+      {
+        "term": "Accounting Illusions",
+        "definition": "Misleading financial metrics or reports that may appear to enhance performance but do not reflect true economic value."
+      },
+      {
+        "term": "Raising Capital",
+        "definition": "The process by which a company secures funding to finance its operations or investments."
+      },
+      {
+        "term": "Fair Price",
+        "definition": "The price at which an asset is reasonably valued based on its intrinsic worth and market conditions."
+      },
+      {
+        "term": "Free Competition",
+        "definition": "A market environment where buyers and sellers operate without significant barriers."
+      }
+    ],
+    "4.8 The Expected Return of a Portfolio": [
+      {
+        "term": "Portfolio Weights",
+        "definition": "The fraction of the total investment allocated to a specific security in the portfolio."
+      },
+      {
+        "term": "Return of the Portfolio",
+        "definition": "The weighted average of the returns of the individual securities in the portfolio."
+      },
+      {
+        "term": "Expected Return of the Portfolio",
+        "definition": "The weighted average of the expected returns of the individual investments in the portfolio."
+      },
+      {
+        "term": "Expected Return",
+        "definition": "The anticipated return on an individual security based on historical or projected data."
+      },
+      {
+        "term": "Risk-Free Interest Rate",
+        "definition": "The theoretical return on an investment with zero risk, often represented by government bonds."
+      },
+      {
+        "term": "Correlation",
+        "definition": "Measures the degree to which two securities’ returns move together, ranging from -1 to +1."
+      },
+      {
+        "term": "Covariance",
+        "definition": "Quantifies the extent to which two securities’ returns change together."
+      },
+      {
+        "term": "Volatility",
+        "definition": "The standard deviation of a security's return, representing its risk."
+      },
+      {
+        "term": "Variance",
+        "definition": "The square of the standard deviation, indicating the degree of spread in the security's return."
+      }
+    ]
+  },
+
+  "Unit 5: Financial Statement and Balance Sheet": {
+    "5.1 Firms’ Disclosure of Financial Information": [
+      {
+        "term": "Financial Statements",
+        "definition": "Accounting reports with past performance information that a firm issues periodically."
+      },
+      {
+        "term": "10-Q",
+        "definition": "A comprehensive unaudited report of financial performance that must be submitted quarterly by all public companies to the Securities and Exchange Commission (SEC)."
+      },
+      {
+        "term": "10-K",
+        "definition": "A comprehensive report filed annually by a publicly traded company about its financial performance and required by the Securities and Exchange Commission (SEC)."
+      },
+      {
+        "term": "Annual Report",
+        "definition": "A document that public corporations must provide annually to shareholders that describes their operations and financial conditions."
+      },
+      {
+        "term": "Generally Accepted Accounting Principles (GAAP)",
+        "definition": "A set of accounting rules, standards, and procedures issued."
+      }
+    ],
+    "5.2 The Balance Sheet": [
+      {
+        "term": "Balance Sheet",
+        "definition": "A list of a firm’s assets and liabilities that provides a snapshot of the firm’s financial position at a given point in time."
+      },
+      {
+        "term": "Statement of Financial Position",
+        "definition": "List of the firm’s assets and liabilities that provides a snapshot of the firm’s financial position at a given point in time."
+      },
+      {
+        "term": "Assets",
+        "definition": "The cash, inventory, property, plant and equipment, and other investments a company has made."
+      },
+      {
+        "term": "Liabilities",
+        "definition": "A firm’s obligations to its creditors."
+      },
+      {
+        "term": "Stockholders’ Equity",
+        "definition": "An accounting measure of a firm’s net worth that represents the difference between the firm’s assets and its liabilities."
+      },
+      {
+        "term": "Current Assets",
+        "definition": "Cash or assets convertible to cash within one year, including securities, receivables, inventories, and prepaid expenses."
+      },
+      {
+        "term": "Marketable Securities",
+        "definition": "Short-term, low-risk investments easily convertible to cash, like government debt maturing within a year."
+      },
+      {
+        "term": "Accounts Receivable",
+        "definition": "Amounts owed to a firm by customers who have purchased goods or services on credit."
+      },
+      {
+        "term": "Inventories",
+        "definition": "A firm’s raw materials as well as its work-in-progress and finished goods."
+      },
+      {
+        "term": "Long-Term Assets",
+        "definition": "Net property, plant, equipment, unused property, start-up costs, long-term investments, and property for sale."
+      },
+      {
+        "term": "Depreciation Expense",
+        "definition": "Amount deducted, for accounting purposes, from an asset’s value to reflect wear and tear over a given period."
+      },
+      {
+        "term": "Accumulated Depreciation",
+        "definition": "The cumulative depreciation of an asset up to a given point in its life; equal to the last period’s accumulated depreciation plus the current period’s depreciation expense."
+      },
+      {
+        "term": "Book Value",
+        "definition": "The acquisition cost of an asset less its accumulated depreciation."
+      },
+      {
+        "term": "Intangible Assets",
+        "definition": "Non-physical assets like intellectual property, trademarks, and goodwill, recorded as the excess of acquisition price over tangible assets' book value."
+      },
+      {
+        "term": "Amortization",
+        "definition": "A charge that captures the change in value of acquired assets. Like depreciation, amortization is not an actual cash expense."
+      },
+      {
+        "term": "Impairment Charge",
+        "definition": "Captures the change in value of the acquired assets; is not an actual cash expense."
+      },
+      {
+        "term": "Current Liabilities",
+        "definition": "Liabilities due within one year, such as payables, short-term debt, current portions of long-term debt, salaries, taxes, and unearned revenue."
+      },
+      {
+        "term": "Accounts Payable",
+        "definition": "The amounts owed to creditors for products or services purchased with credit."
+      },
+      {
+        "term": "Short-Term Debt",
+        "definition": "Debt with a maturity of less than one year."
+      },
+      {
+        "term": "Net Working Capital",
+        "definition": "The difference between current assets and liabilities, showing short-term capital for the business."
+      },
+      {
+        "term": "Long-Term Debt",
+        "definition": "Any loan or debt obligation with a maturity of more than a year."
+      },
+      {
+        "term": "Capital Leases",
+        "definition": "A lease treated as an acquisition, recording the asset and liability on the lessee's balance sheet. Depreciation and interest expenses are deducted over time."
+      },
+      {
+        "term": "Deferred Taxes",
+        "definition": "An asset or liability arising from differences between reported tax expenses and taxes paid."
+      },
+      {
+        "term": "Book Value of Equity",
+        "definition": "The difference between the book value of a firm’s assets and its liabilities, also called stockholders’ equity, represents the net worth of a firm from an accounting perspective."
+      },
+      {
+        "term": "Market Capitalization",
+        "definition": "The total market value of equity; equals the market price per share times the number of shares."
+      },
+      {
+        "term": "Market-to-Book Ratio",
+        "definition": "The ratio of a firm’s market (equity) capitalization to the book value of its stockholders’ equity. Also referred to as the price-to-book or P/B ratio."
+      },
+      {
+        "term": "Value Stocks",
+        "definition": "Firms with low market-to-book ratios."
+      },
+      {
+        "term": "Growth Stocks",
+        "definition": "Firms with high market-to-book ratios."
+      },
+      {
+        "term": "Enterprise Value",
+        "definition": "The firm's equity and debt market value minus cash and securities, reflecting its business value."
+      }
+    ],
+    "5.3 The Income Statement": [
+      {
+        "term": "Income Statement",
+        "definition": "Lists the firm’s revenues and expenses over a period of time."
+      },
+      {
+        "term": "Net Income",
+        "definition": "Total amount of disposable income after all deductions."
+      },
+      {
+        "term": "Gross Profit",
+        "definition": "The difference between sales revenues and the costs."
+      },
+      {
+        "term": "Operating Expenses",
+        "definition": "Expenses from the ordinary course of running the business that are not directly related to producing the goods or services being sold."
+      },
+      {
+        "term": "Operating Income",
+        "definition": "The firm’s gross profit net of operating expenses."
+      },
+      {
+        "term": "Convertible Bonds",
+        "definition": "A form of debt that can be converted to shares."
+      },
+      {
+        "term": "Dilution",
+        "definition": "An increase in total shares to divide the amount of earnings, causing each share to have less dividend."
+      }
+    ],
+    "5.4 The Statement of Cash Flows": [
+      {
+        "term": "Statement of Cash Flow",
+        "definition": "A financial statement that summarizes a company’s cash inflows and outflows from operating, investing, and financing activities over a specific period."
+      },
+      {
+        "term": "Capital Expenditures (CapEx)",
+        "definition": "Funds a company uses to acquire, upgrade, or maintain physical assets such as property, buildings, or equipment."
+      },
+      {
+        "term": "Retained Earnings",
+        "definition": "The portion of a company’s net income that is reinvested into the business rather than distributed as dividends to shareholders."
+      }
+    ],
+    "5.5 Financial Statement Analysis": [
+      {
+        "term": "Financial Statement Analysis",
+        "definition": "Involves evaluating a company’s financial health by reviewing its key financial statements: Income Statement, Balance Sheet, and Cash Flow Statement. This helps investors, creditors, and management make informed decisions."
+      },
+      {
+        "term": "Income Statement",
+        "definition": "Shows profitability over a period (Revenue, COGS, Gross Profit, Operating Expenses, Net Income)."
+      },
+      {
+        "term": "Balance Sheet",
+        "definition": "A snapshot of assets, liabilities, and equity at a point in time (Assets = Liabilities + Equity)."
+      },
+      {
+        "term": "Cash Flow Statement",
+        "definition": "Tracks cash inflows and outflows (Operating, Investing, and Financing activities)."
+      }
+    ]
+  },
+
+  "Unit 6: Risk Management": {
+    "6.1 Common Measures of Risk and Return": [
+      {
+        "term": "Probability Distribution",
+        "definition": "All possible values and the probability of each value that an average can take within a range."
+      },
+      {
+        "term": "Expected Return",
+        "definition": "Weighted average of possible returns."
+      },
+      {
+        "term": "Variance",
+        "definition": "Squared deviation from the mean."
+      },
+      {
+        "term": "Standard Deviation",
+        "definition": "Square root of variance."
+      },
+      {
+        "term": "Volatility",
+        "definition": "The standard deviation of a return."
+      }
+    ],
+    "6.2 Measuring Systematic Risk": [
+      {
+        "term": "Efficient Portfolio",
+        "definition": "A portfolio that contains only systematic risks, and any changes in this portfolio will correspond to the systematic shocks of the economy."
+      },
+      {
+        "term": "Market Portfolio",
+        "definition": "Portfolio of all stocks and securities traded in a capital market."
+      },
+      {
+        "term": "Beta of the Security",
+        "definition": "The expected percentage change in its return given a 1% change in the return of the market portfolio."
+      },
+      {
+        "term": "Systematic Risk",
+        "definition": "The inherent market-wide risk that affects all investments."
+      },
+      {
+        "term": "Real-Firm Betas",
+        "definition": "Measure a company's systematic risk compared to the market, based on actual historical data."
+      },
+      {
+        "term": "Interpreting Betas",
+        "definition": "Measure risk for firms in high-growth or dynamic sectors, reflecting the variability in returns due to advancements, innovation, or market conditions."
+      }
+    ],
+    "6.3 The Volatility of a Large Portfolio": [
+      {
+        "term": "Diversification",
+        "definition": "The practice of reducing risk by investing in a variety of assets with differing risk profiles."
+      },
+      {
+        "term": "Portfolio",
+        "definition": "A collection of financial assets such as stocks, bonds, or other securities held by an investor."
+      },
+      {
+        "term": "Volatility",
+        "definition": "A statistical measure of the dispersion of returns, often expressed as standard deviation."
+      },
+      {
+        "term": "Average Return",
+        "definition": "The mean of an asset's returns over a period, representing its typical performance."
+      },
+      {
+        "term": "Standard Deviation",
+        "definition": "A measure of the variability or risk associated with the return on an investment."
+      },
+      {
+        "term": "Correlation",
+        "definition": "The degree to which two stocks move together, positively or negatively."
+      },
+      {
+        "term": "Negative Correlation",
+        "definition": "A relationship where one stock performs well while the other performs poorly, reducing overall portfolio risk."
+      },
+      {
+        "term": "Common Risks",
+        "definition": "Risks that affect multiple stocks simultaneously, leading to higher correlation."
+      },
+      {
+        "term": "Idiosyncratic Risk",
+        "definition": "Risk unique to a specific asset that can be mitigated through diversification."
+      },
+      {
+        "term": "Systematic Risk",
+        "definition": "The portion of risk that is common to all stocks in the market, which cannot be eliminated through diversification."
       }
     ]
   }
