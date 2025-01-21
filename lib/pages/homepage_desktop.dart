@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:project_name/pages/class_stuff1.dart';
+import 'package:finlit/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project_name/pages/login.dart';
+import 'package:finlit/pages/login.dart';
 import 'package:arc_progress_bar_new/arc_progress_bar_new.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
-import 'package:project_name/pages/vocabulary.dart';
+import 'package:finlit/pages/vocabulary.dart';
+import 'package:finlit/pages/onboarding.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -59,7 +60,7 @@ class _HomeScreenState1 extends State<HomeScreen1> {
   Future<void> _signOut() async {
     await FirebaseAuth.instance.signOut();
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => OnBoarding()),
     );
   }
 

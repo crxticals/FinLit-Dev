@@ -1,15 +1,16 @@
 // ignore_for_file: unused_import
 
+import 'package:finlit/pages/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:project_name/firebase_options.dart';
-import 'package:project_name/pages/homepage.dart';
-import 'package:project_name/pages/homepage_desktop.dart';
-import 'package:project_name/pages/login.dart';
+import 'package:finlit/firebase_options.dart';
+import 'package:finlit/pages/homepage.dart';
+import 'package:finlit/pages/homepage_desktop.dart';
+import 'package:finlit\/pages/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project_name/pages/migrate_data.dart';
-
+import 'package:finlit\/pages/migrate_data.dart';
+import 'package:finlit\/pages/onboarding.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.active) {
             User? user = snapshot.data;
             if (user == null) {
-              return LoginPage(); // User is not signed in
+              return OnBoarding(); // User is not signed in so show onboarding instead
             } else {
               return LayoutBuilder(
                 builder: (context, constraints) {
