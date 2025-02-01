@@ -1,6 +1,8 @@
 // ignore_for_file: unused_local_variable, unused_catch_clause
 
 import 'package:animate_do/animate_do.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:finlit/pages/userpreferences_onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:finlit/pages/signup.dart';
@@ -85,18 +87,26 @@ class LoginPage extends StatelessWidget {
                                 email: emailController.text,
                                 password: passwordController.text,
                               );
+                              String? uid = FirebaseAuth.instance.currentUser?.uid;
+                              DocumentReference userDoc = FirebaseFirestore.instance.collection('users').doc(uid);
+                              DocumentSnapshot snapshot = await userDoc.get();
                               // Add navigation based on screen orientation
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => LayoutBuilder(
                                     builder: (context, constraints) {
-                                      if (constraints.maxWidth > constraints.maxHeight) {
-                                        return const HomeScreen1(); // Landscape
+                                      var userSetup = snapshot.get('first_time?');
+                                      if (userSetup == "True"){
+                                        return UserPreferencesPage();
                                       } else {
-                                        return const HomeScreen(); // Portrait
+                                        if (constraints.maxWidth > constraints.maxHeight) {
+                                          return const HomeScreen1(); // Landscape
+                                          } else {
+                                            return const HomeScreen(); // Portrait
+                                        }
                                       }
-                                    },
+                                      } 
                                   ),
                                 ),
                               );

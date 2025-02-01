@@ -11,7 +11,8 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'dart:typed_data';
-
+import 'package:finlit/pages/homepage.dart';
+import 'package:finlit/pages/homepage_desktop.dart';
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
 
@@ -280,6 +281,7 @@ class _SignupPageState extends State<SignupPage> {
             'email': emailController.text.trim(),
             'profilePicture': profilePictureUrl,
             'createdAt': FieldValue.serverTimestamp(),
+            'first_time?': "True",
           });
 
       // Show success message
