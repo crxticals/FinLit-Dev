@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:project_name/pages/class_stuff1.dart';
+import 'package:finlit/pages/class_stuff1.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:arc_progress_bar_new/arc_progress_bar_new.dart';
+import 'package:finlit/pages/onboarding.dart';
+import 'package:flutter/gestures.dart';
 
 final List<String> imgAssets = [
   'assets/Unit1.png',
@@ -16,7 +17,6 @@ final List<String> imgAssets = [
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
-
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -39,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
       final data = json.decode(response);
       setState(() {
         userData = data['user'] ?? {};
-        // Initialize progress data for each unit
         if (userData['progressStatus'] != null) {
           Map<String, dynamic> progressStatus = userData['progressStatus'];
           unitProgress = progressStatus.map((key, value) => 
@@ -52,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   double getUnitProgress(int index) {
-    // Get unit name from asset path (e.g., 'Unit1' from 'assets/Unit1.png')
     String unitName = imgAssets[index].split('/').last.split('.').first;
     return unitProgress[unitName] ?? 0.0;
   }
@@ -69,13 +67,53 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // Sign out method
   void _signOut() async {
     await FirebaseAuth.instance.signOut();
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => OnBoarding()));
+  }
+
+  Widget _buildStatItem(String title, String value, IconData icon) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(icon, color: Colors.white, size: 28),
+        const SizedBox(height: 8),
+        Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white70,
+            fontSize: 14,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          value,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    // Get the screen size
+    final Size screenSize = MediaQuery.of(context).size;
+    // Calculate the available height for the carousel
+    final double topPadding = MediaQuery.of(context).padding.top;
+    final double headerHeight = 120; // Approximate height for the header
+    final double statsHeight = 120; // Approximate height for the stats container
+    final double spacing = 24; // Spacing between elements
+    final double bottomNavHeight = 56; // Standard bottom navigation height
+    
+    // Calculate the carousel height
+    final double carouselHeight = screenSize.height - 
+        (topPadding + headerHeight + statsHeight + spacing + bottomNavHeight);
+
     return Scaffold(
       body: Stack(
         children: [
@@ -91,42 +129,28 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          Column(
-            children: [
-              Container(
-                color: Colors.transparent,
-                padding: const EdgeInsets.all(16.0),
-                alignment: Alignment.center,
-                child: const Text(
-                  '',
-                  style: TextStyle(
-                    fontSize: 1,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 1),
-              Container(
-                padding: const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(12.0),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 1.0,
-                      offset: Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      alignment: Alignment.centerRight,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+          Listener(
+            onPointerSignal: (PointerSignalEvent pointerSignal) {
+              if (pointerSignal is PointerScrollEvent) {
+                final offset = pointerSignal.scrollDelta.dy;
+                _pageController.position.moveTo(
+                  _pageController.offset + offset,
+                  duration: const Duration(milliseconds: 100),
+                  curve: Curves.easeOut,
+                );
+              }
+            },
+
+            child: Column(
+              children: [
+                // App Bar
+                Padding(
+                  padding: EdgeInsets.fromLTRB(16.0, topPadding + 16.0, 16.0, 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Hello, ${userData['name'] ?? 'User'}',
@@ -136,63 +160,44 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.white,
                             ),
                           ),
-                          const SizedBox(height: 1),
+                          const SizedBox(height: 4),
                           const Text(
                             'Ready to learn?',
                             style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
+                              fontSize: 16,
+                              color: Colors.white70,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              ElevatedButton(
-                                onPressed: _signOut,
-                                style: ElevatedButton.styleFrom(
-                                  foregroundColor: Colors.white,
-                                  backgroundColor: Colors.red,
-                                ),
-                                child: const Text('Sign Out'),
-                              ),
-                            ],
-                          ),
                         ],
                       ),
-                    ),
-                    const Divider(),
-                    Container(
-                      color: const Color(0xFFF2F5EA),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Column(
-                            children: [
-                              const Text('Level'),
-                              Text('${userData['level'] ?? 'N/A'}'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const Text('Rank'),
-                              Text('Rank #${userData['rank'] ?? 'N/A'}'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              const Text('Day Streak'),
-                              Text('${userData['dayStreak'] ?? 'N/A'}'),
-                            ],
-                          ),
-                        ],
+                      IconButton(
+                        onPressed: _signOut,
+                        icon: const Icon(Icons.logout, color: Colors.white),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(
-                child: Center(
+                // User Stats
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _buildStatItem('Level', '${userData['level'] ?? 'N/A'}', Icons.star),
+                      _buildStatItem('Rank', 'Rank #${userData['rank'] ?? 'N/A'}', Icons.leaderboard),
+                      _buildStatItem('Day Streak', '${userData['dayStreak'] ?? 'N/A'}', Icons.local_fire_department),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 24),
+                // Unit Cards with Progress Bar
+                SizedBox(
+                  height: carouselHeight,
                   child: PageView.builder(
                     controller: _pageController,
                     itemCount: imgAssets.length,
@@ -205,9 +210,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             value = (_pageController.page! - index).abs();
                             value = (1 - (value * 0.1)).clamp(0.0, 1.0);
                           }
-
                           double progressPercentage = getUnitProgress(index);
-
+                          
+                          // Calculate the dimensions for the card
+                          double cardWidth = screenSize.width * 0.8;
+                          double cardHeight = carouselHeight * 0.9; // Leave some padding
+                          
                           return Center(
                             child: Transform.scale(
                               scale: value,
@@ -226,34 +234,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Hero(
                                   tag: 'image$index',
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(20.0),
                                     child: SizedBox(
-                                      width: MediaQuery.of(context).size.width,
-                                      height: MediaQuery.of(context).size.height * 0.6,
+                                      width: cardWidth,
+                                      height: cardHeight,
                                       child: Stack(
                                         alignment: Alignment.center,
                                         children: [
-                                          Image.asset(
-                                            imgAssets[index],
-                                            fit: BoxFit.contain,
-                                          ),
-                                          ArcProgressBar(
-                                            percentage: progressPercentage,
-                                            arcThickness: 5,
-                                            innerPadding: 16,
-                                            animateFromLastPercent: true,
-                                            handleSize: 10,
-                                            backgroundColor: Colors.black12,
-                                            foregroundColor: Colors.black,
+                                          Container(
+                                            width: cardWidth,
+                                            height: cardHeight,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: AssetImage(imgAssets[index]),
+                                                fit: BoxFit.contain, // Changed from cover to contain
+                                              ),
+                                              color: Colors.black.withOpacity(0.1), // Optional: adds a subtle background
+                                            ),
                                           ),
                                           Positioned(
                                             bottom: 10,
-                                            child: Text(
-                                              '${progressPercentage.toStringAsFixed(0)}%',
-                                              style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
+                                            child: Container(
+                                              width: cardWidth * 0.8,
+                                              height: 5,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black12,
+                                                borderRadius: BorderRadius.circular(2.5),
+                                              ),
+                                              child: LinearProgressIndicator(
+                                                value: progressPercentage,
+                                                backgroundColor: Colors.transparent,
+                                                valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
                                               ),
                                             ),
                                           ),
@@ -270,15 +281,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(212, 242, 245, 234),
+        backgroundColor: Colors.white,
         selectedItemColor: const Color(0xFF121E28),
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [
